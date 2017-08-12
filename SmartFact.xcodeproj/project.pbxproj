@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19331F31CC79006615CB /* AppDelegate.swift */; };
-		F0EB19361F31CC79006615CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* ViewController.swift */; };
+		F0EB19361F31CC79006615CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* HomeController.swift */; };
 		F0EB19391F31CC79006615CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EB19371F31CC79006615CB /* Main.storyboard */; };
 		F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0EB193A1F31CC79006615CB /* SmartFact.xcdatamodeld */; };
 		F0EB193E1F31CC79006615CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EB193D1F31CC79006615CB /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		F0EB19301F31CC79006615CB /* SmartFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EB19331F31CC79006615CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0EB19351F31CC79006615CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0EB19351F31CC79006615CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		F0EB19381F31CC79006615CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0EB193B1F31CC79006615CB /* SmartFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartFact.xcdatamodel; sourceTree = "<group>"; };
 		F0EB193D1F31CC79006615CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				F0EB19331F31CC79006615CB /* AppDelegate.swift */,
-				F0EB19351F31CC79006615CB /* ViewController.swift */,
+				F0EB19351F31CC79006615CB /* HomeController.swift */,
 				F0EB19371F31CC79006615CB /* Main.storyboard */,
 				F0EB193D1F31CC79006615CB /* Assets.xcassets */,
 				F0EB193F1F31CC79006615CB /* LaunchScreen.storyboard */,
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0EB19361F31CC79006615CB /* ViewController.swift in Sources */,
+				F0EB19361F31CC79006615CB /* HomeController.swift in Sources */,
 				F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */,
 				F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */,
 			);
@@ -511,6 +511,7 @@
 				F0EB195D1F31CC79006615CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0EB195E1F31CC79006615CB /* Build configuration list for PBXNativeTarget "SmartFactTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +520,7 @@
 				F0EB19601F31CC79006615CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0EB19611F31CC79006615CB /* Build configuration list for PBXNativeTarget "SmartFactUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +529,7 @@
 				F0EB19631F31CC79006615CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
