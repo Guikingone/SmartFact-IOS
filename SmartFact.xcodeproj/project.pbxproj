@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F06D11971F41E13100E032DF /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11961F41E13100E032DF /* RegisterController.swift */; };
+		F06D11991F41E1F100E032DF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11981F41E1F100E032DF /* LoginController.swift */; };
+		F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D119A1F41E22400E032DF /* PlanningController.swift */; };
+		F06D119E1F41E27100E032DF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D119D1F41E27100E032DF /* AuthService.swift */; };
+		F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D119F1F41E2A000E032DF /* NotificationsController.swift */; };
+		F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A11F41E2D500E032DF /* AccountingController.swift */; };
+		F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A31F41E2E900E032DF /* ClientController.swift */; };
+		F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A51F41E2FC00E032DF /* BillsController.swift */; };
+		F06D11A91F41E37500E032DF /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A81F41E37500E032DF /* StartController.swift */; };
 		F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19331F31CC79006615CB /* AppDelegate.swift */; };
 		F0EB19361F31CC79006615CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* HomeController.swift */; };
 		F0EB19391F31CC79006615CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EB19371F31CC79006615CB /* Main.storyboard */; };
@@ -35,6 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F06D11961F41E13100E032DF /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		F06D11981F41E1F100E032DF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		F06D119A1F41E22400E032DF /* PlanningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningController.swift; sourceTree = "<group>"; };
+		F06D119D1F41E27100E032DF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F06D119F1F41E2A000E032DF /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		F06D11A11F41E2D500E032DF /* AccountingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingController.swift; sourceTree = "<group>"; };
+		F06D11A31F41E2E900E032DF /* ClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientController.swift; sourceTree = "<group>"; };
+		F06D11A51F41E2FC00E032DF /* BillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsController.swift; sourceTree = "<group>"; };
+		F06D11A81F41E37500E032DF /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		F0EB19301F31CC79006615CB /* SmartFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EB19331F31CC79006615CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0EB19351F31CC79006615CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -76,6 +94,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F06D11951F41E0AC00E032DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0EB19351F31CC79006615CB /* HomeController.swift */,
+				F06D11961F41E13100E032DF /* RegisterController.swift */,
+				F06D11981F41E1F100E032DF /* LoginController.swift */,
+				F06D119A1F41E22400E032DF /* PlanningController.swift */,
+				F06D119F1F41E2A000E032DF /* NotificationsController.swift */,
+				F06D11A11F41E2D500E032DF /* AccountingController.swift */,
+				F06D11A31F41E2E900E032DF /* ClientController.swift */,
+				F06D11A51F41E2FC00E032DF /* BillsController.swift */,
+				F06D11A81F41E37500E032DF /* StartController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F06D119C1F41E26800E032DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F06D119D1F41E27100E032DF /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F06D11A71F41E34600E032DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F06D11AA1F41E51A00E032DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F0EB19271F31CC79006615CB = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +155,11 @@
 		F0EB19321F31CC79006615CB /* SmartFact */ = {
 			isa = PBXGroup;
 			children = (
+				F06D11AA1F41E51A00E032DF /* Models */,
+				F06D11A71F41E34600E032DF /* View */,
+				F06D119C1F41E26800E032DF /* Services */,
+				F06D11951F41E0AC00E032DF /* Controllers */,
 				F0EB19331F31CC79006615CB /* AppDelegate.swift */,
-				F0EB19351F31CC79006615CB /* HomeController.swift */,
 				F0EB19371F31CC79006615CB /* Main.storyboard */,
 				F0EB193D1F31CC79006615CB /* Assets.xcassets */,
 				F0EB193F1F31CC79006615CB /* LaunchScreen.storyboard */,
@@ -262,9 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06D11971F41E13100E032DF /* RegisterController.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeController.swift in Sources */,
+				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
+				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
 				F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */,
 				F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */,
+				F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */,
+				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
+				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
+				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
+				F06D11991F41E1F100E032DF /* LoginController.swift in Sources */,
+				F06D119E1F41E27100E032DF /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

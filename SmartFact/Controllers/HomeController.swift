@@ -10,8 +10,4 @@ import UIKit
 
 class HomeController: UIViewController {
     
-    @IBOutlet weak var textOutlet: UITextField!
-    @IBAction func register() {
-        
-    }
 }
