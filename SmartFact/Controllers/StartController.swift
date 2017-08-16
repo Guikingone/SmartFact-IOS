@@ -8,6 +8,16 @@
 
 import UIKit
 
-class StartController: UIViewController {
+class StartController: UIViewController
+{
+    @IBAction func unwindFromLoginController(unwindSegue: UIStoryboardSegue)
+    {
+        
+    }
+    
+    @IBAction func unwindFromRegisterController(unwindSegue: UIStoryboardSegue)
+    {
+        
+    }
     
 }

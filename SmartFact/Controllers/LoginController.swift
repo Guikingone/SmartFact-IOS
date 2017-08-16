@@ -8,6 +8,10 @@
 
 import UIKit
 
-class LoginController: UIViewController {
-    
+class LoginController: UIViewController
+{
+    @IBAction func unwindForgotPasswordController(unwindSegue: UIStoryboardSegue)
+    {
+        
+    }
 }

@@ -9,13 +9,15 @@
 import Foundation
 import Alamofire
 
-class AuthService {
+class AuthService
+{
     
     static let instance = AuthService()
     
     let defaults = UserDefaults.standard
     
-    var isLoggedIn: Bool {
+    var isLoggedIn: Bool
+    {
         get {
             return defaults.bool(forKey: LOGGED_IN_KEY)
         }
@@ -24,7 +26,8 @@ class AuthService {
         }
     }
     
-    var authToken: String {
+    var authToken: String
+    {
         get {
             return defaults.value(forKey: TOKEN_KEY) as! String
         }
@@ -33,7 +36,8 @@ class AuthService {
         }
     }
     
-    var userEmail: String {
+    var userEmail: String
+    {
         get {
             return defaults.value(forKey: USER_EMAIL) as! String
         }
@@ -42,8 +46,8 @@ class AuthService {
         }
     }
     
-    func registerUser(email: String, password: String, completion: @escaping CompletionHandler) {
-        
+    func registerUser(email: String, password: String, completion: @escaping CompletionHandler)
+    {
         let lowerCaseEmail = email.lowercased()
         let headers = [
             "Content-Type": "application/json"
@@ -53,7 +57,7 @@ class AuthService {
             "password": password
         ]
         
-        Alamofire.request("\(URI_DEV)/api/access_token", method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        Alamofire.request("\(URI_DEV)/access_token", method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             
             if response.result.error == nil {
                 completion(true)
@@ -62,5 +66,10 @@ class AuthService {
                 debugPrint(response.result.error as Any)
             }
         }
+    }
+    
+    func loginUser(email: String, password: String, completion: @escaping CompletionHandler)
+    {
+        
     }
 }

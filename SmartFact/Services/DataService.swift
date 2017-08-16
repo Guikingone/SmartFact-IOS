@@ -7,3 +7,37 @@
 //
 
 import Foundation
+import Alamofire
+
+class DataService
+{
+    func getPersonalUser()
+    {
+        
+    }
+    
+    func getPersonalBills()
+    {
+        
+    }
+    
+    func getPersonalClients()
+    {
+        
+    }
+    
+    func getPersonalPlanning()
+    {
+        
+    }
+    
+    func getPersonalMeetups()
+    {
+        
+    }
+    
+    func getPersonalNotifications()
+    {
+        
+    }
+}

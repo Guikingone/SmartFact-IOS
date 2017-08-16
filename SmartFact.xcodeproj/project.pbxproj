@@ -11,6 +11,7 @@
 		6C9676C51CD0580EF8661994 /* Pods_SmartFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98D45E855242B951EA28F9 /* Pods_SmartFactUITests.framework */; };
 		8C7251F25A878DB78215179C /* Pods_SmartFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */; };
 		F04109E01F4341A3009D04A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109DF1F4341A3009D04A4 /* Constants.swift */; };
+		F04109E21F4350EB009D04A4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109E11F4350EB009D04A4 /* DataService.swift */; };
 		F06D11971F41E13100E032DF /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11961F41E13100E032DF /* RegisterController.swift */; };
 		F06D11991F41E1F100E032DF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11981F41E1F100E032DF /* LoginController.swift */; };
 		F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D119A1F41E22400E032DF /* PlanningController.swift */; };
@@ -20,6 +21,7 @@
 		F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A31F41E2E900E032DF /* ClientController.swift */; };
 		F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A51F41E2FC00E032DF /* BillsController.swift */; };
 		F06D11A91F41E37500E032DF /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A81F41E37500E032DF /* StartController.swift */; };
+		F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07454461F44B75000D2F138 /* ForgotPasswordController.swift */; };
 		F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19331F31CC79006615CB /* AppDelegate.swift */; };
 		F0EB19361F31CC79006615CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* HomeController.swift */; };
 		F0EB19391F31CC79006615CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EB19371F31CC79006615CB /* Main.storyboard */; };
@@ -57,6 +59,7 @@
 		9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC040DF31214B09F0C071154 /* Pods-SmartFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactUITests/Pods-SmartFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F04109DF1F4341A3009D04A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F04109E11F4350EB009D04A4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F06D11961F41E13100E032DF /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		F06D11981F41E1F100E032DF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F06D119A1F41E22400E032DF /* PlanningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningController.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		F06D11A31F41E2E900E032DF /* ClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientController.swift; sourceTree = "<group>"; };
 		F06D11A51F41E2FC00E032DF /* BillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsController.swift; sourceTree = "<group>"; };
 		F06D11A81F41E37500E032DF /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		F07454461F44B75000D2F138 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F0EB19301F31CC79006615CB /* SmartFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EB19331F31CC79006615CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0EB19351F31CC79006615CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				F06D11A31F41E2E900E032DF /* ClientController.swift */,
 				F06D11A51F41E2FC00E032DF /* BillsController.swift */,
 				F06D11A81F41E37500E032DF /* StartController.swift */,
+				F07454461F44B75000D2F138 /* ForgotPasswordController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				F06D119D1F41E27100E032DF /* AuthService.swift */,
+				F04109E11F4350EB009D04A4 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F06D11971F41E13100E032DF /* RegisterController.swift in Sources */,
+				F04109E21F4350EB009D04A4 /* DataService.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeController.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
@@ -543,6 +550,7 @@
 				F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
 				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
+				F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
 				F06D11991F41E1F100E032DF /* LoginController.swift in Sources */,
