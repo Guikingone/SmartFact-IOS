@@ -10,5 +10,7 @@ import UIKit
 
 class ForgotPasswordController: UIViewController
 {
+    @IBOutlet weak var ForgotPasswordBtn: UIButton!
+    @IBOutlet weak var ForgotPasswordTxtField: UITextField!
     
 }

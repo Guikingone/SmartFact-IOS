@@ -11,7 +11,6 @@ import Alamofire
 
 class AuthService
 {
-    
     static let instance = AuthService()
     
     let defaults = UserDefaults.standard
@@ -46,13 +45,15 @@ class AuthService
         }
     }
     
-    func registerUser(email: String, password: String, completion: @escaping CompletionHandler)
+    func registerUser(username: String, email: String, password: String, completion: @escaping CompletionHandler)
     {
+        let lowerCaseUsername = username.lowercased()
         let lowerCaseEmail = email.lowercased()
         let headers = [
             "Content-Type": "application/json"
         ]
         let body: [String: Any] = [
+            "username": lowerCaseUsername,
             "email": lowerCaseEmail,
             "password": password
         ]
