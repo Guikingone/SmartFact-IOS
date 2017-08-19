@@ -10,19 +10,19 @@ import UIKit
 
 class RegisterController: UIViewController
 {
-    @IBOutlet weak var UsernameTxtField: UITextField!
-    @IBOutlet weak var EmailTxtField: UITextField!
-    @IBOutlet weak var PasswordTxtField: UITextField!
-    @IBOutlet weak var PasswordRptTextField: UITextField!
+    @IBOutlet weak var usernameTxtField: UITextField!
+    @IBOutlet weak var emailTxtField: UITextField!
+    @IBOutlet weak var passwordTxtField: UITextField!
+    @IBOutlet weak var passwordRptTextField: UITextField!
     
     override func viewDidLoad() { super.viewDidLoad() }
     
     @IBAction func createAccountAction(_ sender: Any)
     {
-        guard let username = UsernameTxtField.text , UsernameTxtField.text != "" else { return }
-        guard let email = EmailTxtField.text , EmailTxtField.text != "" else { return }
-        guard let password = PasswordTxtField.text , PasswordTxtField.text != "" else { return }
-        guard let passwordRpt = PasswordRptTextField.text , PasswordTxtField.text != "" else { return }
+        guard let username = usernameTxtField.text , usernameTxtField.text != "" else { return }
+        guard let email = emailTxtField.text , emailTxtField.text != "" else { return }
+        guard let password = passwordTxtField.text , passwordTxtField.text != "" else { return }
+        guard let passwordRpt = passwordRptTextField.text , passwordTxtField.text != "" else { return }
 
         if (password != passwordRpt) {
             return
