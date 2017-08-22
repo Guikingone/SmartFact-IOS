@@ -8,6 +8,7 @@
 
 import UIKit
 
-class PlanningController: UIViewController {
+class PlanningController: UIViewController
+{
     
 }

@@ -10,8 +10,24 @@ import UIKit
 
 class LoginController: UIViewController
 {
-    @IBAction func unwindForgotPasswordController(unwindSegue: UIStoryboardSegue)
+    @IBOutlet weak var usernameTxtField: MainForm!
+    @IBOutlet weak var passwordTxtField: MainForm!
+    
+    @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue)
     {
         
+    }
+    
+    @IBAction func LoginUser(_ sender: Any)
+    {
+        guard let username = usernameTxtField.text , usernameTxtField.text != "" else { return }
+        guard let password = passwordTxtField.text , passwordTxtField.text != "" else { return }
+        
+        AuthService.instance.loginUser(username: username, password: password)
+        { (success) in
+            if (success) {
+                print("Connexion successfull")
+            }
+        }
     }
 }

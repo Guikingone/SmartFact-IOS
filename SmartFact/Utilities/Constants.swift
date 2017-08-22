@@ -11,8 +11,9 @@ import Foundation
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URL constants
+let HEADERS = ["Content-Type": "application/json"]
 let URI_PROD: String = "http://smartfact.guillaumeloulier.fr"
-let URI_DEV: String = "http://localhost:8000"
+let URI_DEV: String = "http://127.0.0.1:8000"
 
 // User defaults
 let TOKEN_KEY = "token"

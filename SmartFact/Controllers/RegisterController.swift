@@ -10,10 +10,10 @@ import UIKit
 
 class RegisterController: UIViewController
 {
-    @IBOutlet weak var usernameTxtField: UITextField!
-    @IBOutlet weak var emailTxtField: UITextField!
-    @IBOutlet weak var passwordTxtField: UITextField!
-    @IBOutlet weak var passwordRptTextField: UITextField!
+    @IBOutlet weak var emailTxtField: MainForm!
+    @IBOutlet weak var usernameTxtField: MainForm!
+    @IBOutlet weak var passwordTxtField: MainForm!
+    @IBOutlet weak var passwordRptTxtField: MainForm!
     
     override func viewDidLoad() { super.viewDidLoad() }
     
@@ -22,9 +22,9 @@ class RegisterController: UIViewController
         guard let username = usernameTxtField.text , usernameTxtField.text != "" else { return }
         guard let email = emailTxtField.text , emailTxtField.text != "" else { return }
         guard let password = passwordTxtField.text , passwordTxtField.text != "" else { return }
-        guard let passwordRpt = passwordRptTextField.text , passwordTxtField.text != "" else { return }
+        guard let passwordRpt = passwordRptTxtField.text , passwordRptTxtField.text != "" else { return }
 
-        if (password != passwordRpt) {
+        if (passwordRpt != password) {
             return
         }
         
@@ -32,6 +32,7 @@ class RegisterController: UIViewController
         { (success) in
             if success {
                 print("User registrered !")
+                self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
             }
         }
     }
