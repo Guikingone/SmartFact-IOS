@@ -10,6 +10,7 @@
 		50E2CD9190B9CF8EDBF8518B /* Pods_SmartFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B96A7993270BE6F435116E /* Pods_SmartFactTests.framework */; };
 		6C9676C51CD0580EF8661994 /* Pods_SmartFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98D45E855242B951EA28F9 /* Pods_SmartFactUITests.framework */; };
 		8C7251F25A878DB78215179C /* Pods_SmartFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */; };
+		F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */; };
 		F01FDC941F4AB620008848DD /* MainForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDC931F4AB620008848DD /* MainForm.swift */; };
 		F04109E01F4341A3009D04A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109DF1F4341A3009D04A4 /* Constants.swift */; };
 		F04109E21F4350EB009D04A4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109E11F4350EB009D04A4 /* DataService.swift */; };
@@ -61,6 +62,7 @@
 		870AA475E34B2EDDF4CD65A5 /* Pods-SmartFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactTests/Pods-SmartFactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC040DF31214B09F0C071154 /* Pods-SmartFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactUITests/Pods-SmartFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		F01FDC931F4AB620008848DD /* MainForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForm.swift; sourceTree = "<group>"; };
 		F04109DF1F4341A3009D04A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F04109E11F4350EB009D04A4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				F06D11A51F41E2FC00E032DF /* BillsController.swift */,
 				F06D11A81F41E37500E032DF /* StartController.swift */,
 				F07454461F44B75000D2F138 /* ForgotPasswordController.swift */,
+				F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
 				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
+				F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */,
 				F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,

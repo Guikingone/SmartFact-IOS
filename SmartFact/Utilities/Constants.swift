@@ -17,5 +17,7 @@ let URI_DEV: String = "http://127.0.0.1:8000"
 
 // User defaults
 let TOKEN_KEY = "token"
+let ALLOWED_RESET_TOKEN = "reset_password_token"
+let PASSWORD_RESET_TOKEN = "reset_token"
 let LOGGED_IN_KEY = "logged_in"
 let USER_EMAIL = "user_email"

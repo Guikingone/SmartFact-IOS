@@ -13,5 +13,11 @@ class HomeController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+    }
+    
+    @IBAction func logoutUser(_ sender: Any)
+    {
+        
     }
 }

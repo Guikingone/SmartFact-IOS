@@ -31,7 +31,6 @@ class RegisterController: UIViewController
         AuthService.instance.registerUser(username: username, email: email, password: password)
         { (success) in
             if success {
-                print("User registrered !")
                 self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
             }
         }

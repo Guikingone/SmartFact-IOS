@@ -28,17 +28,37 @@ class AuthService
     var authToken: String
     {
         get {
-            return defaults.value(forKey: TOKEN_KEY) as! String
+            return defaults.string(forKey: TOKEN_KEY)!
         }
         set {
             defaults.set(newValue, forKey: TOKEN_KEY)
         }
     }
     
+    var allowedToResetPassword: Bool
+    {
+        get {
+            return defaults.bool(forKey: ALLOWED_RESET_TOKEN)
+        }
+        set {
+            defaults.set(newValue, forKey: ALLOWED_RESET_TOKEN)
+        }
+    }
+    
+    var passwordResetToken: String
+    {
+        get {
+            return defaults.string(forKey: PASSWORD_RESET_TOKEN)!
+        }
+        set {
+            defaults.set(newValue, forKey: PASSWORD_RESET_TOKEN)
+        }
+    }
+    
     var userEmail: String
     {
         get {
-            return defaults.value(forKey: USER_EMAIL) as! String
+            return defaults.string(forKey: USER_EMAIL)!
         }
         set {
             defaults.set(newValue, forKey: USER_EMAIL)
@@ -49,14 +69,13 @@ class AuthService
     {
         let body: [String: Any] = [
             "username": username,
-            "password": password,
+            "plainPassword": password,
             "email": email
         ]
         
-        Alamofire.request("\(URI_DEV)/api/users/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON { (response) in
+        Alamofire.request("\(URI_DEV)/api/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                print(response.result.value as Any?)
                 completion(true)
             } else {
                 completion(false)
@@ -83,6 +102,50 @@ class AuthService
                     }
                 }
                 completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func resetPasswordToken(email: String, username: String, completion: @escaping CompletionHandler)
+    {
+        let body: [String: Any] = [
+            "email": email,
+            "username": username
+        ]
+        
+        Alamofire.request("\(URI_DEV)/api/password/reset/token", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
+            (response) in
+            
+            if response.result.error == nil {
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    if let token = json["token"] as? String {
+                        self.passwordResetToken = token
+                        self.allowedToResetPassword = true
+                    }
+                }
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func resetPassword(password: String, passwordRpt: String, completion: @escaping CompletionHandler)
+    {
+        let body: [String: Any] = [
+            "token": self.passwordResetToken,
+            "password": password
+        ]
+        
+        Alamofire.request("\(URI_DEV)/api/password/reset", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
+            (response) in
+            
+            if response.result.error == nil {
+                // TODO
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
