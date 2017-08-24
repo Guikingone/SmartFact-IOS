@@ -73,7 +73,7 @@ class AuthService
             "email": email
         ]
         
-        Alamofire.request("\(URI_DEV)/api/register", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON { (response) in
+        Alamofire.request("\(URI_DEV)/register/api", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 completion(true)
@@ -116,7 +116,7 @@ class AuthService
             "username": username
         ]
         
-        Alamofire.request("\(URI_DEV)/api/password/reset/token", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
+        Alamofire.request("\(URI_DEV)/password/reset/token/api", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
             (response) in
             
             if response.result.error == nil {
@@ -134,18 +134,18 @@ class AuthService
         }
     }
     
-    func resetPassword(password: String, passwordRpt: String, completion: @escaping CompletionHandler)
+    func resetPassword(password: String, completion: @escaping CompletionHandler)
     {
         let body: [String: Any] = [
             "token": self.passwordResetToken,
             "password": password
         ]
         
-        Alamofire.request("\(URI_DEV)/api/password/reset", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
+        Alamofire.request("\(URI_DEV)/password/reset/api", method: .patch, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
             (response) in
             
             if response.result.error == nil {
-                // TODO
+                completion(true)
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)

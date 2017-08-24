@@ -10,5 +10,18 @@ import UIKit
 
 class ResetPasswordController: UIViewController
 {
+    @IBOutlet weak var passwordTxtField: MainForm!
     
+    @IBAction func resetPassword(_ sender: Any)
+    {
+        guard let password = passwordTxtField.text , passwordTxtField.text != "" else { return }
+        
+        AuthService.instance.resetPassword(password: password) {
+            (success) in
+            
+            if success {
+                self.performSegue(withIdentifier: "PasswordUpdated", sender: self)
+            }
+        }
+    }
 }

@@ -11,9 +11,20 @@ import Alamofire
 
 class DataService
 {
-    func getPersonalUser()
+    static let instance = DataService()
+    
+    static let authService = AuthService.instance
+    
+    func getPersonalUserInformations()
     {
-        
+        if AuthService.instance.isLoggedIn {
+            let headers: [String: Any] = [
+                "Content-Type": "application/json",
+                "Authorization": AuthService.instance.authToken
+            ]
+            
+            // TODO
+        }
     }
     
     func getPersonalBills()

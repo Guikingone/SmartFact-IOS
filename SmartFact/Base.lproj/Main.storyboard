@@ -368,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3N-7O-RVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2682.608695652174" y="-289.4021739130435"/>
+            <point key="canvasLocation" x="2683" y="-289"/>
         </scene>
         <!--Reset Password Controller-->
         <scene sceneID="pI3-mm-qK8">
@@ -385,19 +385,63 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-uX-CnH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-0i-1X6" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
+                                <rect key="frame" x="20" y="206" width="374" height="55"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="zZc-la-B83"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ai-2W-v5b" customClass="MainButton" customModule="SmartFact" customModuleProvider="target">
+                                <rect key="frame" x="20" y="336" width="374" height="53"/>
+                                <color key="backgroundColor" red="1" green="0.60784313729999995" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="qHn-Pc-2vo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Réinitialiser le mot de passe"/>
+                                <connections>
+                                    <action selector="resetPassword:" destination="nvE-X5-mbX" eventType="touchUpInside" id="2rx-2D-P7F"/>
+                                    <action selector="resetPassword:" destination="nVU-nC-fUP" eventType="touchUpInside" id="MS1-Mh-FoL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmartFact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb7-Qe-1lX">
+                                <rect key="frame" x="40" y="40" width="334" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.59999999999999998" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Vpw-0i-1X6" firstAttribute="centerX" secondItem="sc3-J3-JNP" secondAttribute="centerX" id="5es-IW-WNw"/>
                             <constraint firstItem="bHg-uX-CnH" firstAttribute="top" secondItem="sc3-J3-JNP" secondAttribute="top" id="HNy-fK-BWq"/>
+                            <constraint firstItem="Vpw-0i-1X6" firstAttribute="leading" secondItem="sc3-J3-JNP" secondAttribute="leadingMargin" id="R0J-Wf-rXe"/>
+                            <constraint firstItem="7ai-2W-v5b" firstAttribute="leading" secondItem="sc3-J3-JNP" secondAttribute="leadingMargin" id="R0a-6x-yqa"/>
+                            <constraint firstItem="Vpw-0i-1X6" firstAttribute="top" secondItem="sb7-Qe-1lX" secondAttribute="bottom" constant="130" id="VCf-c8-frd"/>
                             <constraint firstItem="bHg-uX-CnH" firstAttribute="leading" secondItem="sc3-J3-JNP" secondAttribute="leading" id="YN7-9p-EHq"/>
+                            <constraint firstItem="7ai-2W-v5b" firstAttribute="top" secondItem="Vpw-0i-1X6" secondAttribute="bottom" constant="75" id="aoq-Tl-0MM"/>
+                            <constraint firstItem="7ai-2W-v5b" firstAttribute="trailing" secondItem="sc3-J3-JNP" secondAttribute="trailingMargin" id="cSe-cf-e9L"/>
                             <constraint firstAttribute="trailing" secondItem="bHg-uX-CnH" secondAttribute="trailing" id="dUb-gN-Gru"/>
+                            <constraint firstItem="Vpw-0i-1X6" firstAttribute="trailing" secondItem="sc3-J3-JNP" secondAttribute="trailingMargin" id="mab-Bk-NaB"/>
+                            <constraint firstItem="sb7-Qe-1lX" firstAttribute="leading" secondItem="sc3-J3-JNP" secondAttribute="leadingMargin" constant="20" id="n55-0V-Pk4"/>
                             <constraint firstItem="jkc-bi-2PF" firstAttribute="top" secondItem="bHg-uX-CnH" secondAttribute="bottom" id="n9c-2a-7Qe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sb7-Qe-1lX" secondAttribute="trailing" constant="20" id="nge-V4-PC3"/>
+                            <constraint firstItem="sb7-Qe-1lX" firstAttribute="top" secondItem="ueE-d2-Ces" secondAttribute="bottom" constant="20" id="rtP-0G-LMM"/>
+                            <constraint firstItem="jkc-bi-2PF" firstAttribute="top" secondItem="7ai-2W-v5b" secondAttribute="bottom" constant="347" id="yMb-cM-3tG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTxtField" destination="Vpw-0i-1X6" id="b0c-w3-MwJ"/>
+                        <segue destination="LW3-u0-HHz" kind="show" identifier="PasswordUpdated" id="1fJ-aX-dRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcB-FB-Kf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3592.753623188406" y="-289.4021739130435"/>
+            <point key="canvasLocation" x="3590" y="-695"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="pvb-Lp-4eU">
@@ -511,6 +555,7 @@
         <image name="background" width="828" height="1472"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RME-pg-eLk"/>
+        <segue reference="33C-Ke-KtC"/>
+        <segue reference="1fJ-aX-dRA"/>
     </inferredMetricsTieBreakers>
 </document>

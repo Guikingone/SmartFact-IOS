@@ -14,6 +14,8 @@ class HomeController: UIViewController
     {
         super.viewDidLoad()
         
+        DataService.instance.getPersonalUserInformations()
+        
     }
     
     @IBAction func logoutUser(_ sender: Any)
