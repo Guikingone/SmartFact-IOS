@@ -8,6 +8,7 @@
 
 import UIKit
 
-class AccountingController: UIViewController {
+class AccountingController: UIViewController
+{
     
 }

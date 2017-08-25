@@ -91,7 +91,7 @@ class AuthService
             "password": password
         ]
         
-        Alamofire.request("\(URI_DEV)/jwt/token", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
+        Alamofire.request(URI_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
             (response) in
             
             if response.result.error == nil {

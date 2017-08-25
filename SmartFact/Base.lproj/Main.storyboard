@@ -104,6 +104,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OG4-wk-ymN">
+                                <rect key="frame" x="328" y="35" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutUser:" destination="h1P-38-J8Y" eventType="touchUpInside" id="kCJ-cN-0kA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -113,10 +121,13 @@
                             <constraint firstItem="C5a-rV-3MO" firstAttribute="leading" secondItem="QM0-HD-pSe" secondAttribute="leadingMargin" constant="20" id="cAj-Ux-Dk1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="LW3-u0-HHz" kind="show" identifier="LogoutUserSegue" id="aQz-QW-yLl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roa-1L-jIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="495"/>
+            <point key="canvasLocation" x="2683" y="528"/>
         </scene>
         <!--Bills Controller-->
         <scene sceneID="gQx-Gm-RnB">
@@ -548,14 +559,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28b-uC-q6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813.0434782608697" y="32.608695652173914"/>
+            <point key="canvasLocation" x="1857" y="33"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="828" height="1472"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="33C-Ke-KtC"/>
-        <segue reference="1fJ-aX-dRA"/>
+        <segue reference="aQz-QW-yLl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,42 +13,90 @@ class DataService
 {
     static let instance = DataService()
     
-    static let authService = AuthService.instance
-    
-    func getPersonalUserInformations()
+    func getPersonalUserInformations(completionHandler: @escaping CompletionHandler)
     {
-        if AuthService.instance.isLoggedIn {
-            let headers: [String: Any] = [
-                "Content-Type": "application/json",
-                "Authorization": AuthService.instance.authToken
-            ]
+        Alamofire.request(URI_PERSONAl_USER, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
-            // TODO
+            if response.result.error == nil {
+                // TODO
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+                debugPrint(response.result.error as Any)
+            }
         }
     }
     
-    func getPersonalBills()
+    func getPersonalBills(completionHandler: @escaping CompletionHandler)
     {
+        Alamofire.request(URI_PERSONAL_BILLS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                // TODO
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func getPersonalClients(completionHandler: @escaping CompletionHandler)
+    {
+        Alamofire.request(URI_PERSONAL_CLIENTS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                // TODO
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
         
     }
     
-    func getPersonalClients()
+    func getPersonalPlanning(completionHandler: @escaping CompletionHandler)
     {
+        Alamofire.request(URI_PERSONAL_PLANNING, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                // TODO
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
         
     }
     
-    func getPersonalPlanning()
+    func getPersonalMeetups(completionHandler: @escaping CompletionHandler)
     {
+        Alamofire.request(URI_PERSONAL_MEETUPS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                // TODO
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
         
     }
     
-    func getPersonalMeetups()
+    func getPersonalNotifications(completionHandler: @escaping CompletionHandler)
     {
-        
-    }
-    
-    func getPersonalNotifications()
-    {
-        
+        Alamofire.request(URI_PERSONAL_NOTIFICATIONS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                // TODO
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
     }
 }

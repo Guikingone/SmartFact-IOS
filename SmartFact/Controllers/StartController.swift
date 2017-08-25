@@ -10,14 +10,6 @@ import UIKit
 
 class StartController: UIViewController
 {
-    @IBAction func unwindFromLoginController(unwindSegue: UIStoryboardSegue)
-    {
-        
-    }
-    
-    @IBAction func unwindFromRegisterController(unwindSegue: UIStoryboardSegue)
-    {
-        
-    }
-    
+    @IBAction func unwindFromLoginController(unwindSegue: UIStoryboardSegue){}
+    @IBAction func unwindFromRegisterController(unwindSegue: UIStoryboardSegue){}
 }

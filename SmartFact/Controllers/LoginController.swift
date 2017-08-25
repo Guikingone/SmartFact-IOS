@@ -13,10 +13,7 @@ class LoginController: UIViewController
     @IBOutlet weak var usernameTxtField: MainForm!
     @IBOutlet weak var passwordTxtField: MainForm!
     
-    @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue)
-    {
-        
-    }
+    @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue){}
     
     @IBAction func LoginUser(_ sender: Any)
     {

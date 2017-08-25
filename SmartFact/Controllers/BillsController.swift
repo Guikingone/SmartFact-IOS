@@ -8,6 +8,10 @@
 
 import UIKit
 
-class BillsController: UIViewController {
-    
+class BillsController: UIViewController
+{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }

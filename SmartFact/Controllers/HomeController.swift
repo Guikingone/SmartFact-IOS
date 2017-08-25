@@ -14,12 +14,17 @@ class HomeController: UIViewController
     {
         super.viewDidLoad()
         
-        DataService.instance.getPersonalUserInformations()
-        
+        DataService.instance.getPersonalUserInformations { (success) in
+            
+            if success {
+                // TODO
+            }
+        }
     }
     
     @IBAction func logoutUser(_ sender: Any)
     {
-        
+        AuthService.instance.isLoggedIn = false
+        self.performSegue(withIdentifier: "LogoutUserSegue", sender: self)
     }
 }
