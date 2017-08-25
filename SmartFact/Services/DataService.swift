@@ -18,7 +18,9 @@ class DataService
         Alamofire.request(URI_PERSONAl_USER, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                // TODO
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    // TODO
+                }
                 completionHandler(true)
             } else {
                 completionHandler(false)
@@ -32,7 +34,9 @@ class DataService
         Alamofire.request(URI_PERSONAL_BILLS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                // TODO
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    // TODO
+                }
                 completionHandler(true)
             } else {
                 completionHandler(false)
@@ -46,7 +50,9 @@ class DataService
         Alamofire.request(URI_PERSONAL_CLIENTS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                // TODO
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    // TODO
+                }
                 completionHandler(true)
             } else {
                 completionHandler(false)
@@ -61,7 +67,9 @@ class DataService
         Alamofire.request(URI_PERSONAL_PLANNING, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                // TODO
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    // TODO
+                }
                 completionHandler(true)
             } else {
                 completionHandler(false)
@@ -76,7 +84,9 @@ class DataService
         Alamofire.request(URI_PERSONAL_MEETUPS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                // TODO
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    // TODO
+                }
                 completionHandler(true)
             } else {
                 completionHandler(false)
@@ -91,7 +101,9 @@ class DataService
         Alamofire.request(URI_PERSONAL_NOTIFICATIONS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
-                // TODO
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    // TODO
+                }
                 completionHandler(true)
             } else {
                 completionHandler(false)

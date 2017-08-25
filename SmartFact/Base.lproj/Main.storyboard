@@ -107,7 +107,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OG4-wk-ymN">
                                 <rect key="frame" x="328" y="35" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" title="Out"/>
                                 <connections>
                                     <action selector="logoutUser:" destination="h1P-38-J8Y" eventType="touchUpInside" id="kCJ-cN-0kA"/>
                                 </connections>

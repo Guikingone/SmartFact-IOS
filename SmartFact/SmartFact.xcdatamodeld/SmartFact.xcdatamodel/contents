@@ -8,6 +8,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="planning" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +16,7 @@
         <relationship name="planning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Planning" inverseName="user" inverseEntity="Planning" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="Planning" positionX="-54" positionY="9" width="128" height="75"/>
         <element name="Meetups" positionX="-36" positionY="45" width="128" height="60"/>
     </elements>

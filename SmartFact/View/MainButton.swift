@@ -14,6 +14,6 @@ class MainButton: UIButton
     {
         super.awakeFromNib()
         
-        layer.cornerRadius = 10
+        layer.cornerRadius = 5
     }
 }
