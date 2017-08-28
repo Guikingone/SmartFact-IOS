@@ -19,7 +19,19 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // TODO
+                    guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+                    let user = User(context: managedContext)
+                    user.id = json["id"] as? String
+                    user.firstname = json["firstname"] as? String
+                    user.lastname = json["lastname"] as? String
+                    user.email = json["email"] as? String
+                    user.username = json["username"] as? String
+                    
+                    do {
+                        try managedContext.save()
+                    } catch {
+                        debugPrint("Error : \(error.localizedDescription)")
+                    }
                 }
                 completionHandler(true)
             } else {

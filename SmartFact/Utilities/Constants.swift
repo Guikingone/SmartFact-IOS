@@ -15,6 +15,8 @@ let URI_PROD: String = "http://smartfact.guillaumeloulier.fr/"
 let URI_DEV: String = "http://127.0.0.1:8000/"
 let URI_REGISTER: String = "\(URI_DEV)register/api"
 let URI_LOGIN: String = "\(URI_DEV)jwt/token"
+let URI_RESET_PASSWORD_TOKEN: String = "\(URI_DEV)password/reset/token/api"
+let URI_RESET_PASSWORD: String = "\(URI_DEV)password/reset/api"
 
 // URL Users constants
 let URI_PERSONAl_USER: String = "\(URI_DEV)api/users/me"
@@ -37,5 +39,5 @@ let HEADERS = ["Content-Type": "application/json"]
 
 let AUTH_HEADERS = [
     "Content-Type": "application/json",
-    "Authorization": AuthService.instance.authToken
+    "authorization": AuthService.instance.authToken
 ]

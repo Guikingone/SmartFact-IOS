@@ -8,6 +8,8 @@
 
 import UIKit
 
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
+
 class StartController: UIViewController
 {
     @IBAction func unwindFromLoginController(unwindSegue: UIStoryboardSegue){}
