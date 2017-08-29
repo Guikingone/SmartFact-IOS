@@ -122,6 +122,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="usernameLabel" destination="C5a-rV-3MO" id="Uk1-ow-zJd"/>
                         <segue destination="LW3-u0-HHz" kind="show" identifier="LogoutUserSegue" id="aQz-QW-yLl"/>
                     </connections>
                 </viewController>

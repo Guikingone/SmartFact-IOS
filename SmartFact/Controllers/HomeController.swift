@@ -10,6 +10,8 @@ import UIKit
 
 class HomeController: UIViewController
 {
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -18,6 +20,7 @@ class HomeController: UIViewController
             
             if success {
                 // TODO
+                // Change the username displayed
             }
         }
     }
@@ -25,6 +28,12 @@ class HomeController: UIViewController
     @IBAction func logoutUser(_ sender: Any)
     {
         AuthService.instance.isLoggedIn = false
+        DataService.instance.deletePersonalUser { (success) in
+            
+            if success {
+                print("User deleted !")
+            }
+        }
         self.performSegue(withIdentifier: "LogoutUserSegue", sender: self)
     }
 }

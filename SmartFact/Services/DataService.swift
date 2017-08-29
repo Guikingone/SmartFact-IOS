@@ -8,10 +8,13 @@
 
 import Foundation
 import Alamofire
+import CoreData
 
 class DataService
 {
     static let instance = DataService()
+    
+    var users: [User] = []
     
     func getPersonalUserInformations(completionHandler: @escaping CompletionHandler)
     {
@@ -19,18 +22,34 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-                    let user = User(context: managedContext)
-                    user.id = json["id"] as? String
-                    user.firstname = json["firstname"] as? String
-                    user.lastname = json["lastname"] as? String
-                    user.email = json["email"] as? String
-                    user.username = json["username"] as? String
                     
+                    // Allow to search if the user already exist in Core Data.
+                    guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
                     do {
-                        try managedContext.save()
+                        self.users = try managedContext.fetch(fetchRequest) as! [User]
+                        for user in self.users {
+                            if user.email == json["email"] as? String {
+                                print("User already found !")
+                                return
+                            } else {
+                                let user = User(context: managedContext)
+                                user.id = json["id"] as? String
+                                user.firstname = json["firstname"] as? String
+                                user.lastname = json["lastname"] as? String
+                                user.email = json["email"] as? String
+                                user.username = json["username"] as? String
+                                do {
+                                    try managedContext.save()
+                                    completionHandler(true)
+                                } catch {
+                                    debugPrint("Error : \(error.localizedDescription)")
+                                    completionHandler(false)
+                                }
+                            }
+                        }
                     } catch {
-                        debugPrint("Error : \(error.localizedDescription)")
+                        debugPrint(error)
                     }
                 }
                 completionHandler(true)
@@ -121,6 +140,16 @@ class DataService
                 completionHandler(false)
                 debugPrint(response.result.error as Any)
             }
+        }
+    }
+    
+    func deletePersonalUser(completionHandler: @escaping CompletionHandler)
+    {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        for user in self.users {
+            managedContext.delete(user)
+            completionHandler(true)
         }
     }
 }
