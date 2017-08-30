@@ -1,6 +1,0 @@
-framework module Pods_SmartFactTests {
-  umbrella header "Pods-SmartFactTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
