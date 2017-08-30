@@ -7,9 +7,6 @@ target 'SmartFact' do
 
   # Pods for SmartFact
   pod 'Alamofire', '~> 4.4'
-  pod 'SwiftyJSON'
-  pod 'Socket.IO-Client-Swift'
-  pod 'Charts/Realm'
 
   target 'SmartFactTests' do
     inherit! :search_paths

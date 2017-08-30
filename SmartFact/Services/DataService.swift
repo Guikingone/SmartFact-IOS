@@ -6,15 +6,13 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-import Foundation
-import Alamofire
 import CoreData
+import Alamofire
+import Foundation
 
 class DataService
 {
     static let instance = DataService()
-    
-    var users: [User] = []
     
     func getPersonalUserInformations(completionHandler: @escaping CompletionHandler)
     {
@@ -24,12 +22,13 @@ class DataService
                 if let json = response.result.value as? Dictionary<String, Any> {
                     
                     // Allow to search if the user already exist in Core Data.
-                    guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-                    fetchRequest.predicate = NSPredicate(format: "email=\(json["email"])")
                     do {
-                        self.users = try managedContext.fetch(fetchRequest) as! [User]
-                        print(self.users)
+                        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+                        let users = try managedContext.fetch(fetchRequest) as! [User]
+                        for user in users {
+                            print(user)
+                        }
 //                        for user in self.users {
 //                            if user.email == json["email"] as? String {
 //                                print("User already found !")
@@ -148,10 +147,14 @@ class DataService
     func deletePersonalUser(completionHandler: @escaping CompletionHandler)
     {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        // TODO : Add a predicate on the username or email.
         
-        for user in self.users {
-            managedContext.delete(user)
-            completionHandler(true)
+        do {
+            let user = try managedContext.fetch(fetchRequest)
+            managedContext.delete(user as! NSManagedObject)
+        } catch {
+            debugPrint(error)
         }
     }
 }
