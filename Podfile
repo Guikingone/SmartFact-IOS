@@ -7,6 +7,7 @@ target 'SmartFact' do
 
   # Pods for SmartFact
   pod 'Alamofire', '~> 4.4'
+  pod 'SideMenu'
 
   target 'SmartFactTests' do
     inherit! :search_paths

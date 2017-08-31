@@ -27,7 +27,10 @@ class DataService
                         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
                         let users = try managedContext.fetch(fetchRequest) as! [User]
                         for user in users {
-                            print(user)
+                            if user.email == json["email"] as? String {
+                                let personalUser = user
+                                print(personalUser)
+                            }
                         }
 //                        for user in self.users {
 //                            if user.email == json["email"] as? String {
@@ -67,7 +70,18 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // TODO
+                    // Allow to search if new bills can be added in Core Data.
+                    do {
+                        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Bills")
+                        let bills = try managedContext.fetch(fetchRequest) as! [Bills]
+                        for bill in bills {
+                            // TODO: Found if there's no new bills.
+                            
+                        }
+                    } catch {
+                        debugPrint(error)
+                    }
                 }
                 completionHandler(true)
             } else {

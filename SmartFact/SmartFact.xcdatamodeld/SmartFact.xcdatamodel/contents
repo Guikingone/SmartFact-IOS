@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13221.4" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Accounting" representedClassName="Accounting" syncable="YES" codeGenerationType="class">
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="accounting" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Bills" representedClassName="Bills" syncable="YES" codeGenerationType="class">
+        <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clients" inverseName="bills" inverseEntity="Clients" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="bills" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Clients" representedClassName="Clients" syncable="YES" codeGenerationType="class">
+        <relationship name="bills" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bills" inverseName="client" inverseEntity="Bills" syncable="YES"/>
+    </entity>
     <entity name="Meetups" representedClassName="Meetups" syncable="YES" codeGenerationType="class">
         <relationship name="planning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Planning" inverseName="meetups" inverseEntity="Planning" syncable="YES"/>
     </entity>
@@ -16,13 +26,18 @@
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="accounting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Accounting" inverseName="user" inverseEntity="Accounting" syncable="YES"/>
+        <relationship name="bills" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bills" inverseName="user" inverseEntity="Bills" syncable="YES"/>
         <relationship name="notifications" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notifications" inverseName="user" inverseEntity="Notifications" syncable="YES"/>
         <relationship name="planning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Planning" inverseName="user" inverseEntity="Planning" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Meetups" positionX="-36" positionY="45" width="128" height="60"/>
-        <element name="Planning" positionX="-54" positionY="9" width="128" height="75"/>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="Notifications" positionX="-18" positionY="63" width="128" height="60"/>
+        <element name="Meetups" positionX="-198" positionY="-333" width="128" height="60"/>
+        <element name="Notifications" positionX="187" positionY="-258" width="128" height="60"/>
+        <element name="Planning" positionX="-405" positionY="-138" width="128" height="75"/>
+        <element name="User" positionX="-36" positionY="-333" width="128" height="178"/>
+        <element name="Clients" positionX="-405" positionY="-27" width="128" height="58"/>
+        <element name="Bills" positionX="-135" positionY="18" width="128" height="73"/>
+        <element name="Accounting" positionX="70" positionY="-87" width="128" height="60"/>
     </elements>
 </model>
