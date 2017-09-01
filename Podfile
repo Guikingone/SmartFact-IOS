@@ -6,8 +6,8 @@ target 'SmartFact' do
   use_frameworks!
 
   # Pods for SmartFact
+  pod 'MaterialComponents'
   pod 'Alamofire', '~> 4.4'
-  pod 'SideMenu'
 
   target 'SmartFactTests' do
     inherit! :search_paths

@@ -116,9 +116,6 @@
                                 <rect key="frame" x="20" y="35" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu"/>
-                                <connections>
-                                    <action selector="logoutUser:" destination="h1P-38-J8Y" eventType="touchUpInside" id="MFa-fp-KWH"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -131,7 +128,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="OJf-Bt-BAf"/>
                     <connections>
-                        <outlet property="menuBtn" destination="lYc-Wr-icw" id="92R-lP-Prb"/>
                         <outlet property="usernameLbl" destination="C5a-rV-3MO" id="AwG-t6-736"/>
                         <segue destination="LW3-u0-HHz" kind="show" identifier="LogoutUserSegue" id="aQz-QW-yLl"/>
                     </connections>

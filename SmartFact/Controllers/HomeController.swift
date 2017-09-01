@@ -29,12 +29,6 @@ class HomeController: UIViewController
     @IBAction func logoutUser(_ sender: Any)
     {
         AuthService.instance.isLoggedIn = false
-        DataService.instance.deletePersonalUser { (success) in
-            
-            if success {
-                print("User deleted !")
-            }
-        }
         self.performSegue(withIdentifier: "LogoutUserSegue", sender: self)
     }
 }

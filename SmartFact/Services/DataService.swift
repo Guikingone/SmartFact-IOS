@@ -157,18 +157,4 @@ class DataService
             }
         }
     }
-    
-    func deletePersonalUser(completionHandler: @escaping CompletionHandler)
-    {
-        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        // TODO : Add a predicate on the username or email.
-        
-        do {
-            let user = try managedContext.fetch(fetchRequest)
-            managedContext.delete(user as! NSManagedObject)
-        } catch {
-            debugPrint(error)
-        }
-    }
 }
