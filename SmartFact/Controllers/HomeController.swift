@@ -10,9 +10,6 @@ import UIKit
 
 class HomeController: UIViewController
 {
-    @IBOutlet weak var menuBtn: UIButton!
-    @IBOutlet weak var usernameLbl: UILabel!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()

@@ -26,6 +26,9 @@
 		F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07454461F44B75000D2F138 /* ForgotPasswordController.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
 		F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0D8241F55BC9E00421A51 /* UserMock.swift */; };
+		F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */; };
+		F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14ED1F5D41D0004C2728 /* MeetupsDetailsController.swift */; };
+		F0AE14F01F5D43B2004C2728 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14EF1F5D43B2004C2728 /* UserController.swift */; };
 		F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19331F31CC79006615CB /* AppDelegate.swift */; };
 		F0EB19361F31CC79006615CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* HomeController.swift */; };
 		F0EB19391F31CC79006615CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EB19371F31CC79006615CB /* Main.storyboard */; };
@@ -78,6 +81,9 @@
 		F07454461F44B75000D2F138 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		F0A0D8241F55BC9E00421A51 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
+		F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsDetailsController.swift; sourceTree = "<group>"; };
+		F0AE14ED1F5D41D0004C2728 /* MeetupsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupsDetailsController.swift; sourceTree = "<group>"; };
+		F0AE14EF1F5D43B2004C2728 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		F0EB19301F31CC79006615CB /* SmartFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EB19331F31CC79006615CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0EB19351F31CC79006615CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -168,6 +174,9 @@
 				F06D11A81F41E37500E032DF /* StartController.swift */,
 				F07454461F44B75000D2F138 /* ForgotPasswordController.swift */,
 				F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */,
+				F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */,
+				F0AE14ED1F5D41D0004C2728 /* MeetupsDetailsController.swift */,
+				F0AE14EF1F5D43B2004C2728 /* UserController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -567,6 +576,7 @@
 				F0EB19361F31CC79006615CB /* HomeController.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
+				F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */,
 				F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */,
 				F01FDC941F4AB620008848DD /* MainForm.swift in Sources */,
 				F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */,
@@ -575,12 +585,14 @@
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
 				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
+				F0AE14F01F5D43B2004C2728 /* UserController.swift in Sources */,
 				F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */,
 				F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
 				F06D11991F41E1F100E032DF /* LoginController.swift in Sources */,
 				F06D119E1F41E27100E032DF /* AuthService.swift in Sources */,
+				F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
