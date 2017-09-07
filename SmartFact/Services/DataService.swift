@@ -6,7 +6,6 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-import CoreData
 import Alamofire
 import Foundation
 
@@ -20,43 +19,22 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
+                    let id = json["id"] as! String
+                    let username = json["username"] as! String
+                    let email = json["email"] as! String
+                    let firstname = json["firstname"] as! String
+                    let lastname = json["lastname"] as! String
                     
-                    // Allow to search if the user already exist in Core Data.
-                    do {
-                        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-                        let users = try managedContext.fetch(fetchRequest) as! [User]
-                        for user in users {
-                            if user.email == json["email"] as? String {
-                                let personalUser = user
-                                print(personalUser)
-                            }
-                        }
-//                        for user in self.users {
-//                            if user.email == json["email"] as? String {
-//                                print("User already found !")
-//                                return
-//                            } else {
-//                                let user = User(context: managedContext)
-//                                user.id = json["id"] as? String
-//                                user.firstname = json["firstname"] as? String
-//                                user.lastname = json["lastname"] as? String
-//                                user.email = json["email"] as? String
-//                                user.username = json["username"] as? String
-//                                do {
-//                                    try managedContext.save()
-//                                    completionHandler(true)
-//                                } catch {
-//                                    debugPrint("Error : \(error.localizedDescription)")
-//                                    completionHandler(false)
-//                                }
-//                            }
-//                        }
-                    } catch {
-                        debugPrint(error)
-                    }
+                    // Store the data received from the API into the UserService.
+                    UserService.instance.setUserData(
+                        id: id,
+                        username: username,
+                        firstname: firstname,
+                        lastname: lastname,
+                        email: email
+                    )
+                    completionHandler(true)
                 }
-                completionHandler(true)
             } else {
                 completionHandler(false)
                 debugPrint(response.result.error as Any)
@@ -70,18 +48,7 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // Allow to search if new bills can be added in Core Data.
-                    do {
-                        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Bills")
-                        let bills = try managedContext.fetch(fetchRequest) as! [Bills]
-                        for bill in bills {
-                            // TODO: Found if there's no new bills.
-                            
-                        }
-                    } catch {
-                        debugPrint(error)
-                    }
+                    // TODO
                 }
                 completionHandler(true)
             } else {

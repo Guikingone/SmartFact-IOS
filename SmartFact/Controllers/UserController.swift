@@ -10,5 +10,11 @@ import UIKit
 
 class UserController: UIViewController
 {
+    @IBOutlet weak var usernameTxtLabel: UILabel!
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.usernameTxtLabel.text = UserService.instance.username
+    }
 }

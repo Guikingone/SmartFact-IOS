@@ -10,15 +10,16 @@ import UIKit
 
 class HomeController: UIViewController
 {
+    @IBOutlet weak var usernameTxtLabel: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        DataService.instance.getPersonalUserInformations { (success) in
-            
+        DataService.instance.getPersonalUserInformations {
+            (success) in
             if success {
-                // TODO
-                // Change the username displayed
+                self.usernameTxtLabel.text = "Hello \(UserService.instance.username)"
             }
         }
     }

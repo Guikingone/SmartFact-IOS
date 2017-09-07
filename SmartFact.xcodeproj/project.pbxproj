@@ -23,6 +23,7 @@
 		F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A31F41E2E900E032DF /* ClientController.swift */; };
 		F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A51F41E2FC00E032DF /* BillsController.swift */; };
 		F06D11A91F41E37500E032DF /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A81F41E37500E032DF /* StartController.swift */; };
+		F06E27A31F6126FA00CAD63D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E27A21F6126FA00CAD63D /* UserService.swift */; };
 		F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07454461F44B75000D2F138 /* ForgotPasswordController.swift */; };
 		F0892BC71F5FF65F00707C04 /* BackBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0892BC61F5FF65F00707C04 /* BackBtn.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
@@ -79,6 +80,7 @@
 		F06D11A31F41E2E900E032DF /* ClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientController.swift; sourceTree = "<group>"; };
 		F06D11A51F41E2FC00E032DF /* BillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsController.swift; sourceTree = "<group>"; };
 		F06D11A81F41E37500E032DF /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		F06E27A21F6126FA00CAD63D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F07454461F44B75000D2F138 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F0892BC61F5FF65F00707C04 /* BackBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBtn.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				F06D119D1F41E27100E032DF /* AuthService.swift */,
 				F04109E11F4350EB009D04A4 /* DataService.swift */,
+				F06E27A21F6126FA00CAD63D /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
+				F06E27A31F6126FA00CAD63D /* UserService.swift in Sources */,
 				F06D11991F41E1F100E032DF /* LoginController.swift in Sources */,
 				F06D119E1F41E27100E032DF /* AuthService.swift in Sources */,
 				F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */,

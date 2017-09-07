@@ -10,5 +10,7 @@ import UIKit
 
 class PlanningController: UIViewController
 {
+    @IBOutlet weak var meetupsDetailsBtn: UIButton!
+    
     
 }
