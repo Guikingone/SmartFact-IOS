@@ -6,15 +6,30 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-class UserService
+class UserManager
 {
-    static let instance = UserService()
+    static let instance = UserManager()
     
-    public private(set) var id: String = ""
-    public private(set) var username: String = ""
-    public private(set) var firstname: String = ""
-    public private(set) var lastname: String = ""
-    public private(set) var email: String = ""
+    func create(data: Dictionary<String, Any>)
+    {
+        UserMock.instance.createUser(
+            id: data["id"] as! String,
+            username: data["username"] as! String,
+            firstname: data["firstname"] as! String,
+            lastname: data["lastname"] as! String,
+            email: data["email"] as! String
+        )
+    }
+    
+    func deleteUserData()
+    {
+        
+    }
+    
+    func patchUserData()
+    {
+        UserMock.instance.patchUser()
+    }
     
     func saveUserData()
     {
@@ -53,24 +68,5 @@ class UserService
         //                    } catch {
         //                        debugPrint(error)
         //                    }
-    }
-    
-    func setUserData(id: String, username: String, firstname: String, lastname:String, email: String)
-    {
-        self.id = id
-        self.username = username
-        self.firstname = firstname
-        self.lastname = lastname
-        self.email = email
-    }
-    
-    func deleteUserData()
-    {
-        
-    }
-    
-    func patchUserData()
-    {
-        
     }
 }

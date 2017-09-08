@@ -10,8 +10,13 @@ import UIKit
 
 class BillsController: UIViewController
 {
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
+        DataService.instance.getPersonalBills { (success) in
+            if success {
+                // TODO : Display all the bills saved.
+            }
+        }
     }
 }

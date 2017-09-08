@@ -15,6 +15,6 @@ class UserController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.usernameTxtLabel.text = UserService.instance.username
+        self.usernameTxtLabel.text = UserMock.instance.username
     }
 }

@@ -14,6 +14,15 @@
 		F01FDC941F4AB620008848DD /* MainForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDC931F4AB620008848DD /* MainForm.swift */; };
 		F04109E01F4341A3009D04A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109DF1F4341A3009D04A4 /* Constants.swift */; };
 		F04109E21F4350EB009D04A4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109E11F4350EB009D04A4 /* DataService.swift */; };
+		F06263661F627F5F00B03536 /* BillsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263651F627F5F00B03536 /* BillsManager.swift */; };
+		F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263671F627F9C00B03536 /* PlanningManager.swift */; };
+		F062636A1F6280F200B03536 /* BillsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263691F6280F200B03536 /* BillsMock.swift */; };
+		F062636C1F62D5B400B03536 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062636B1F62D5B400B03536 /* LoadingController.swift */; };
+		F062636E1F62D78700B03536 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062636D1F62D78700B03536 /* NotificationsManager.swift */; };
+		F06263701F62D79900B03536 /* NotificationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062636F1F62D79900B03536 /* NotificationsMock.swift */; };
+		F06263721F62D8C100B03536 /* MeetupsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263711F62D8C100B03536 /* MeetupsManager.swift */; };
+		F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263731F62D8D200B03536 /* MeetupsMock.swift */; };
+		F06263761F62D8E400B03536 /* PlanningMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263751F62D8E400B03536 /* PlanningMock.swift */; };
 		F06D11971F41E13100E032DF /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11961F41E13100E032DF /* RegisterController.swift */; };
 		F06D11991F41E1F100E032DF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11981F41E1F100E032DF /* LoginController.swift */; };
 		F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D119A1F41E22400E032DF /* PlanningController.swift */; };
@@ -23,7 +32,10 @@
 		F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A31F41E2E900E032DF /* ClientController.swift */; };
 		F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A51F41E2FC00E032DF /* BillsController.swift */; };
 		F06D11A91F41E37500E032DF /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A81F41E37500E032DF /* StartController.swift */; };
-		F06E27A31F6126FA00CAD63D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E27A21F6126FA00CAD63D /* UserService.swift */; };
+		F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E27A21F6126FA00CAD63D /* UserManager.swift */; };
+		F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E731F62DEE400D71DBB /* AccountingMock.swift */; };
+		F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E751F62DEF400D71DBB /* AccountingManager.swift */; };
+		F0732E781F62E12B00D71DBB /* ClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E771F62E12B00D71DBB /* ClientsManager.swift */; };
 		F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07454461F44B75000D2F138 /* ForgotPasswordController.swift */; };
 		F0892BC71F5FF65F00707C04 /* BackBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0892BC61F5FF65F00707C04 /* BackBtn.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
@@ -71,6 +83,15 @@
 		F01FDC931F4AB620008848DD /* MainForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForm.swift; sourceTree = "<group>"; };
 		F04109DF1F4341A3009D04A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F04109E11F4350EB009D04A4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F06263651F627F5F00B03536 /* BillsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsManager.swift; sourceTree = "<group>"; };
+		F06263671F627F9C00B03536 /* PlanningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningManager.swift; sourceTree = "<group>"; };
+		F06263691F6280F200B03536 /* BillsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsMock.swift; sourceTree = "<group>"; };
+		F062636B1F62D5B400B03536 /* LoadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
+		F062636D1F62D78700B03536 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		F062636F1F62D79900B03536 /* NotificationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsMock.swift; sourceTree = "<group>"; };
+		F06263711F62D8C100B03536 /* MeetupsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupsManager.swift; sourceTree = "<group>"; };
+		F06263731F62D8D200B03536 /* MeetupsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupsMock.swift; sourceTree = "<group>"; };
+		F06263751F62D8E400B03536 /* PlanningMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningMock.swift; sourceTree = "<group>"; };
 		F06D11961F41E13100E032DF /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		F06D11981F41E1F100E032DF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F06D119A1F41E22400E032DF /* PlanningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningController.swift; sourceTree = "<group>"; };
@@ -80,7 +101,10 @@
 		F06D11A31F41E2E900E032DF /* ClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientController.swift; sourceTree = "<group>"; };
 		F06D11A51F41E2FC00E032DF /* BillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsController.swift; sourceTree = "<group>"; };
 		F06D11A81F41E37500E032DF /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
-		F06E27A21F6126FA00CAD63D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F06E27A21F6126FA00CAD63D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		F0732E731F62DEE400D71DBB /* AccountingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingMock.swift; sourceTree = "<group>"; };
+		F0732E751F62DEF400D71DBB /* AccountingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingManager.swift; sourceTree = "<group>"; };
+		F0732E771F62E12B00D71DBB /* ClientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsManager.swift; sourceTree = "<group>"; };
 		F07454461F44B75000D2F138 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F0892BC61F5FF65F00707C04 /* BackBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBtn.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
@@ -164,6 +188,20 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		F06263641F627F0300B03536 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F06E27A21F6126FA00CAD63D /* UserManager.swift */,
+				F06263651F627F5F00B03536 /* BillsManager.swift */,
+				F06263671F627F9C00B03536 /* PlanningManager.swift */,
+				F062636D1F62D78700B03536 /* NotificationsManager.swift */,
+				F06263711F62D8C100B03536 /* MeetupsManager.swift */,
+				F0732E751F62DEF400D71DBB /* AccountingManager.swift */,
+				F0732E771F62E12B00D71DBB /* ClientsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F06D11951F41E0AC00E032DF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +228,6 @@
 			children = (
 				F06D119D1F41E27100E032DF /* AuthService.swift */,
 				F04109E11F4350EB009D04A4 /* DataService.swift */,
-				F06E27A21F6126FA00CAD63D /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,6 +238,7 @@
 				F09417AE1F48741A001FB7BC /* MainButton.swift */,
 				F01FDC931F4AB620008848DD /* MainForm.swift */,
 				F0892BC61F5FF65F00707C04 /* BackBtn.swift */,
+				F062636B1F62D5B400B03536 /* LoadingController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +247,11 @@
 			isa = PBXGroup;
 			children = (
 				F0A0D8241F55BC9E00421A51 /* UserMock.swift */,
+				F06263691F6280F200B03536 /* BillsMock.swift */,
+				F062636F1F62D79900B03536 /* NotificationsMock.swift */,
+				F06263731F62D8D200B03536 /* MeetupsMock.swift */,
+				F06263751F62D8E400B03536 /* PlanningMock.swift */,
+				F0732E731F62DEE400D71DBB /* AccountingMock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +281,7 @@
 		F0EB19321F31CC79006615CB /* SmartFact */ = {
 			isa = PBXGroup;
 			children = (
+				F06263641F627F0300B03536 /* Managers */,
 				F0A0D8231F55BC9800421A51 /* Models */,
 				F04109DE1F434195009D04A4 /* Utilities */,
 				F06D11A71F41E34600E032DF /* View */,
@@ -348,6 +392,7 @@
 				TargetAttributes = {
 					F0EB192F1F31CC79006615CB = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = PN7CAY235J;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -472,20 +517,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -577,27 +612,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0732E781F62E12B00D71DBB /* ClientsManager.swift in Sources */,
 				F0892BC71F5FF65F00707C04 /* BackBtn.swift in Sources */,
 				F06D11971F41E13100E032DF /* RegisterController.swift in Sources */,
 				F04109E21F4350EB009D04A4 /* DataService.swift in Sources */,
+				F062636E1F62D78700B03536 /* NotificationsManager.swift in Sources */,
+				F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeController.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
+				F06263761F62D8E400B03536 /* PlanningMock.swift in Sources */,
 				F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */,
 				F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */,
+				F062636C1F62D5B400B03536 /* LoadingController.swift in Sources */,
+				F06263701F62D79900B03536 /* NotificationsMock.swift in Sources */,
 				F01FDC941F4AB620008848DD /* MainForm.swift in Sources */,
+				F06263721F62D8C100B03536 /* MeetupsManager.swift in Sources */,
 				F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */,
 				F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */,
 				F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */,
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,
+				F06263661F627F5F00B03536 /* BillsManager.swift in Sources */,
+				F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
 				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
 				F0AE14F01F5D43B2004C2728 /* UserController.swift in Sources */,
+				F062636A1F6280F200B03536 /* BillsMock.swift in Sources */,
 				F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */,
 				F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */,
+				F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
+				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
-				F06E27A31F6126FA00CAD63D /* UserService.swift in Sources */,
+				F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */,
 				F06D11991F41E1F100E032DF /* LoginController.swift in Sources */,
 				F06D119E1F41E27100E032DF /* AuthService.swift in Sources */,
 				F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */,
@@ -767,6 +814,7 @@
 			baseConfigurationReference = 5D52632CAEC9351B1CF11F92 /* Pods-SmartFact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PN7CAY235J;
 				INFOPLIST_FILE = SmartFact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.guillaumeloulier.SmartFact;
@@ -781,6 +829,7 @@
 			baseConfigurationReference = 25C9A59A601768CAEDEEBA82 /* Pods-SmartFact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PN7CAY235J;
 				INFOPLIST_FILE = SmartFact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.guillaumeloulier.SmartFact;

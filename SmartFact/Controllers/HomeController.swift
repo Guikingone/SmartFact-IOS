@@ -15,11 +15,10 @@ class HomeController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         DataService.instance.getPersonalUserInformations {
             (success) in
             if success {
-                self.usernameTxtLabel.text = "Hello \(UserService.instance.username)"
+                self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
             }
         }
     }

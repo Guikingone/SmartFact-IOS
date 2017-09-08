@@ -13,26 +13,13 @@ class DataService
 {
     static let instance = DataService()
     
-    func getPersonalUserInformations(completionHandler: @escaping CompletionHandler)
+    public func getPersonalUserInformations(completionHandler: @escaping CompletionHandler)
     {
         Alamofire.request(URI_PERSONAl_USER, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    let id = json["id"] as! String
-                    let username = json["username"] as! String
-                    let email = json["email"] as! String
-                    let firstname = json["firstname"] as! String
-                    let lastname = json["lastname"] as! String
-                    
-                    // Store the data received from the API into the UserService.
-                    UserService.instance.setUserData(
-                        id: id,
-                        username: username,
-                        firstname: firstname,
-                        lastname: lastname,
-                        email: email
-                    )
+                    UserManager.instance.create(data: json)
                     completionHandler(true)
                 }
             } else {
@@ -42,15 +29,31 @@ class DataService
         }
     }
     
-    func getPersonalBills(completionHandler: @escaping CompletionHandler)
+    public func getPersonalBills(completionHandler: @escaping CompletionHandler)
     {
         Alamofire.request(URI_PERSONAL_BILLS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // TODO
+                    BillsManager.instance.setBillsData(data: json)
+                    completionHandler(true)
                 }
-                completionHandler(true)
+            } else {
+                completionHandler(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    public func getPersonalAccounting(completionHandler: @escaping CompletionHandler)
+    {
+        Alamofire.request(URI_PERSONAL_ACCOUNTINGS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    AccountingManager.instance.createAccounting(data: json)
+                    completionHandler(true)
+                }
             } else {
                 completionHandler(false)
                 debugPrint(response.result.error as Any)
@@ -64,15 +67,14 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // TODO
+                    ClientsManager.instance.create(data: json)
+                    completionHandler(true)
                 }
-                completionHandler(true)
             } else {
                 completionHandler(false)
                 debugPrint(response.result.error as Any)
             }
         }
-        
     }
     
     func getPersonalPlanning(completionHandler: @escaping CompletionHandler)
@@ -81,9 +83,9 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // TODO
+                    PlanningManager.instance.create(data: json)
+                    completionHandler(true)
                 }
-                completionHandler(true)
             } else {
                 completionHandler(false)
                 debugPrint(response.result.error as Any)
@@ -98,9 +100,9 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // TODO
+                    MeetupsManager.instance.create(data: json)
+                    completionHandler(true)
                 }
-                completionHandler(true)
             } else {
                 completionHandler(false)
                 debugPrint(response.result.error as Any)
@@ -115,9 +117,9 @@ class DataService
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    // TODO
+                    NotificationsManager.instance.createNotifications(data: json)
+                    completionHandler(true)
                 }
-                completionHandler(true)
             } else {
                 completionHandler(false)
                 debugPrint(response.result.error as Any)

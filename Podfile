@@ -6,7 +6,6 @@ target 'SmartFact' do
   use_frameworks!
 
   # Pods for SmartFact
-  pod 'MaterialComponents'
   pod 'Alamofire', '~> 4.4'
 
   target 'SmartFactTests' do

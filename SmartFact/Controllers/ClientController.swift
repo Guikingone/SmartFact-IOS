@@ -8,6 +8,7 @@
 
 import UIKit
 
-class ClientController: UIViewController {
+class ClientController: UIViewController
+{
     
 }
