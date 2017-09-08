@@ -10,6 +10,9 @@ import UIKit
 
 class BillsController: UIViewController
 {
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var billsList: UITableView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
