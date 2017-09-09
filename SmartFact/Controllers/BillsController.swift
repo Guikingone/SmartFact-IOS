@@ -16,10 +16,36 @@ class BillsController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        DataService.instance.getPersonalBills { (success) in
-            if success {
-                // TODO : Display all the bills saved.
-            }
-        }
+        billsList.delegate = self
+        billsList.dataSource = self
+        
+        // TODO : Check if there's data, if not, show the label.
+        //        If so, show the table then load data from API (or CoreData if
+        //        the option was checked).
+        
+        billsList.isHidden = false
+        
+//        DataService.instance.getPersonalBills { (success) in
+//            if success {
+//                // TODO : Display all the bills saved.
+//            }
+//        }
+    }
+}
+
+extension BillsController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = billsList.dequeueReusableCell(withIdentifier: "billCell") as? BillsCell
+            else { return UITableViewCell() }
+        cell.configureCell(client: "Mr Test", total: 12.5)
+        return cell
     }
 }

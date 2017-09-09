@@ -10,7 +10,7 @@ class BillsManager
 {
     static let instance = BillsManager()
     
-    public private(set) var bills: [String: Any] = [:]
+    public private(set) var bills: [BillsMock] = []
     
     public func setBillsData(data: Dictionary<String, Any>)
     {
@@ -19,5 +19,30 @@ class BillsManager
             let bills = BillsMock()
             
         }
+    }
+    
+    public func patchBillById(id: String)
+    {
+        
+    }
+    
+    public func fetchBills()
+    {
+        
+    }
+    
+    public func fetchBillById(id: String)
+    {
+        
+    }
+    
+    public func deleteBills()
+    {
+        
+    }
+    
+    public func deleteBillById(id: String)
+    {
+        
     }
 }

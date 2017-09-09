@@ -10,6 +10,7 @@
 		50E2CD9190B9CF8EDBF8518B /* Pods_SmartFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B96A7993270BE6F435116E /* Pods_SmartFactTests.framework */; };
 		6C9676C51CD0580EF8661994 /* Pods_SmartFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98D45E855242B951EA28F9 /* Pods_SmartFactUITests.framework */; };
 		8C7251F25A878DB78215179C /* Pods_SmartFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */; };
+		F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A62F31F6444F4000B6BE9 /* BillsCell.swift */; };
 		F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */; };
 		F01FDC941F4AB620008848DD /* MainForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDC931F4AB620008848DD /* MainForm.swift */; };
 		F04109E01F4341A3009D04A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109DF1F4341A3009D04A4 /* Constants.swift */; };
@@ -79,6 +80,7 @@
 		870AA475E34B2EDDF4CD65A5 /* Pods-SmartFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactTests/Pods-SmartFactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC040DF31214B09F0C071154 /* Pods-SmartFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactUITests/Pods-SmartFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F00A62F31F6444F4000B6BE9 /* BillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsCell.swift; sourceTree = "<group>"; };
 		F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		F01FDC931F4AB620008848DD /* MainForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForm.swift; sourceTree = "<group>"; };
 		F04109DF1F4341A3009D04A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				F01FDC931F4AB620008848DD /* MainForm.swift */,
 				F0892BC61F5FF65F00707C04 /* BackBtn.swift */,
 				F062636B1F62D5B400B03536 /* LoadingController.swift */,
+				F00A62F31F6444F4000B6BE9 /* BillsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
 				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,
+				F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
 				F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */,
 				F06D11991F41E1F100E032DF /* LoginController.swift in Sources */,
