@@ -13,7 +13,7 @@ class UserManager
     func create(data: Dictionary<String, Any>)
     {
         UserMock.instance.createUser(
-            id: data["id"] as! String,
+            id: (data["id"] as? String)!,
             username: data["username"] as! String,
             firstname: data["firstname"] as! String,
             lastname: data["lastname"] as! String,

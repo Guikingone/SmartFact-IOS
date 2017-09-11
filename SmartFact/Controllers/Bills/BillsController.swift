@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class BillsController: UIViewController
 {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var billsList: UITableView!
+    
+    var bills: [BillsMock] = []
     
     override func viewDidLoad()
     {
@@ -28,12 +31,24 @@ class BillsController: UIViewController
 //        DataService.instance.getPersonalBills { (success) in
 //            if success {
 //                // TODO : Display all the bills saved.
+//                fetch(entityname: "Bills", completion: { (success) in
+//                    if success {
+//
+//                    }
+//                })
 //            }
 //        }
     }
+    
+    @IBAction func createBillAction(_ sender: Any)
+    {
+        guard let createBillController = storyboard?.instantiateViewController(withIdentifier: "createBillController") else { return }
+        presentDetails(createBillController)
+    }
 }
 
-extension BillsController: UITableViewDelegate, UITableViewDataSource {
+extension BillsController: UITableViewDelegate, UITableViewDataSource
+{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

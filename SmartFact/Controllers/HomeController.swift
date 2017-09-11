@@ -15,6 +15,7 @@ class HomeController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         DataService.instance.getPersonalUserInformations {
             (success) in
             if success {
