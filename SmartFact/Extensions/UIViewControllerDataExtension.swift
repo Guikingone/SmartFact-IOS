@@ -11,6 +11,15 @@ import CoreData
 
 extension UIViewController
 {
+    public func deviceStorage()
+    {
+        if !StorageService.instance.deviceStorage {
+            return
+        } else {
+            StorageService.instance.callCoreDataManagers()
+        }
+    }
+    
     public func fetch(entityname: String, completion: (_ complete: Bool) -> ())
     {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }

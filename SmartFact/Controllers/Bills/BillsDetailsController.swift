@@ -10,5 +10,15 @@ import UIKit
 
 class BillsDetailsController: UIViewController
 {
+    @IBOutlet weak var billClientNameLabel: UILabel!
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func backBtnWasPressed(_ sender: Any)
+    {
+        dismissDetails()
+    }
 }

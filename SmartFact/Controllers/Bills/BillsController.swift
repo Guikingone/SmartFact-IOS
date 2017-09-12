@@ -7,14 +7,11 @@
 //
 
 import UIKit
-import CoreData
 
 class BillsController: UIViewController
 {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var billsList: UITableView!
-    
-    var bills: [BillsMock] = []
     
     override func viewDidLoad()
     {
@@ -26,7 +23,10 @@ class BillsController: UIViewController
         //        If so, show the table then load data from API (or CoreData if
         //        the option was checked).
         
-        billsList.isHidden = false
+        if BillsManager.instance.bills.count == 0 {
+            self.billsList.isHidden = true
+            self.welcomeLabel.isHidden = false
+        }
         
 //        DataService.instance.getPersonalBills { (success) in
 //            if success {
@@ -54,7 +54,7 @@ extension BillsController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return BillsManager.instance.bills.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,5 +62,12 @@ extension BillsController: UITableViewDelegate, UITableViewDataSource
             else { return UITableViewCell() }
         cell.configureCell(client: "Mr Test", total: 12.5)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let billDetailController = storyboard?.instantiateViewController(
+            withIdentifier: "BillsDetailsController"
+            ) as? BillsDetailsController else { return }
+        present(billDetailController, animated: true, completion: nil)
     }
 }

@@ -38,6 +38,10 @@
 		F0732E781F62E12B00D71DBB /* ClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E771F62E12B00D71DBB /* ClientsManager.swift */; };
 		F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07454461F44B75000D2F138 /* ForgotPasswordController.swift */; };
 		F0892BC71F5FF65F00707C04 /* BackBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0892BC61F5FF65F00707C04 /* BackBtn.swift */; };
+		F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D51F67B6E800879405 /* UIViewExtension.swift */; };
+		F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D71F67C03400879405 /* UIButtonExtension.swift */; };
+		F08A85DA1F67C27700879405 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D91F67C27700879405 /* StorageService.swift */; };
+		F08A85DD1F67C43500879405 /* ManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85DC1F67C43500879405 /* ManagerFactory.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
 		F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0D8241F55BC9E00421A51 /* UserMock.swift */; };
 		F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */; };
@@ -110,6 +114,10 @@
 		F0732E771F62E12B00D71DBB /* ClientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsManager.swift; sourceTree = "<group>"; };
 		F07454461F44B75000D2F138 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F0892BC61F5FF65F00707C04 /* BackBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBtn.swift; sourceTree = "<group>"; };
+		F08A85D51F67B6E800879405 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F08A85D71F67C03400879405 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		F08A85D91F67C27700879405 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		F08A85DC1F67C43500879405 /* ManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFactory.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		F0A0D8241F55BC9E00421A51 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
 		F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsDetailsController.swift; sourceTree = "<group>"; };
@@ -228,6 +236,7 @@
 			children = (
 				F06D119D1F41E27100E032DF /* AuthService.swift */,
 				F04109E11F4350EB009D04A4 /* DataService.swift */,
+				F08A85D91F67C27700879405 /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,6 +250,14 @@
 				F00A62F31F6444F4000B6BE9 /* BillsCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F08A85DB1F67C42B00879405 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				F08A85DC1F67C43500879405 /* ManagerFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		F0A0D8231F55BC9800421A51 /* Models */ = {
@@ -308,6 +325,8 @@
 			children = (
 				F0D5C94F1F66EC480005AF91 /* UIViewControllerExtension.swift */,
 				F0D5C9511F66FDA10005AF91 /* UIViewControllerDataExtension.swift */,
+				F08A85D51F67B6E800879405 /* UIViewExtension.swift */,
+				F08A85D71F67C03400879405 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,6 +356,7 @@
 		F0EB19321F31CC79006615CB /* SmartFact */ = {
 			isa = PBXGroup;
 			children = (
+				F08A85DB1F67C42B00879405 /* Factory */,
 				F0D5C94E1F66EC240005AF91 /* Extensions */,
 				F06263641F627F0300B03536 /* Managers */,
 				F0A0D8231F55BC9800421A51 /* Models */,
@@ -682,6 +702,7 @@
 				F06263761F62D8E400B03536 /* PlanningMock.swift in Sources */,
 				F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */,
 				F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */,
+				F08A85DA1F67C27700879405 /* StorageService.swift in Sources */,
 				F06263701F62D79900B03536 /* NotificationsMock.swift in Sources */,
 				F01FDC941F4AB620008848DD /* MainForm.swift in Sources */,
 				F0D5C9521F66FDA10005AF91 /* UIViewControllerDataExtension.swift in Sources */,
@@ -690,15 +711,18 @@
 				F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */,
 				F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */,
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,
+				F08A85DD1F67C43500879405 /* ManagerFactory.swift in Sources */,
 				F06263661F627F5F00B03536 /* BillsManager.swift in Sources */,
 				F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
 				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
 				F0AE14F01F5D43B2004C2728 /* UserController.swift in Sources */,
+				F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */,
 				F062636A1F6280F200B03536 /* BillsMock.swift in Sources */,
 				F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */,
 				F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */,
 				F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */,
+				F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
 				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,
 				F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */,
