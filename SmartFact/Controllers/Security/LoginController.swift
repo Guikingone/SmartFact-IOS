@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class LoginController: UIViewController
 {
     @IBOutlet weak var usernameTxtField: MainForm!
     @IBOutlet weak var passwordTxtField: MainForm!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        // Adding the TouchID feature for authentication.
+        if LABiometryType.typeTouchID.rawValue == 1 {
+            
+        }
+    }
     
     @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue){}
     
