@@ -10,5 +10,8 @@ import UIKit
 
 class ClientController: UIViewController
 {
-    
+    @IBAction func backBtnPressed(_ sender: Any)
+    {
+        dismissDetails()
+    }
 }

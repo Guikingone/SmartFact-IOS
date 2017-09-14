@@ -26,7 +26,6 @@ class HomeController: UIViewController
     
     @IBAction func logoutUser(_ sender: Any)
     {
-        AuthService.instance.isLoggedIn = false
-        self.performSegue(withIdentifier: "LogoutUserSegue", sender: self)
+        logout()
     }
 }

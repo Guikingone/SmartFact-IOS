@@ -12,5 +12,11 @@ class PlanningController: UIViewController
 {
     @IBOutlet weak var meetupsDetailsBtn: UIButton!
     
-    
+    @IBAction func createMeetup(_ sender: Any)
+    {
+        guard let createMeetupController = storyboard?.instantiateViewController(
+            withIdentifier: "createMeetupController"
+            ) as? CreateMeetupController else { return }
+        present(createMeetupController, animated: true, completion: nil)
+    }
 }

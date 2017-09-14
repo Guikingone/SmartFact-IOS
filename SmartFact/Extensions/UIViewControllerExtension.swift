@@ -10,6 +10,11 @@ import UIKit
 
 extension UIViewController
 {
+    public func logout()
+    {
+    
+    }
+    
     public func presentDetails(_ viewControllerToPresent: UIViewController)
     {
         let transition = CATransition()
