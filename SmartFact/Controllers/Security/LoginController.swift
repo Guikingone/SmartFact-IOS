@@ -14,14 +14,9 @@ class LoginController: UIViewController
     @IBOutlet weak var usernameTxtField: MainForm!
     @IBOutlet weak var passwordTxtField: MainForm!
     
-    override func viewDidLoad()
+    override func viewDidAppear(_ animated: Bool)
     {
-        super.viewDidLoad()
-        
-        // Adding the TouchID feature for authentication.
-        if LABiometryType.typeTouchID.rawValue == 1 {
-            
-        }
+        biometricLogin()
     }
     
     @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue){}
