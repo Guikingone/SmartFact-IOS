@@ -10,5 +10,10 @@ import UIKit
 
 class AccountingController: UIViewController
 {
+    @IBOutlet weak var accountingNameTxtField: UILabel!
     
+    @IBAction func backBtnPressed(_ sender: Any)
+    {
+        dismissDetails()
+    }
 }

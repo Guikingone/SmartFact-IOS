@@ -424,13 +424,23 @@
                                     <action selector="backBtnPressed:" destination="RD3-22-FpY" eventType="touchUpInside" id="GWM-K1-t3J"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nn-ff-Wpq">
+                                <rect key="frame" x="166" y="64" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7Pp-ev-djV" firstAttribute="top" secondItem="qgt-U1-cAb" secondAttribute="bottom" id="04o-V5-rSa"/>
                             <constraint firstItem="7Pp-ev-djV" firstAttribute="leading" secondItem="n9R-DO-JeS" secondAttribute="leadingMargin" id="S4x-fC-Fgy"/>
+                            <constraint firstItem="1nn-ff-Wpq" firstAttribute="top" secondItem="qgt-U1-cAb" secondAttribute="bottom" constant="20" id="TLS-5s-kMQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clientNameTxtField" destination="1nn-ff-Wpq" id="BZ6-Y5-bBe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wki-aD-lSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -451,14 +461,27 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ld-2b-aHd">
                                 <rect key="frame" x="16" y="44" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="C3p-y1-4tz" eventType="touchUpInside" id="DH0-2H-9CN"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gja-3A-eh3">
+                                <rect key="frame" x="166" y="64" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gja-3A-eh3" firstAttribute="top" secondItem="31b-bZ-Gh5" secondAttribute="bottom" constant="20" id="56J-Zk-zb3"/>
                             <constraint firstItem="9ld-2b-aHd" firstAttribute="leading" secondItem="Ni6-GT-66z" secondAttribute="leadingMargin" id="Z1t-C8-Xqe"/>
                             <constraint firstItem="9ld-2b-aHd" firstAttribute="top" secondItem="31b-bZ-Gh5" secondAttribute="bottom" id="uhC-Re-7Vm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountingNameTxtField" destination="gja-3A-eh3" id="O6c-lz-fKr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIg-Af-mua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -555,6 +578,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createBillBtn:" destination="LRH-xr-sSY" eventType="touchUpInside" id="dsM-WF-73x"/>
+                                    <action selector="createMeetup:" destination="tlT-Kb-HrL" eventType="touchUpInside" id="BV7-Ae-yWI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -594,13 +618,23 @@
                                     <action selector="backBtnWasPressed:" destination="eNc-H2-DJ3" eventType="touchUpInside" id="U7j-i3-a6A"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epV-HK-eKP">
+                                <rect key="frame" x="166" y="64" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="epV-HK-eKP" firstAttribute="top" secondItem="5MB-Ex-aLI" secondAttribute="bottom" constant="20" id="2kz-X1-6h3"/>
                             <constraint firstItem="HmS-PT-gMu" firstAttribute="top" secondItem="5MB-Ex-aLI" secondAttribute="bottom" id="56I-li-G8f"/>
                             <constraint firstItem="HmS-PT-gMu" firstAttribute="leading" secondItem="Fay-Pu-yuf" secondAttribute="leadingMargin" id="Wgx-t2-sqT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="meetupResumeTxtField" destination="epV-HK-eKP" id="h1L-uE-XGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLm-tb-P32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1117,6 +1151,6 @@
         <image name="ic_reorder.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kwo-Kj-9PE"/>
+        <segue reference="q0k-9U-1pf"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,8 @@ import UIKit
 
 class ClientController: UIViewController
 {
+    @IBOutlet weak var clientNameTxtField: UILabel!
+    
     @IBAction func backBtnPressed(_ sender: Any)
     {
         dismissDetails()

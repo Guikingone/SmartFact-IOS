@@ -15,4 +15,8 @@ class CreateMeetupController: UIViewController
         dismissDetails()
     }
     
+    @IBAction func createMeetup(_ sender: Any)
+    {
+        
+    }
 }

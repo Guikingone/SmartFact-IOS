@@ -10,6 +10,8 @@ import UIKit
 
 class MeetupsDetailsController: UIViewController
 {
+    @IBOutlet weak var meetupResumeTxtField: UILabel!
+    
     @IBAction func backBtnWasPressed(_ sender: Any)
     {
         dismissDetails()
