@@ -12,7 +12,30 @@ extension UIViewController
 {
     public func logout()
     {
-    
+        let alert = UIAlertController(
+            title: "Logout ?",
+            message: "You've asked for getting logged out.",
+            preferredStyle: .alert
+        )
+        alert.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Yes",
+                comment: "Default action"),
+                style: .`default`,
+                handler: { _ in
+                    AuthService.instance.isLoggedIn = false;
+                    self.performSegue(withIdentifier: "logoutSegue", sender: self) }
+            )
+        )
+        alert.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Cancel",
+                comment: "Default action"),
+                style: .`default`,
+                handler: { _ in }
+            )
+        )
+        self.present(alert, animated: true, completion: nil)
     }
     
     public func presentDetails(_ viewControllerToPresent: UIViewController)
