@@ -10,5 +10,9 @@ import UIKit
 
 class CreateMeetupController: UIViewController
 {
+    @IBAction func backBtnWasPressed(_ sender: Any)
+    {
+        dismissDetails()
+    }
     
 }

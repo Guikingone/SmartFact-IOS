@@ -193,6 +193,7 @@
                             <constraint firstItem="7vS-4X-d0c" firstAttribute="leading" secondItem="Dfk-lD-Er9" secondAttribute="leadingMargin" id="FKm-Zd-Jhw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7vS-4X-d0c" secondAttribute="trailing" id="px3-q1-3X2"/>
                             <constraint firstItem="WQq-Rw-Jwj" firstAttribute="trailing" secondItem="Dfk-lD-Er9" secondAttribute="trailingMargin" id="tSu-CR-xYw"/>
+                            <constraint firstItem="3cN-V5-uDh" firstAttribute="top" secondItem="7vS-4X-d0c" secondAttribute="bottom" constant="20" id="urv-UK-sDn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Factures" id="uCK-4g-sfV"/>
@@ -256,6 +257,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="wft-4R-aBu" secondAttribute="trailing" constant="20" id="9q3-xT-yJ1"/>
                             <constraint firstItem="wft-4R-aBu" firstAttribute="leading" secondItem="ZLF-ph-KHS" secondAttribute="leadingMargin" constant="20" id="L7h-0q-gvt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6i6-dF-Hvg" secondAttribute="trailing" id="Ois-dZ-4Q8"/>
+                            <constraint firstItem="hNC-kT-Ftc" firstAttribute="top" secondItem="6i6-dF-Hvg" secondAttribute="bottom" constant="20" id="kdr-bv-w10"/>
                             <constraint firstItem="6i6-dF-Hvg" firstAttribute="leading" secondItem="ZLF-ph-KHS" secondAttribute="leadingMargin" id="p8d-Cx-W0Q"/>
                         </constraints>
                     </view>
@@ -284,7 +286,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGD-0t-kZW">
-                                <rect key="frame" x="0.0" y="728" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="708" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.2627450980392157" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ODS-hi-gei"/>
@@ -338,8 +340,8 @@
                             <constraint firstItem="boC-br-1pS" firstAttribute="leading" secondItem="4Kk-3P-kx7" secondAttribute="leadingMargin" constant="20" id="7pt-j4-K14"/>
                             <constraint firstItem="boC-br-1pS" firstAttribute="top" secondItem="YQX-HB-WKy" secondAttribute="bottom" constant="45" id="8vW-W9-bsb"/>
                             <constraint firstItem="YQX-HB-WKy" firstAttribute="top" secondItem="Ulg-nB-BdE" secondAttribute="bottom" constant="45" id="9KT-da-G2V"/>
-                            <constraint firstItem="R4U-Le-qzT" firstAttribute="top" secondItem="VGD-0t-kZW" secondAttribute="bottom" id="Din-px-l0F"/>
                             <constraint firstItem="oyI-gI-qhX" firstAttribute="leading" secondItem="4Kk-3P-kx7" secondAttribute="leadingMargin" id="HTr-UF-5ur"/>
+                            <constraint firstItem="R4U-Le-qzT" firstAttribute="top" secondItem="VGD-0t-kZW" secondAttribute="bottom" constant="20" id="JPQ-cx-Uhz"/>
                             <constraint firstItem="Ulg-nB-BdE" firstAttribute="leading" secondItem="4Kk-3P-kx7" secondAttribute="leadingMargin" constant="20" id="K9J-R7-dA2"/>
                             <constraint firstItem="Ulg-nB-BdE" firstAttribute="top" secondItem="QsS-KP-F1L" secondAttribute="bottom" constant="60" id="XKW-iX-vpx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YQX-HB-WKy" secondAttribute="trailing" constant="20" id="bnU-b9-60E"/>
@@ -475,7 +477,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="grc-td-3g7">
-                                <rect key="frame" x="16" y="399" width="343" height="330"/>
+                                <rect key="frame" x="16" y="399" width="343" height="310"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="82f-Wu-ZIE">
@@ -498,9 +500,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UyP-GN-uqe" firstAttribute="top" secondItem="grc-td-3g7" secondAttribute="bottom" constant="20" id="6BP-cx-nxx"/>
                             <constraint firstItem="K8y-pA-DYs" firstAttribute="trailing" secondItem="xR0-IP-2hJ" secondAttribute="trailingMargin" id="7tV-2L-zJJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="grc-td-3g7" secondAttribute="trailing" id="ZHz-XU-9lb"/>
-                            <constraint firstItem="grc-td-3g7" firstAttribute="top" secondItem="un9-hI-flf" secondAttribute="bottom" constant="355" id="g8b-6r-8eu"/>
                             <constraint firstItem="grc-td-3g7" firstAttribute="leading" secondItem="xR0-IP-2hJ" secondAttribute="leadingMargin" id="hdD-pY-kQE"/>
                             <constraint firstItem="K8y-pA-DYs" firstAttribute="top" secondItem="un9-hI-flf" secondAttribute="bottom" id="uw0-Oj-wdA"/>
                         </constraints>
@@ -531,6 +533,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t55-kK-Tl3">
                                 <rect key="frame" x="16" y="44" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnWasPressed:" destination="tlT-Kb-HrL" eventType="touchUpInside" id="4XS-dM-zvA"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4u4-3k-MlP">
                                 <rect key="frame" x="36" y="94" width="303" height="30"/>
@@ -538,13 +543,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baB-iF-QYY">
+                                <rect key="frame" x="0.0" y="708" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zvu-Jw-yRB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Create a new meetup">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="createBillBtn:" destination="LRH-xr-sSY" eventType="touchUpInside" id="dsM-WF-73x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4u4-3k-MlP" firstAttribute="leading" secondItem="tiD-7H-vlb" secondAttribute="leadingMargin" constant="20" id="2pn-Th-6S1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4u4-3k-MlP" secondAttribute="trailing" constant="20" id="4gi-Tz-gcx"/>
+                            <constraint firstItem="baB-iF-QYY" firstAttribute="leading" secondItem="tiD-7H-vlb" secondAttribute="leading" id="M1o-l5-tk2"/>
                             <constraint firstItem="t55-kK-Tl3" firstAttribute="top" secondItem="2eJ-mg-fqz" secondAttribute="bottom" id="REP-Q5-E6f"/>
                             <constraint firstItem="4u4-3k-MlP" firstAttribute="top" secondItem="2eJ-mg-fqz" secondAttribute="bottom" constant="50" id="RVy-bL-erq"/>
+                            <constraint firstItem="3xI-dL-W2R" firstAttribute="top" secondItem="baB-iF-QYY" secondAttribute="bottom" constant="20" id="YGJ-W5-APZ"/>
+                            <constraint firstAttribute="trailing" secondItem="baB-iF-QYY" secondAttribute="trailing" id="Z8e-Cx-s6y"/>
                             <constraint firstItem="t55-kK-Tl3" firstAttribute="leading" secondItem="tiD-7H-vlb" secondAttribute="leadingMargin" id="fxw-pX-Fsr"/>
                         </constraints>
                     </view>
@@ -568,6 +590,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmS-PT-gMu">
                                 <rect key="frame" x="16" y="44" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnWasPressed:" destination="eNc-H2-DJ3" eventType="touchUpInside" id="U7j-i3-a6A"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -641,6 +666,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-0Q-nCF">
                                 <rect key="frame" x="293" y="44" width="66" height="30"/>
                                 <state key="normal" title="Delete All"/>
+                                <connections>
+                                    <action selector="deleteAllNotifications:" destination="4W9-BP-sFn" eventType="touchUpInside" id="ifN-1C-5KS"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-By-z5R">
                                 <rect key="frame" x="16" y="362" width="343" height="347"/>
@@ -649,7 +677,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PKw-By-z5R" firstAttribute="top" secondItem="WhL-0Q-nCF" secondAttribute="bottom" constant="200" id="Eeh-D5-eJ2"/>
+                            <constraint firstItem="wu9-MA-Sxt" firstAttribute="top" secondItem="PKw-By-z5R" secondAttribute="bottom" constant="20" id="CCd-sZ-Ez3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PKw-By-z5R" secondAttribute="trailing" id="YHM-1j-WK8"/>
                             <constraint firstItem="WhL-0Q-nCF" firstAttribute="top" secondItem="52X-TC-TEw" secondAttribute="bottom" id="fww-lf-BMt"/>
                             <constraint firstItem="PKw-By-z5R" firstAttribute="leading" secondItem="DGD-In-Rer" secondAttribute="leadingMargin" id="pJx-TH-Hah"/>

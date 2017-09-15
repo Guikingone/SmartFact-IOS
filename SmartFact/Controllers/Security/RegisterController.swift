@@ -32,6 +32,8 @@ class RegisterController: UIViewController
         { (success) in
             if success {
                 self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
+            } else {
+                self.registerFailure()
             }
         }
     }

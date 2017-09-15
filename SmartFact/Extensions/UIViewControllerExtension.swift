@@ -11,6 +11,29 @@ import LocalAuthentication
 
 extension UIViewController
 {
+    public func registerFailure()
+    {
+        let alertTitle: String = "Registration process has failed !"
+        let error: String = "To define"
+        
+        let registerFailureAlert = UIAlertController(
+            title: alertTitle,
+            message: error,
+            preferredStyle: .alert
+        )
+        
+        registerFailureAlert.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Retry",
+                comment: "Default action"),
+                style: .`default`,
+                handler: { _ in }
+            )
+        )
+        
+        self.present(registerFailureAlert, animated: true, completion: nil)
+    }
+    
     public func biometricLogin()
     {
         let laContext = LAContext();
@@ -58,6 +81,16 @@ extension UIViewController
             message: "You've asked for getting logged out.",
             preferredStyle: .alert
         )
+        
+        alert.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Cancel",
+                                         comment: "Default action"),
+                style: .`default`,
+                handler: { _ in }
+            )
+        )
+        
         alert.addAction(
             UIAlertAction(
                 title: NSLocalizedString("Yes",
@@ -68,14 +101,7 @@ extension UIViewController
                     self.performSegue(withIdentifier: "logoutSegue", sender: self) }
             )
         )
-        alert.addAction(
-            UIAlertAction(
-                title: NSLocalizedString("Cancel",
-                comment: "Default action"),
-                style: .`default`,
-                handler: { _ in }
-            )
-        )
+        
         self.present(alert, animated: true, completion: nil)
     }
     

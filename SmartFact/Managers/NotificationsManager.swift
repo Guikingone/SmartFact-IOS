@@ -10,7 +10,17 @@ class NotificationsManager
 {
     static let instance = NotificationsManager()
     
-    func createNotifications(data: Dictionary<String, Any>)
+    public func getNotifications()
+    {
+        
+    }
+    
+    public func createNotifications(data: Dictionary<String, Any>)
+    {
+        
+    }
+    
+    public func deleteNotifications()
     {
         
     }
