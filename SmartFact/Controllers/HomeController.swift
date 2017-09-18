@@ -12,6 +12,11 @@ class HomeController: UIViewController
 {
     @IBOutlet weak var usernameTxtLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        self.usernameTxtLabel.isHidden = false
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -22,6 +27,8 @@ class HomeController: UIViewController
                 self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
             }
         }
+        
+        self.usernameTxtLabel.isHidden = true
     }
     
     @IBAction func logoutUser(_ sender: Any)

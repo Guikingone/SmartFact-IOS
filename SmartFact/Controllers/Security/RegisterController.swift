@@ -15,8 +15,6 @@ class RegisterController: UIViewController
     @IBOutlet weak var passwordTxtField: MainForm!
     @IBOutlet weak var passwordRptTxtField: MainForm!
     
-    override func viewDidLoad() { super.viewDidLoad() }
-    
     @IBAction func createAccountAction(_ sender: Any)
     {
         guard let username = usernameTxtField.text , usernameTxtField.text != "" else { return }
@@ -28,13 +26,21 @@ class RegisterController: UIViewController
             return
         }
         
-        AuthService.instance.registerUser(username: username, email: email, password: password)
+        AuthService.instance.coreRegisterUser(username: username, email: email, password: password)
         { (success) in
             if success {
-                self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
+                }
+                print("Success")
             } else {
                 self.registerFailure()
             }
         }
+    }
+    
+    @IBAction func backBtnWasPressed(_ sender: Any)
+    {
+        dismissDetails()
     }
 }

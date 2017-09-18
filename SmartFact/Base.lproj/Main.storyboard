@@ -49,6 +49,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Inscription"/>
                                 <connections>
+                                    <action selector="register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ji8-3d-giq"/>
                                     <segue destination="SQu-j6-bWM" kind="show" id="deY-Kd-8ZU"/>
                                 </connections>
                             </button>
@@ -61,6 +62,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Connexion"/>
                                 <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X0A-IL-QlL"/>
                                     <segue destination="LW3-u0-HHz" kind="show" id="q0k-9U-1pf"/>
                                 </connections>
                             </button>
@@ -751,7 +753,7 @@
         <!--Register Controller-->
         <scene sceneID="6fi-0K-eyX">
             <objects>
-                <viewController id="SQu-j6-bWM" customClass="RegisterController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerController" id="SQu-j6-bWM" customClass="RegisterController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ykz-H6-i1S"/>
                         <viewControllerLayoutGuide type="bottom" id="ygB-8B-zub"/>
@@ -827,6 +829,13 @@
                                     <action selector="createAccountAction:" destination="SQu-j6-bWM" eventType="touchUpInside" id="62h-WC-fsD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKE-hE-rXc">
+                                <rect key="frame" x="16" y="44" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnWasPressed:" destination="SQu-j6-bWM" eventType="touchUpInside" id="8qf-Wc-hKN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -850,6 +859,7 @@
                             <constraint firstItem="Tro-hf-xsI" firstAttribute="leading" secondItem="IeL-4K-q1s" secondAttribute="leadingMargin" id="ZJd-Q8-8lB"/>
                             <constraint firstItem="Ob1-sf-xm5" firstAttribute="top" secondItem="T28-By-kKh" secondAttribute="bottom" constant="45" id="ZkI-3y-0fH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6EG-My-VHE" secondAttribute="trailing" constant="20" id="bFG-1d-cQg"/>
+                            <constraint firstItem="oKE-hE-rXc" firstAttribute="leading" secondItem="IeL-4K-q1s" secondAttribute="leadingMargin" id="f1h-gd-lNo"/>
                             <constraint firstItem="ygB-8B-zub" firstAttribute="top" secondItem="EU0-pK-rHZ" secondAttribute="bottom" id="fii-ho-iqB"/>
                             <constraint firstItem="EU0-pK-rHZ" firstAttribute="top" secondItem="IeL-4K-q1s" secondAttribute="top" id="gYC-HQ-NVJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5CD-Dv-NZD" secondAttribute="trailing" id="qrU-g2-ZbZ"/>
@@ -858,6 +868,7 @@
                             <constraint firstItem="5CD-Dv-NZD" firstAttribute="leading" secondItem="IeL-4K-q1s" secondAttribute="leadingMargin" id="sqG-Qm-mTi"/>
                             <constraint firstItem="T28-By-kKh" firstAttribute="leading" secondItem="IeL-4K-q1s" secondAttribute="leadingMargin" id="u83-5P-k3d"/>
                             <constraint firstAttribute="trailing" secondItem="EU0-pK-rHZ" secondAttribute="trailing" id="xh8-H1-Pcn"/>
+                            <constraint firstItem="oKE-hE-rXc" firstAttribute="top" secondItem="ykz-H6-i1S" secondAttribute="bottom" id="z8S-Gk-j4E"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1040,7 +1051,7 @@
         <!--Login Controller-->
         <scene sceneID="pvb-Lp-4eU">
             <objects>
-                <viewController id="LW3-u0-HHz" customClass="LoginController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginController" id="LW3-u0-HHz" customClass="LoginController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qQ4-ta-sG7"/>
                         <viewControllerLayoutGuide type="bottom" id="dBD-zt-pKz"/>

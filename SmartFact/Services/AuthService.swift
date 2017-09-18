@@ -65,6 +65,41 @@ class AuthService
         }
     }
     
+    public func coreRegisterUser(username: String, email: String, password: String, completion: @escaping (_: Bool) -> ()) {
+        do {
+            
+            let body = [
+                "username": username,
+                "plainPassword": password,
+                "email": email
+            ]
+            
+            guard let requestBody = try? JSONEncoder().encode(body) else { return }
+            
+            let request = try URLRequest(url: URI_REGISTER, method: .post, headers: HEADERS)
+            
+            let task = URLSession.shared.uploadTask(with: request, from: requestBody) {
+                (data, response, error) in
+                
+                if let error = error {
+                    debugPrint(error)
+                    return
+                }
+                guard let response = response as? HTTPURLResponse, response.statusCode == 201 else { return }
+                
+                if response.statusCode == 201 {
+                    completion(true)
+                }
+            }
+            
+            task.resume()
+            
+        } catch {
+            debugPrint(error)
+            completion(false)
+        }
+    }
+    
     func registerUser(username: String, email: String, password: String, completion: @escaping CompletionHandler)
     {
         let body: [String: Any] = [
