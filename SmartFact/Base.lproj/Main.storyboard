@@ -358,11 +358,60 @@
                         <outlet property="clientTxtField" destination="Ulg-nB-BdE" id="cRw-Zg-x7z"/>
                         <outlet property="createBillBtn" destination="VGD-0t-kZW" id="LFY-iN-csu"/>
                         <outlet property="startingDateTxtField" destination="YQX-HB-WKy" id="aSm-BP-oC9"/>
+                        <segue destination="9pi-GI-5SC" kind="show" id="uvM-dF-tTy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFd-cX-zf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2824.6376811594205" y="2415.489130434783"/>
+        </scene>
+        <!--Bill Validation Controller-->
+        <scene sceneID="c83-x7-evS">
+            <objects>
+                <viewController storyboardIdentifier="billValidationController" id="9pi-GI-5SC" customClass="BillValidationController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S6O-NR-f3J"/>
+                        <viewControllerLayoutGuide type="bottom" id="TEg-HD-Cn6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XEJ-xl-NzB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHl-qi-T1i">
+                                <rect key="frame" x="16" y="44" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnWasPressed:" destination="9pi-GI-5SC" eventType="touchUpInside" id="13b-Qt-U84"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsy-SV-AUP">
+                                <rect key="frame" x="0.0" y="728" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="maB-eC-YTe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="createBillBtn:" destination="LRH-xr-sSY" eventType="touchUpInside" id="hbD-8F-goW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TEg-HD-Cn6" firstAttribute="top" secondItem="Zsy-SV-AUP" secondAttribute="bottom" id="0PW-w5-f4h"/>
+                            <constraint firstItem="Zsy-SV-AUP" firstAttribute="leading" secondItem="XEJ-xl-NzB" secondAttribute="leading" id="1cr-7c-VVq"/>
+                            <constraint firstAttribute="trailing" secondItem="Zsy-SV-AUP" secondAttribute="trailing" id="HhV-Wj-hNI"/>
+                            <constraint firstItem="pHl-qi-T1i" firstAttribute="leading" secondItem="XEJ-xl-NzB" secondAttribute="leadingMargin" id="YSB-kD-phP"/>
+                            <constraint firstItem="pHl-qi-T1i" firstAttribute="top" secondItem="S6O-NR-f3J" secondAttribute="bottom" id="xuY-g5-pWQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDv-zv-kZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2825" y="3101"/>
         </scene>
         <!--Bills Details Controller-->
         <scene sceneID="bc7-CS-tGx">

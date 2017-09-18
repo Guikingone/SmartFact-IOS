@@ -29,6 +29,7 @@ class CreateBillController: UIViewController
     
     @IBAction func createBillBtn(_ sender: Any)
     {
-        
+        guard let billValidationController = storyboard?.instantiateViewController(withIdentifier: "billValidationController") as? BillValidationController else { return }
+        presentDetails(billValidationController)
     }
 }
