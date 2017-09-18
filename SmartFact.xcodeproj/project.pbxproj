@@ -33,6 +33,7 @@
 		F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A51F41E2FC00E032DF /* BillsController.swift */; };
 		F06D11A91F41E37500E032DF /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A81F41E37500E032DF /* StartController.swift */; };
 		F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E27A21F6126FA00CAD63D /* UserManager.swift */; };
+		F06E98241F70107B00D3ACFA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E98231F70107B00D3ACFA /* Token.swift */; };
 		F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E731F62DEE400D71DBB /* AccountingMock.swift */; };
 		F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E751F62DEF400D71DBB /* AccountingManager.swift */; };
 		F0732E781F62E12B00D71DBB /* ClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E771F62E12B00D71DBB /* ClientsManager.swift */; };
@@ -42,7 +43,6 @@
 		F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D51F67B6E800879405 /* UIViewExtension.swift */; };
 		F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D71F67C03400879405 /* UIButtonExtension.swift */; };
 		F08A85DA1F67C27700879405 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D91F67C27700879405 /* StorageService.swift */; };
-		F08A85DD1F67C43500879405 /* ManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85DC1F67C43500879405 /* ManagerFactory.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
 		F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0D8241F55BC9E00421A51 /* UserMock.swift */; };
 		F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */; };
@@ -110,6 +110,7 @@
 		F06D11A51F41E2FC00E032DF /* BillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsController.swift; sourceTree = "<group>"; };
 		F06D11A81F41E37500E032DF /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		F06E27A21F6126FA00CAD63D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		F06E98231F70107B00D3ACFA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F0732E731F62DEE400D71DBB /* AccountingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingMock.swift; sourceTree = "<group>"; };
 		F0732E751F62DEF400D71DBB /* AccountingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingManager.swift; sourceTree = "<group>"; };
 		F0732E771F62E12B00D71DBB /* ClientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsManager.swift; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		F08A85D51F67B6E800879405 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F08A85D71F67C03400879405 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		F08A85D91F67C27700879405 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
-		F08A85DC1F67C43500879405 /* ManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFactory.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		F0A0D8241F55BC9E00421A51 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
 		F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsDetailsController.swift; sourceTree = "<group>"; };
@@ -254,20 +254,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F06E98221F70106300D3ACFA /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				F06E98231F70107B00D3ACFA /* Token.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		F07B0B691F6AF4DF00ABE958 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
 				F06D11A31F41E2E900E032DF /* ClientController.swift */,
 			);
 			path = Clients;
-			sourceTree = "<group>";
-		};
-		F08A85DB1F67C42B00879405 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				F08A85DC1F67C43500879405 /* ManagerFactory.swift */,
-			);
-			path = Factory;
 			sourceTree = "<group>";
 		};
 		F0A0D8231F55BC9800421A51 /* Models */ = {
@@ -367,7 +367,7 @@
 		F0EB19321F31CC79006615CB /* SmartFact */ = {
 			isa = PBXGroup;
 			children = (
-				F08A85DB1F67C42B00879405 /* Factory */,
+				F06E98221F70106300D3ACFA /* Structs */,
 				F0D5C94E1F66EC240005AF91 /* Extensions */,
 				F06263641F627F0300B03536 /* Managers */,
 				F0A0D8231F55BC9800421A51 /* Models */,
@@ -722,7 +722,6 @@
 				F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */,
 				F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */,
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,
-				F08A85DD1F67C43500879405 /* ManagerFactory.swift in Sources */,
 				F07B0B6B1F6AF6B800ABE958 /* CreateMeetupController.swift in Sources */,
 				F06263661F627F5F00B03536 /* BillsManager.swift in Sources */,
 				F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */,
@@ -736,6 +735,7 @@
 				F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */,
 				F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
+				F06E98241F70107B00D3ACFA /* Token.swift in Sources */,
 				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,
 				F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,

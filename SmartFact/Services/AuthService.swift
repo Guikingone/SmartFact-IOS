@@ -65,7 +65,8 @@ class AuthService
         }
     }
     
-    public func coreRegisterUser(username: String, email: String, password: String, completion: @escaping (_: Bool) -> ()) {
+    public func registerUser(username: String, email: String, password: String, completion: @escaping (_: Bool) -> ())
+    {
         do {
             
             let body = [
@@ -85,6 +86,7 @@ class AuthService
                     debugPrint(error)
                     return
                 }
+                
                 guard let response = response as? HTTPURLResponse, response.statusCode == 201 else { return }
                 
                 if response.statusCode == 201 {
@@ -100,53 +102,47 @@ class AuthService
         }
     }
     
-    func registerUser(username: String, email: String, password: String, completion: @escaping CompletionHandler)
+    public func loginUser(username: String, password: String, completion: @escaping (_: Bool) -> ())
     {
-        let body: [String: Any] = [
-            "username": username,
-            "plainPassword": password,
-            "email": email
-        ]
-        
-        Alamofire.request(URI_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON { (response) in
+        do {
+            let body = [
+                "username": username,
+                "password": password
+            ]
             
-            if response.result.error == nil {
-                completion(true)
-            } else {
-                completion(false)
-                debugPrint(response.result.error as Any)
-            }
-        }
-    }
-    
-    func loginUser(username: String, password: String, completion: @escaping CompletionHandler)
-    {
-        let body: [String: Any] = [
-            "username": username,
-            "password": password
-        ]
-        
-        Alamofire.request(URI_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADERS).responseJSON {
-            (response) in
+            guard let requestBody = try? JSONEncoder().encode(body) else { return }
             
-            if response.result.error == nil {
-                if let json = response.result.value as? Dictionary<String, Any> {
-                    if let token = json["token"] as? String {
-                        self.authToken = token
-                        self.isLoggedIn = true
-                        completion(true)
-                    }
+            let request = try URLRequest(url: URI_LOGIN, method: .post, headers: HEADERS)
+            
+            let task = URLSession.shared.uploadTask(with: request, from: requestBody) {
+                (data, response, error) in
+                
+                if let error = error {
+                    print(error)
+                    return
                 }
-            } else {
-                completion(false)
-                debugPrint(response.result.error as Any)
+                
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+                
+                if response.statusCode == 200 {
+                    let token = try? JSONDecoder().decode(Token.self, from: data!)
+                    self.authToken = (token?.token)!
+                    self.isLoggedIn = true
+                    completion(true)
+                }
             }
+            
+            task.resume()
+            
+        } catch {
+            debugPrint(error)
+            completion(false)
         }
     }
     
     func resetPasswordToken(email: String, username: String, completion: @escaping CompletionHandler)
     {
-        let body: [String: Any] = [
+        let body = [
             "email": email,
             "username": username
         ]

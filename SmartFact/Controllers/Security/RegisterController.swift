@@ -26,13 +26,12 @@ class RegisterController: UIViewController
             return
         }
         
-        AuthService.instance.coreRegisterUser(username: username, email: email, password: password)
+        AuthService.instance.registerUser(username: username, email: email, password: password)
         { (success) in
             if success {
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
                 }
-                print("Success")
             } else {
                 self.registerFailure()
             }

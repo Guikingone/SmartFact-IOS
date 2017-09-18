@@ -29,8 +29,10 @@ class LoginController: UIViewController
         AuthService.instance.loginUser(username: username, password: password)
         { (success) in
             if (success) {
-                if AuthService.instance.isLoggedIn {
-                    self.performSegue(withIdentifier: "LoggedInSegue", sender: self)
+                DispatchQueue.main.async {
+                    if AuthService.instance.isLoggedIn {
+                        self.performSegue(withIdentifier: "LoggedInSegue", sender: self)
+                    }
                 }
             }
         }

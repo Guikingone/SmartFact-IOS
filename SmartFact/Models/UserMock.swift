@@ -6,7 +6,7 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-class UserMock
+class UserMock: Decodable
 {
     static let instance = UserMock()
     
@@ -15,6 +15,7 @@ class UserMock
     public private(set) var firstname: String = ""
     public private(set) var lastname: String = ""
     public private(set) var email: String = ""
+    public private(set) var token: String = ""
     
     func createUser(id: String, username: String, firstname: String, lastname: String, email: String)
     {
