@@ -13,7 +13,6 @@ class CreateBillController: UIViewController
     @IBOutlet weak var clientTxtField: UITextField!
     @IBOutlet weak var startingDateTxtField: UITextField!
     @IBOutlet weak var endingDateTxtField: UITextField!
-    
     @IBOutlet weak var createBillBtn: UIButton!
     
     override func viewDidLoad()
@@ -22,14 +21,22 @@ class CreateBillController: UIViewController
         createBillBtn.bindToKeyboard()
     }
     
-    @IBAction func backBtnWasPressed(_ sender: Any)
-    {
-        dismissDetails()
-    }
-    
     @IBAction func createBillBtn(_ sender: Any)
     {
         guard let billValidationController = storyboard?.instantiateViewController(withIdentifier: "billValidationController") as? BillValidationController else { return }
+        
+        billValidationController.initData(
+            client: clientTxtField.text!,
+            startingDate: startingDateTxtField.text!,
+            endingDate: endingDateTxtField.text!
+        )
+        
         presentDetails(billValidationController)
+        
+    }
+    
+    @IBAction func backBtnWasPressed(_ sender: Any)
+    {
+        dismissDetails()
     }
 }

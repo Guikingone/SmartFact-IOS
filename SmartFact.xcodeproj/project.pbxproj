@@ -52,6 +52,7 @@
 		F0D5C9491F66A9010005AF91 /* CreateBillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5C9481F66A9010005AF91 /* CreateBillController.swift */; };
 		F0D5C9501F66EC480005AF91 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5C94F1F66EC480005AF91 /* UIViewControllerExtension.swift */; };
 		F0D5C9521F66FDA10005AF91 /* UIViewControllerDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5C9511F66FDA10005AF91 /* UIViewControllerDataExtension.swift */; };
+		F0DA37EC1F711AE3000CAC0D /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DA37EB1F711AE3000CAC0D /* UserStruct.swift */; };
 		F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19331F31CC79006615CB /* AppDelegate.swift */; };
 		F0EB19361F31CC79006615CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* HomeController.swift */; };
 		F0EB19391F31CC79006615CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EB19371F31CC79006615CB /* Main.storyboard */; };
@@ -130,6 +131,7 @@
 		F0D5C9481F66A9010005AF91 /* CreateBillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBillController.swift; sourceTree = "<group>"; };
 		F0D5C94F1F66EC480005AF91 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		F0D5C9511F66FDA10005AF91 /* UIViewControllerDataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerDataExtension.swift; sourceTree = "<group>"; };
+		F0DA37EB1F711AE3000CAC0D /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
 		F0EB19301F31CC79006615CB /* SmartFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EB19331F31CC79006615CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0EB19351F31CC79006615CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				F06E98231F70107B00D3ACFA /* Token.swift */,
+				F0DA37EB1F711AE3000CAC0D /* UserStruct.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */,
 				F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */,
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,
+				F0DA37EC1F711AE3000CAC0D /* UserStruct.swift in Sources */,
 				F07B0B6B1F6AF6B800ABE958 /* CreateMeetupController.swift in Sources */,
 				F06263661F627F5F00B03536 /* BillsManager.swift in Sources */,
 				F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */,

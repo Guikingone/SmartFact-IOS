@@ -16,7 +16,7 @@ class UserMock: Decodable
     public private(set) var lastname: String = ""
     public private(set) var email: String = ""
     
-    func createUser(id: String, username: String, firstname: String, lastname: String, email: String)
+    public func createUser(id: String, username: String, firstname: String, lastname: String, email: String)
     {
         self.id = id
         self.username = username

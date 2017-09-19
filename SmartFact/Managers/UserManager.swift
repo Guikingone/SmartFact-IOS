@@ -6,19 +6,62 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
+import CoreData
+
 class UserManager
 {
     static let instance = UserManager()
     
-    func create(data: Dictionary<String, Any>)
+    public func getUser(data: UserStruct, completion: (_: Bool) -> ())
     {
         UserMock.instance.createUser(
-            id: (data["id"] as? String)!,
-            username: data["username"] as! String,
-            firstname: data["firstname"] as! String,
-            lastname: data["lastname"] as! String,
-            email: data["email"] as! String
+            id: data.id,
+            username: data.username,
+            firstname: data.firstname,
+            lastname: data.lastname,
+            email: data.email
         )
+        
+        // TODO: Fetch to find if an user is already saved.
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        
+        do {
+            try managedContext.fetch(fetchRequest)
+            completion(true)
+        } catch {
+            debugPrint("Could not fetch: \(error.localizedDescription)")
+            completion(false)
+        }
+    }
+    
+    public func createUser(data: UserStruct, completion: (_: Bool) -> ())
+    {
+        UserMock.instance.createUser(
+            id: data.id,
+            username: data.username,
+            firstname: data.firstname,
+            lastname: data.lastname,
+            email: data.email
+        )
+        
+        guard let managedcontext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let user = User(context: managedcontext)
+        user.id = UserMock.instance.id
+        user.username = UserMock.instance.username
+        user.firstname = UserMock.instance.firstname
+        user.lastname = UserMock.instance.lastname
+        user.email = UserMock.instance.email
+        
+        do {
+            try managedcontext.save()
+            completion(true)
+        } catch {
+            debugPrint("Could not save: \(error.localizedDescription)")
+            completion(false)
+        }
     }
     
     func deleteUserData()
@@ -29,44 +72,5 @@ class UserManager
     func patchUserData()
     {
         UserMock.instance.patchUser()
-    }
-    
-    func saveUserData()
-    {
-        // Once the user is logged in, we save the data into Core Data for futur usage.
-        // Allow to search if the user already exist in Core Data.
-        //                    do {
-        //                        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-        //                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        //                        let users = try managedContext.fetch(fetchRequest) as! [User]
-        //                        for user in users {
-        //                            if user.email == json["email"] as? String {
-        //                                let personalUser = user
-        //                                print(personalUser)
-        //                            }
-        //                        }
-        //                        for user in self.users {
-        //                            if user.email == json["email"] as? String {
-        //                                print("User already found !")
-        //                                return
-        //                            } else {
-        //                                let user = User(context: managedContext)
-        //                                user.id = json["id"] as? String
-        //                                user.firstname = json["firstname"] as? String
-        //                                user.lastname = json["lastname"] as? String
-        //                                user.email = json["email"] as? String
-        //                                user.username = json["username"] as? String
-        //                                do {
-        //                                    try managedContext.save()
-        //                                    completionHandler(true)
-        //                                } catch {
-        //                                    debugPrint("Error : \(error.localizedDescription)")
-        //                                    completionHandler(false)
-        //                                }
-        //                            }
-        //                        }
-        //                    } catch {
-        //                        debugPrint(error)
-        //                    }
     }
 }

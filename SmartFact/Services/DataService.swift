@@ -13,19 +13,48 @@ class DataService
 {
     static let instance = DataService()
     
-    public func getPersonalUserInformations(completionHandler: @escaping CompletionHandler)
+    public func getPersonalUserInformations(completion: @escaping (_: Bool) -> ())
     {
-        Alamofire.request(URI_PERSONAl_USER, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
+        do {
+            let request = try URLRequest(url: URI_PERSONAl_USER, method: .get, headers: AUTH_HEADERS)
             
-            if response.result.error == nil {
-                if let json = response.result.value as? Dictionary<String, Any> {
-                    UserManager.instance.create(data: json)
-                    completionHandler(true)
+            let task = URLSession.shared.dataTask(with: request)
+            { (data, response, errors) in
+                
+                if errors != nil {
+                    completion(false)
                 }
-            } else {
-                completionHandler(false)
-                debugPrint(response.result.error as Any)
+                
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+                
+                let data = data!
+                
+                if response.statusCode == 200 {
+                    let user = try? JSONDecoder().decode(UserStruct.self, from: data)
+                    
+                    // TODO: Check if there already a user saved.
+                    
+                    UserManager.instance.getUser(data: user!) {
+                        success in
+                        if success {
+                            completion(true)
+                        } else {
+                            UserManager.instance.createUser(data: user!) {
+                                success in
+                                if success {
+                                    completion(true)
+                                }
+                            }
+                        }
+                    }
+                }
             }
+            
+            task.resume()
+            
+        } catch {
+            debugPrint(error)
+            completion(false)
         }
     }
     

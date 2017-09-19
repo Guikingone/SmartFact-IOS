@@ -18,8 +18,16 @@ class BillsMock
     public private(set) var sendAt: String = ""
     public private(set) var tva: Bool = false
     
-    func createBills(id: String, date: String, total: Double)
+    public func createBills(date: String, total: Double)
     {
+        self.date = date
+        self.total = total
+    }
+    
+    public func saveBill(bill: Int)
+    {
+        guard let managedcontext = appDelegate?.persistentContainer.viewContext else { return }
         
+        let bill = Bills(context: managedcontext)
     }
 }

@@ -21,10 +21,13 @@ class HomeController: UIViewController
     {
         super.viewDidLoad()
         
-        DataService.instance.getPersonalUserInformations {
-            (success) in
-            if success {
-                self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
+        DataService.instance.getPersonalUserInformations
+        { (success) in
+            
+            DispatchQueue.main.async {
+                if success {
+                    self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
+                }
             }
         }
         

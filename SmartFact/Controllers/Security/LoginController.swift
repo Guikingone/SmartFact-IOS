@@ -16,7 +16,7 @@ class LoginController: UIViewController
     
     override func viewDidAppear(_ animated: Bool)
     {
-        biometricLogin()
+        //biometricLogin()
     }
     
     @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue){}
