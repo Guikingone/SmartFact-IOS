@@ -23,13 +23,21 @@ class UserManager
         )
         
         // TODO: Fetch to find if an user is already saved.
+        //       If the user is found, store it into the Manager via a new instance.
+        
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        fetchRequest.predicate = NSPredicate(format: "username == %@", UserMock.instance.username)
         
         do {
-            try managedContext.fetch(fetchRequest)
-            completion(true)
+            let user = try managedContext.fetch(fetchRequest)
+        
+            if user.count >= 0 {
+                completion(true)
+            } else {
+                completion(false)
+            }
         } catch {
             debugPrint("Could not fetch: \(error.localizedDescription)")
             completion(false)
@@ -71,6 +79,6 @@ class UserManager
     
     func patchUserData()
     {
-        UserMock.instance.patchUser()
+        
     }
 }

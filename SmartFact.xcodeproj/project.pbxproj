@@ -45,6 +45,7 @@
 		F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D71F67C03400879405 /* UIButtonExtension.swift */; };
 		F08A85DA1F67C27700879405 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D91F67C27700879405 /* StorageService.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
+		F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09E3D561F72DEFE008C56F3 /* BillStruct.swift */; };
 		F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0D8241F55BC9E00421A51 /* UserMock.swift */; };
 		F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */; };
 		F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14ED1F5D41D0004C2728 /* MeetupsDetailsController.swift */; };
@@ -124,6 +125,7 @@
 		F08A85D71F67C03400879405 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		F08A85D91F67C27700879405 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		F09E3D561F72DEFE008C56F3 /* BillStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStruct.swift; sourceTree = "<group>"; };
 		F0A0D8241F55BC9E00421A51 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
 		F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsDetailsController.swift; sourceTree = "<group>"; };
 		F0AE14ED1F5D41D0004C2728 /* MeetupsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupsDetailsController.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				F06E98231F70107B00D3ACFA /* Token.swift */,
 				F0DA37EB1F711AE3000CAC0D /* UserStruct.swift */,
+				F09E3D561F72DEFE008C56F3 /* BillStruct.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				F04109E21F4350EB009D04A4 /* DataService.swift in Sources */,
 				F062636E1F62D78700B03536 /* NotificationsManager.swift in Sources */,
 				F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */,
+				F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeController.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,

@@ -12,6 +12,11 @@ class BillsManager
     
     public private(set) var bills: [BillsMock] = []
     
+    public func createBill(data: BillStruct)
+    {
+        
+    }
+    
     public func setBillsData(data: Dictionary<String, Any>)
     {
         for entry in data {

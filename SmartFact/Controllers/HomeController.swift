@@ -21,6 +21,8 @@ class HomeController: UIViewController
     {
         super.viewDidLoad()
         
+        self.usernameTxtLabel.isHidden = true
+        
         DataService.instance.getPersonalUserInformations
         { (success) in
             
@@ -30,8 +32,6 @@ class HomeController: UIViewController
                 }
             }
         }
-        
-        self.usernameTxtLabel.isHidden = true
     }
     
     @IBAction func logoutUser(_ sender: Any)

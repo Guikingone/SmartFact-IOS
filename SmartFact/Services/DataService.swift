@@ -32,17 +32,17 @@ class DataService
                 if response.statusCode == 200 {
                     let user = try? JSONDecoder().decode(UserStruct.self, from: data)
                     
-                    // TODO: Check if there already a user saved.
-                    
-                    UserManager.instance.getUser(data: user!) {
-                        success in
-                        if success {
-                            completion(true)
-                        } else {
-                            UserManager.instance.createUser(data: user!) {
-                                success in
-                                if success {
-                                    completion(true)
+                    DispatchQueue.main.async {
+                        UserManager.instance.getUser(data: user!) {
+                            success in
+                            if success {
+                                completion(true)
+                            } else {
+                                UserManager.instance.createUser(data: user!) {
+                                    success in
+                                    if success {
+                                        completion(true)
+                                    }
                                 }
                             }
                         }
