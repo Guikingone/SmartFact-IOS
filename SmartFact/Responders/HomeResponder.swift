@@ -8,12 +8,21 @@
 
 class HomeResponder
 {
-    public func storeUserData(data: UserStruct.Response)
+    public func getUserData(data: UserStruct.Response, success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
+    {
+        // TODO: Call CoreData and get the user using his username.
+        UserManager().getUser(data: data) { (success) in
+            
+            if success {
+                // TODO : Return the data.
+            }
+        }
+    }
+    
+    public func storeUserData(data: UserStruct.Response, success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
     {
         UserManager().createUser(data: data, success: { (success) in
-            UserManager().getUser(data: data, completion: { (success) in
-                
-            })
+            // TODO
         }) { (failure) in
             // TODO
         }

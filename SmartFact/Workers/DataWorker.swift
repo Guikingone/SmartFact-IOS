@@ -32,6 +32,8 @@ class DataWorker
                 if response.statusCode == 200 {
                     let user = try? JSONDecoder().decode(UserStruct.Response.self, from: data)
                     success(user!)
+                } else {
+                    failure(true)
                 }
             }
             
@@ -39,102 +41,103 @@ class DataWorker
             
         } catch {
             debugPrint(error)
+            failure(true)
         }
     }
     
-    public func getPersonalBills(completionHandler: @escaping CompletionHandler)
+    public func getPersonalBills(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_BILLS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     BillsManager.instance.setBillsData(data: json)
-                    completionHandler(true)
+                    success(true)
                 }
             } else {
-                completionHandler(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }
     }
     
-    public func getPersonalAccounting(completionHandler: @escaping CompletionHandler)
+    public func getPersonalAccounting(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_ACCOUNTINGS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     AccountingManager.instance.createAccounting(data: json)
-                    completionHandler(true)
+                    success(true)
                 }
             } else {
-                completionHandler(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }
     }
     
-    func getPersonalClients(completionHandler: @escaping CompletionHandler)
+    func getPersonalClients(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_CLIENTS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     ClientsManager.instance.create(data: json)
-                    completionHandler(true)
+                    success(true)
                 }
             } else {
-                completionHandler(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }
     }
     
-    func getPersonalPlanning(completionHandler: @escaping CompletionHandler)
+    func getPersonalPlanning(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_PLANNING, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     PlanningManager.instance.create(data: json)
-                    completionHandler(true)
+                    success(true)
                 }
             } else {
-                completionHandler(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }
         
     }
     
-    func getPersonalMeetups(completionHandler: @escaping CompletionHandler)
+    func getPersonalMeetups(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_MEETUPS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     MeetupsManager.instance.create(data: json)
-                    completionHandler(true)
+                    success(true)
                 }
             } else {
-                completionHandler(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }
         
     }
     
-    func getPersonalNotifications(completionHandler: @escaping CompletionHandler)
+    func getPersonalNotifications(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_NOTIFICATIONS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     NotificationsManager.instance.createNotifications(data: json)
-                    completionHandler(true)
+                    success(true)
                 }
             } else {
-                completionHandler(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }

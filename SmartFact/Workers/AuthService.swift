@@ -125,8 +125,8 @@ class AuthService
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
                 
                 if response.statusCode == 200 {
-                    let token = try? JSONDecoder().decode(Token.self, from: data!)
-                    self.authToken = (token?.token)!
+                    let userToken = try? JSONDecoder().decode(UserStruct.Token.self, from: data!)
+                    self.authToken = (userToken?.token)!
                     self.isLoggedIn = true
                     completion(true)
                 }
@@ -140,7 +140,7 @@ class AuthService
         }
     }
     
-    func resetPasswordToken(email: String, username: String, completion: @escaping CompletionHandler)
+    func resetPasswordToken(email: String, username: String, success: @escaping (_: Bool) -> ())
     {
         let body = [
             "email": email,
@@ -157,15 +157,15 @@ class AuthService
                         self.allowedToResetPassword = true
                     }
                 }
-                completion(true)
+                success(true)
             } else {
-                completion(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }
     }
     
-    func resetPassword(password: String, completion: @escaping CompletionHandler)
+    func resetPassword(password: String, success: @escaping (_: Bool) -> ())
     {
         let body: [String: Any] = [
             "token": self.passwordResetToken,
@@ -176,9 +176,9 @@ class AuthService
             (response) in
             
             if response.result.error == nil {
-                completion(true)
+                success(true)
             } else {
-                completion(false)
+                success(false)
                 debugPrint(response.result.error as Any)
             }
         }

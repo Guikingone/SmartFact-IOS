@@ -17,6 +17,29 @@ struct UserStruct: Decodable
         let email: String
     }
     
+    struct Request: Decodable
+    {
+        let id: String
+        let username: String
+        let firstname: String
+        let lastname: String
+        let email: String
+    }
+    
+    struct View: Decodable
+    {
+        let id: String
+        let username: String
+        let firstname: String
+        let lastname: String
+        let email: String
+    }
+    
+    struct Token: Decodable
+    {
+        let token: String
+    }
+    
     let id: String
     let username: String
     let firstname: String

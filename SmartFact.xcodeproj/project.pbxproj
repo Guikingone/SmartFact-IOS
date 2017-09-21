@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50E2CD9190B9CF8EDBF8518B /* Pods_SmartFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B96A7993270BE6F435116E /* Pods_SmartFactTests.framework */; };
 		6C9676C51CD0580EF8661994 /* Pods_SmartFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98D45E855242B951EA28F9 /* Pods_SmartFactUITests.framework */; };
+		8A42DBAA1F74303400B568D2 /* LoginResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42DBA91F74303400B568D2 /* LoginResponder.swift */; };
 		8C7251F25A878DB78215179C /* Pods_SmartFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */; };
 		F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A62F31F6444F4000B6BE9 /* BillsCell.swift */; };
 		F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */; };
@@ -44,7 +45,6 @@
 		F0892BC71F5FF65F00707C04 /* BackBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0892BC61F5FF65F00707C04 /* BackBtn.swift */; };
 		F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D51F67B6E800879405 /* UIViewExtension.swift */; };
 		F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D71F67C03400879405 /* UIButtonExtension.swift */; };
-		F08A85DA1F67C27700879405 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D91F67C27700879405 /* StorageService.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
 		F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09E3D561F72DEFE008C56F3 /* BillStruct.swift */; };
 		F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0D8241F55BC9E00421A51 /* UserMock.swift */; };
@@ -89,6 +89,7 @@
 		25C9A59A601768CAEDEEBA82 /* Pods-SmartFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFact.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact.release.xcconfig"; sourceTree = "<group>"; };
 		5D52632CAEC9351B1CF11F92 /* Pods-SmartFact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact.debug.xcconfig"; sourceTree = "<group>"; };
 		870AA475E34B2EDDF4CD65A5 /* Pods-SmartFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactTests/Pods-SmartFactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A42DBA91F74303400B568D2 /* LoginResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponder.swift; sourceTree = "<group>"; };
 		9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC040DF31214B09F0C071154 /* Pods-SmartFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactUITests/Pods-SmartFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00A62F31F6444F4000B6BE9 /* BillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsCell.swift; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		F0892BC61F5FF65F00707C04 /* BackBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBtn.swift; sourceTree = "<group>"; };
 		F08A85D51F67B6E800879405 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F08A85D71F67C03400879405 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		F08A85D91F67C27700879405 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		F09E3D561F72DEFE008C56F3 /* BillStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStruct.swift; sourceTree = "<group>"; };
 		F0A0D8241F55BC9E00421A51 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
@@ -181,6 +181,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A42DBA81F74302500B568D2 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				8A42DBA91F74303400B568D2 /* LoginResponder.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
 		CC02332DD4C4FCFD79DE8B36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +279,7 @@
 		F06EA75F1F73A7F5008F9621 /* Responders */ = {
 			isa = PBXGroup;
 			children = (
+				8A42DBA81F74302500B568D2 /* Security */,
 				F06EA7621F73DCF0008F9621 /* HomeResponder.swift */,
 			);
 			path = Responders;
@@ -289,7 +298,6 @@
 			children = (
 				F06D119D1F41E27100E032DF /* AuthService.swift */,
 				F04109E11F4350EB009D04A4 /* DataWorker.swift */,
-				F08A85D91F67C27700879405 /* StorageService.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -730,11 +738,11 @@
 				F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeAction.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
+				8A42DBAA1F74303400B568D2 /* LoginResponder.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
 				F06263761F62D8E400B03536 /* PlanningMock.swift in Sources */,
 				F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */,
 				F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */,
-				F08A85DA1F67C27700879405 /* StorageService.swift in Sources */,
 				F06263701F62D79900B03536 /* NotificationsMock.swift in Sources */,
 				F01FDC941F4AB620008848DD /* MainForm.swift in Sources */,
 				F0D5C9521F66FDA10005AF91 /* UIViewControllerDataExtension.swift in Sources */,

@@ -9,4 +9,19 @@
 struct BillStruct
 {
     let id: String
+    
+    struct Response: Decodable
+    {
+        let id: String
+    }
+    
+    struct Request: Decodable
+    {
+        let id: String
+    }
+    
+    struct View: Decodable
+    {
+        let id: String
+    }
 }

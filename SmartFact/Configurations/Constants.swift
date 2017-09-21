@@ -6,10 +6,6 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-import Foundation
-
-typealias CompletionHandler = (_ Success: Bool) -> ()
-
 // URL Security constants
 let URI_PROD: String = "http://smartfact.guillaumeloulier.fr/"
 let URI_DEV: String = "http://127.0.0.1:8000/"

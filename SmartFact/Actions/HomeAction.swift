@@ -23,16 +23,35 @@ class HomeAction: UIViewController
         
         self.usernameTxtLabel.isHidden = true
         
-        DataWorker.instance.getPersonalUserInformations(success: { (success) in
+        DataWorker.instance.getPersonalUserInformations(success: {
+            (data) in
             
             // TODO: Call the manager to store data and update the TxtField.
-            
-            HomeResponder().storeUserData(data: success)
-            
-            self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
-            
+            HomeResponder().getUserData(data: data, success: { (found) in
+                
+                if found {
+                    self.usernameTxtLabel.text = data.username
+                }
+                
+            }, failure: { (failure) in
+                
+                if failure {
+                    HomeResponder().storeUserData(data: data, success: { (created) in
+                        
+                        if created {
+                            // TODO : Return the user and set the username.
+                        }
+                        
+                    }, failure: { (failure) in
+                        
+                        if failure {
+                            // TODO: Show an error.
+                        }
+                    })
+                }
+            })
         }) { (failure) in
-            self.usernameTxtLabel.text = ""
+            // If the user isn't connected.
             self.connexionFailure()
         }
     }

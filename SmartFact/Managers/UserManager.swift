@@ -12,6 +12,8 @@ class UserManager
 {
     static let instance = UserManager()
     
+    // TODO: Update the method in order to return data if the user is found.
+    //       If the user isn't found, return failure(true).
     public func getUser(data: UserStruct.Response, completion: (_: Bool) -> ())
     {
         // TODO: Fetch to find if an user is already saved.
@@ -36,6 +38,8 @@ class UserManager
         }
     }
     
+    // TODO: Update the method according to the fact that if the user is created, it should be returned for further calls.
+    //       If the user can't be created, failure(true).
     public func createUser(data: UserStruct.Response, success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
     {
         guard let managedcontext = appDelegate?.persistentContainer.viewContext else { return }
