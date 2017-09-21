@@ -8,6 +8,15 @@
 
 struct UserStruct: Decodable
 {
+    struct Response: Decodable
+    {
+        let id: String
+        let username: String
+        let firstname: String
+        let lastname: String
+        let email: String
+    }
+    
     let id: String
     let username: String
     let firstname: String

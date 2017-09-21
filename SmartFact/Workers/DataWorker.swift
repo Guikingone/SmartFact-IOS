@@ -13,7 +13,7 @@ class DataWorker
 {
     static let instance = DataWorker()
     
-    public func getPersonalUserInformations(success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
+    public func getPersonalUserInformations(success: @escaping (_ response: UserStruct.Response) -> (), failure: @escaping (_: Bool) -> ())
     {
         do {
             let request = try URLRequest(url: URI_PERSONAL_USER, method: .get, headers: AUTH_HEADERS)
@@ -30,17 +30,8 @@ class DataWorker
                 let data = data!
                 
                 if response.statusCode == 200 {
-                    let user = try? JSONDecoder().decode(UserStruct.self, from: data)
-                    
-                    UserStruct.init(
-                        id: (user?.id)!,
-                        username: (user?.username)!,
-                        firstname: (user?.firstname)!,
-                        lastname: (user?.lastname)!,
-                        email: (user?.email)!
-                    )
-                    
-                    success(true)
+                    let user = try? JSONDecoder().decode(UserStruct.Response.self, from: data)
+                    success(user!)
                 }
             }
             

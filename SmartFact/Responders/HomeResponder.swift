@@ -8,8 +8,14 @@
 
 class HomeResponder
 {
-    public func storeUserData(data: UserStruct)
+    public func storeUserData(data: UserStruct.Response)
     {
-        
+        UserManager().createUser(data: data, success: { (success) in
+            UserManager().getUser(data: data, completion: { (success) in
+                
+            })
+        }) { (failure) in
+            // TODO
+        }
     }
 }

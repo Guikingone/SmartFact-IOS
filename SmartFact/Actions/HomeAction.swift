@@ -27,7 +27,7 @@ class HomeAction: UIViewController
             
             // TODO: Call the manager to store data and update the TxtField.
             
-            HomeResponder().storeUserData(data: UserStruct)
+            HomeResponder().storeUserData(data: success)
             
             self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
             

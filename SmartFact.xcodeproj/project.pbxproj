@@ -56,7 +56,7 @@
 		F0D5C9521F66FDA10005AF91 /* UIViewControllerDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5C9511F66FDA10005AF91 /* UIViewControllerDataExtension.swift */; };
 		F0DA37EC1F711AE3000CAC0D /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DA37EB1F711AE3000CAC0D /* UserStruct.swift */; };
 		F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19331F31CC79006615CB /* AppDelegate.swift */; };
-		F0EB19361F31CC79006615CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* HomeController.swift */; };
+		F0EB19361F31CC79006615CB /* HomeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB19351F31CC79006615CB /* HomeAction.swift */; };
 		F0EB19391F31CC79006615CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EB19371F31CC79006615CB /* Main.storyboard */; };
 		F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0EB193A1F31CC79006615CB /* SmartFact.xcdatamodeld */; };
 		F0EB193E1F31CC79006615CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EB193D1F31CC79006615CB /* Assets.xcassets */; };
@@ -138,7 +138,7 @@
 		F0DA37EB1F711AE3000CAC0D /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
 		F0EB19301F31CC79006615CB /* SmartFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EB19331F31CC79006615CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0EB19351F31CC79006615CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		F0EB19351F31CC79006615CB /* HomeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAction.swift; sourceTree = "<group>"; };
 		F0EB19381F31CC79006615CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0EB193B1F31CC79006615CB /* SmartFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartFact.xcdatamodel; sourceTree = "<group>"; };
 		F0EB193D1F31CC79006615CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 				F0D5C94B1F66AA3F0005AF91 /* User */,
 				F0D5C94A1F66AA380005AF91 /* Security */,
 				F0D5C9471F66A8E90005AF91 /* Bills */,
-				F0EB19351F31CC79006615CB /* HomeController.swift */,
+				F0EB19351F31CC79006615CB /* HomeAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -728,7 +728,7 @@
 				F062636E1F62D78700B03536 /* NotificationsManager.swift in Sources */,
 				F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */,
 				F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */,
-				F0EB19361F31CC79006615CB /* HomeController.swift in Sources */,
+				F0EB19361F31CC79006615CB /* HomeAction.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
 				F06263761F62D8E400B03536 /* PlanningMock.swift in Sources */,

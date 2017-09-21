@@ -12,23 +12,15 @@ class UserManager
 {
     static let instance = UserManager()
     
-    public func getUser(data: UserStruct, completion: (_: Bool) -> ())
+    public func getUser(data: UserStruct.Response, completion: (_: Bool) -> ())
     {
-        UserMock.instance.createUser(
-            id: data.id,
-            username: data.username,
-            firstname: data.firstname,
-            lastname: data.lastname,
-            email: data.email
-        )
-        
         // TODO: Fetch to find if an user is already saved.
         //       If the user is found, store it into the Manager via a new instance.
         
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        fetchRequest.predicate = NSPredicate(format: "username == %@", UserMock.instance.username)
+        fetchRequest.predicate = NSPredicate(format: "username == %@", data.username)
         
         do {
             let user = try managedContext.fetch(fetchRequest)
@@ -44,31 +36,23 @@ class UserManager
         }
     }
     
-    public func createUser(data: UserStruct, completion: (_: Bool) -> ())
+    public func createUser(data: UserStruct.Response, success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
     {
-        UserMock.instance.createUser(
-            id: data.id,
-            username: data.username,
-            firstname: data.firstname,
-            lastname: data.lastname,
-            email: data.email
-        )
-        
         guard let managedcontext = appDelegate?.persistentContainer.viewContext else { return }
         
         let user = User(context: managedcontext)
-        user.id = UserMock.instance.id
-        user.username = UserMock.instance.username
-        user.firstname = UserMock.instance.firstname
-        user.lastname = UserMock.instance.lastname
-        user.email = UserMock.instance.email
+        user.id = data.id
+        user.username = data.username
+        user.firstname = data.firstname
+        user.lastname = data.lastname
+        user.email = data.email
         
         do {
             try managedcontext.save()
-            completion(true)
+            success(true)
         } catch {
+            failure(true)
             debugPrint("Could not save: \(error.localizedDescription)")
-            completion(false)
         }
     }
     
