@@ -19,7 +19,7 @@ let URI_RESET_PASSWORD_TOKEN: String = "\(URI_DEV)password/reset/token/api"
 let URI_RESET_PASSWORD: String = "\(URI_DEV)password/reset/api"
 
 // URL Users constants
-let URI_PERSONAl_USER: String = "\(URI_DEV)api/users/me"
+let URI_PERSONAL_USER: String = "\(URI_DEV)api/users/me"
 let URI_PERSONAL_NOTIFICATIONS: String = "\(URI_DEV)api/notifications/me"
 let URI_PERSONAL_PLANNING: String = "\(URI_DEV)api/planning/me"
 let URI_PERSONAL_MEETUPS: String = "\(URI_DEV)api/meetups/me"

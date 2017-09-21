@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UIViewController
+class HomeAction: UIViewController
 {
     @IBOutlet weak var usernameTxtLabel: UILabel!
     
@@ -23,14 +23,17 @@ class HomeController: UIViewController
         
         self.usernameTxtLabel.isHidden = true
         
-        DataService.instance.getPersonalUserInformations
-        { (success) in
+        DataWorker.instance.getPersonalUserInformations(success: { (success) in
             
-            DispatchQueue.main.async {
-                if success {
-                    self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
-                }
-            }
+            // TODO: Call the manager to store data and update the TxtField.
+            
+            HomeResponder().storeUserData(data: UserStruct)
+            
+            self.usernameTxtLabel.text = "Hello \(UserMock.instance.username)"
+            
+        }) { (failure) in
+            self.usernameTxtLabel.text = ""
+            self.connexionFailure()
         }
     }
     

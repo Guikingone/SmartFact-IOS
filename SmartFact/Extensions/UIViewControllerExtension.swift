@@ -34,6 +34,29 @@ extension UIViewController
         self.present(registerFailureAlert, animated: true, completion: nil)
     }
     
+    public func connexionFailure()
+    {
+        let connexionTitle: String = "Connexion has failed !"
+        let error: String = "To define"
+        
+        let connexionFailureAlert = UIAlertController(
+            title: connexionTitle,
+            message: error,
+            preferredStyle: .alert
+        )
+        
+        connexionFailureAlert.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Retry",
+                comment: "Default action"),
+                style: .`default`,
+                handler: { _ in }
+            )
+        )
+        
+        self.present(connexionFailureAlert, animated: true, completion: nil)
+    }
+    
     public func biometricLogin()
     {
         let laContext = LAContext();

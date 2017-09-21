@@ -694,7 +694,7 @@
         <!--Home-->
         <scene sceneID="08k-Qc-mfQ">
             <objects>
-                <viewController id="2vU-Pv-4KH" customClass="HomeController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2vU-Pv-4KH" customClass="HomeAction" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p6f-O4-b9D"/>
                         <viewControllerLayoutGuide type="bottom" id="Luu-yz-qgl"/>
@@ -1211,6 +1211,6 @@
         <image name="ic_reorder.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q0k-9U-1pf"/>
+        <segue reference="Kwo-Kj-9PE"/>
     </inferredMetricsTieBreakers>
 </document>

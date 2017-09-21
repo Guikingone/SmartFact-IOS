@@ -14,7 +14,7 @@
 		F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */; };
 		F01FDC941F4AB620008848DD /* MainForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDC931F4AB620008848DD /* MainForm.swift */; };
 		F04109E01F4341A3009D04A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109DF1F4341A3009D04A4 /* Constants.swift */; };
-		F04109E21F4350EB009D04A4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109E11F4350EB009D04A4 /* DataService.swift */; };
+		F04109E21F4350EB009D04A4 /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109E11F4350EB009D04A4 /* DataWorker.swift */; };
 		F06263661F627F5F00B03536 /* BillsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263651F627F5F00B03536 /* BillsManager.swift */; };
 		F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263671F627F9C00B03536 /* PlanningManager.swift */; };
 		F062636A1F6280F200B03536 /* BillsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263691F6280F200B03536 /* BillsMock.swift */; };
@@ -35,6 +35,7 @@
 		F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E27A21F6126FA00CAD63D /* UserManager.swift */; };
 		F06E98241F70107B00D3ACFA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E98231F70107B00D3ACFA /* Token.swift */; };
 		F06E98261F70234000D3ACFA /* BillValidationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E98251F70234000D3ACFA /* BillValidationController.swift */; };
+		F06EA7631F73DCF0008F9621 /* HomeResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06EA7621F73DCF0008F9621 /* HomeResponder.swift */; };
 		F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E731F62DEE400D71DBB /* AccountingMock.swift */; };
 		F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E751F62DEF400D71DBB /* AccountingManager.swift */; };
 		F0732E781F62E12B00D71DBB /* ClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E771F62E12B00D71DBB /* ClientsManager.swift */; };
@@ -94,7 +95,7 @@
 		F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		F01FDC931F4AB620008848DD /* MainForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForm.swift; sourceTree = "<group>"; };
 		F04109DF1F4341A3009D04A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F04109E11F4350EB009D04A4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F04109E11F4350EB009D04A4 /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
 		F06263651F627F5F00B03536 /* BillsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsManager.swift; sourceTree = "<group>"; };
 		F06263671F627F9C00B03536 /* PlanningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningManager.swift; sourceTree = "<group>"; };
 		F06263691F6280F200B03536 /* BillsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsMock.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		F06E27A21F6126FA00CAD63D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		F06E98231F70107B00D3ACFA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F06E98251F70234000D3ACFA /* BillValidationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationController.swift; sourceTree = "<group>"; };
+		F06EA7621F73DCF0008F9621 /* HomeResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponder.swift; sourceTree = "<group>"; };
 		F0732E731F62DEE400D71DBB /* AccountingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingMock.swift; sourceTree = "<group>"; };
 		F0732E751F62DEF400D71DBB /* AccountingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingManager.swift; sourceTree = "<group>"; };
 		F0732E771F62E12B00D71DBB /* ClientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsManager.swift; sourceTree = "<group>"; };
@@ -202,14 +204,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F04109DE1F434195009D04A4 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				F04109DF1F4341A3009D04A4 /* Constants.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		F06263641F627F0300B03536 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,31 +216,6 @@
 				F0732E771F62E12B00D71DBB /* ClientsManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		F06D11951F41E0AC00E032DF /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F07B0B691F6AF4DF00ABE958 /* Clients */,
-				F0D5C94D1F66AAAA0005AF91 /* Accounting */,
-				F0D5C94C1F66AA730005AF91 /* Planning */,
-				F0D5C94B1F66AA3F0005AF91 /* User */,
-				F0D5C94A1F66AA380005AF91 /* Security */,
-				F0D5C9471F66A8E90005AF91 /* Bills */,
-				F0EB19351F31CC79006615CB /* HomeController.swift */,
-				F06D11A81F41E37500E032DF /* StartController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F06D119C1F41E26800E032DF /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				F06D119D1F41E27100E032DF /* AuthService.swift */,
-				F04109E11F4350EB009D04A4 /* DataService.swift */,
-				F08A85D91F67C27700879405 /* StorageService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		F06D11A71F41E34600E032DF /* View */ = {
@@ -270,15 +239,22 @@
 			path = Structs;
 			sourceTree = "<group>";
 		};
-		F07B0B691F6AF4DF00ABE958 /* Clients */ = {
+		F06EA75D1F73A7E5008F9621 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				F06D11A31F41E2E900E032DF /* ClientController.swift */,
+				F06D11A81F41E37500E032DF /* StartController.swift */,
+				F07B0B691F6AF4DF00ABE958 /* Clients */,
+				F0D5C94D1F66AAAA0005AF91 /* Accounting */,
+				F0D5C94C1F66AA730005AF91 /* Planning */,
+				F0D5C94B1F66AA3F0005AF91 /* User */,
+				F0D5C94A1F66AA380005AF91 /* Security */,
+				F0D5C9471F66A8E90005AF91 /* Bills */,
+				F0EB19351F31CC79006615CB /* HomeController.swift */,
 			);
-			path = Clients;
+			path = Actions;
 			sourceTree = "<group>";
 		};
-		F0A0D8231F55BC9800421A51 /* Models */ = {
+		F06EA75E1F73A7EE008F9621 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				F0A0D8241F55BC9E00421A51 /* UserMock.swift */,
@@ -287,8 +263,43 @@
 				F06263731F62D8D200B03536 /* MeetupsMock.swift */,
 				F06263751F62D8E400B03536 /* PlanningMock.swift */,
 				F0732E731F62DEE400D71DBB /* AccountingMock.swift */,
+				F06E98221F70106300D3ACFA /* Structs */,
 			);
-			path = Models;
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F06EA75F1F73A7F5008F9621 /* Responders */ = {
+			isa = PBXGroup;
+			children = (
+				F06EA7621F73DCF0008F9621 /* HomeResponder.swift */,
+			);
+			path = Responders;
+			sourceTree = "<group>";
+		};
+		F06EA7611F73A877008F9621 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				F04109DF1F4341A3009D04A4 /* Constants.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		F06EA7641F73DD41008F9621 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				F06D119D1F41E27100E032DF /* AuthService.swift */,
+				F04109E11F4350EB009D04A4 /* DataWorker.swift */,
+				F08A85D91F67C27700879405 /* StorageService.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		F07B0B691F6AF4DF00ABE958 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				F06D11A31F41E2E900E032DF /* ClientController.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 		F0D5C9471F66A8E90005AF91 /* Bills */ = {
@@ -376,14 +387,14 @@
 		F0EB19321F31CC79006615CB /* SmartFact */ = {
 			isa = PBXGroup;
 			children = (
-				F06E98221F70106300D3ACFA /* Structs */,
-				F0D5C94E1F66EC240005AF91 /* Extensions */,
 				F06263641F627F0300B03536 /* Managers */,
-				F0A0D8231F55BC9800421A51 /* Models */,
-				F04109DE1F434195009D04A4 /* Utilities */,
+				F06EA7641F73DD41008F9621 /* Workers */,
+				F06EA7611F73A877008F9621 /* Configurations */,
+				F06EA75F1F73A7F5008F9621 /* Responders */,
+				F06EA75E1F73A7EE008F9621 /* Domain */,
+				F06EA75D1F73A7E5008F9621 /* Actions */,
+				F0D5C94E1F66EC240005AF91 /* Extensions */,
 				F06D11A71F41E34600E032DF /* View */,
-				F06D119C1F41E26800E032DF /* Services */,
-				F06D11951F41E0AC00E032DF /* Controllers */,
 				F0EB19331F31CC79006615CB /* AppDelegate.swift */,
 				F0EB19371F31CC79006615CB /* Main.storyboard */,
 				F0EB193D1F31CC79006615CB /* Assets.xcassets */,
@@ -713,7 +724,7 @@
 				F0892BC71F5FF65F00707C04 /* BackBtn.swift in Sources */,
 				F06D11971F41E13100E032DF /* RegisterController.swift in Sources */,
 				F0D5C9501F66EC480005AF91 /* UIViewControllerExtension.swift in Sources */,
-				F04109E21F4350EB009D04A4 /* DataService.swift in Sources */,
+				F04109E21F4350EB009D04A4 /* DataWorker.swift in Sources */,
 				F062636E1F62D78700B03536 /* NotificationsManager.swift in Sources */,
 				F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */,
 				F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */,
@@ -749,6 +760,7 @@
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
 				F06E98241F70107B00D3ACFA /* Token.swift in Sources */,
 				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,
+				F06EA7631F73DCF0008F9621 /* HomeResponder.swift in Sources */,
 				F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
 				F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */,

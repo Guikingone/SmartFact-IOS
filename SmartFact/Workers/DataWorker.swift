@@ -9,20 +9,20 @@
 import Alamofire
 import Foundation
 
-class DataService
+class DataWorker
 {
-    static let instance = DataService()
+    static let instance = DataWorker()
     
-    public func getPersonalUserInformations(completion: @escaping (_: Bool) -> ())
+    public func getPersonalUserInformations(success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
     {
         do {
-            let request = try URLRequest(url: URI_PERSONAl_USER, method: .get, headers: AUTH_HEADERS)
+            let request = try URLRequest(url: URI_PERSONAL_USER, method: .get, headers: AUTH_HEADERS)
             
             let task = URLSession.shared.dataTask(with: request)
             { (data, response, errors) in
                 
                 if errors != nil {
-                    completion(false)
+                    failure(true)
                 }
                 
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
@@ -32,21 +32,15 @@ class DataService
                 if response.statusCode == 200 {
                     let user = try? JSONDecoder().decode(UserStruct.self, from: data)
                     
-                    DispatchQueue.main.async {
-                        UserManager.instance.getUser(data: user!) {
-                            success in
-                            if success {
-                                completion(true)
-                            } else {
-                                UserManager.instance.createUser(data: user!) {
-                                    success in
-                                    if success {
-                                        completion(true)
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    UserStruct.init(
+                        id: (user?.id)!,
+                        username: (user?.username)!,
+                        firstname: (user?.firstname)!,
+                        lastname: (user?.lastname)!,
+                        email: (user?.email)!
+                    )
+                    
+                    success(true)
                 }
             }
             
@@ -54,7 +48,6 @@ class DataService
             
         } catch {
             debugPrint(error)
-            completion(false)
         }
     }
     
