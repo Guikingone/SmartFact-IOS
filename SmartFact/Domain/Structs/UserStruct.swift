@@ -8,7 +8,7 @@
 
 struct UserStruct: Decodable
 {
-    struct Response: Decodable
+    struct getUserData: Decodable
     {
         let id: String
         let username: String
@@ -17,7 +17,7 @@ struct UserStruct: Decodable
         let email: String
     }
     
-    struct Request: Decodable
+    struct postUserData: Decodable
     {
         let id: String
         let username: String
@@ -26,7 +26,7 @@ struct UserStruct: Decodable
         let email: String
     }
     
-    struct View: Decodable
+    struct viewUserData: Decodable
     {
         let id: String
         let username: String
@@ -35,7 +35,12 @@ struct UserStruct: Decodable
         let email: String
     }
     
-    struct Token: Decodable
+    struct authToken: Decodable
+    {
+        let token: String
+    }
+    
+    struct passwordReset: Decodable
     {
         let token: String
     }

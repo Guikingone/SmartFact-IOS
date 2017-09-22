@@ -10,6 +10,10 @@
 		50E2CD9190B9CF8EDBF8518B /* Pods_SmartFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B96A7993270BE6F435116E /* Pods_SmartFactTests.framework */; };
 		6C9676C51CD0580EF8661994 /* Pods_SmartFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98D45E855242B951EA28F9 /* Pods_SmartFactUITests.framework */; };
 		8A42DBAA1F74303400B568D2 /* LoginResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42DBA91F74303400B568D2 /* LoginResponder.swift */; };
+		8A8114B21F752FE70001C947 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B11F752FE70001C947 /* HomeWorker.swift */; };
+		8A8114B41F7530280001C947 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B31F7530280001C947 /* HomeInteractor.swift */; };
+		8A8114B71F754BBD0001C947 /* BillsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B61F754BBD0001C947 /* BillsWorker.swift */; };
+		8A8114B91F754CDA0001C947 /* BillsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B81F754CDA0001C947 /* BillsInteractor.swift */; };
 		8C7251F25A878DB78215179C /* Pods_SmartFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */; };
 		F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A62F31F6444F4000B6BE9 /* BillsCell.swift */; };
 		F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */; };
@@ -31,12 +35,11 @@
 		F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D119F1F41E2A000E032DF /* NotificationsController.swift */; };
 		F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A11F41E2D500E032DF /* AccountingController.swift */; };
 		F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A31F41E2E900E032DF /* ClientController.swift */; };
-		F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A51F41E2FC00E032DF /* BillsController.swift */; };
+		F06D11A61F41E2FC00E032DF /* BillsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A51F41E2FC00E032DF /* BillsAction.swift */; };
 		F06D11A91F41E37500E032DF /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D11A81F41E37500E032DF /* StartController.swift */; };
 		F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E27A21F6126FA00CAD63D /* UserManager.swift */; };
 		F06E98241F70107B00D3ACFA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E98231F70107B00D3ACFA /* Token.swift */; };
 		F06E98261F70234000D3ACFA /* BillValidationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E98251F70234000D3ACFA /* BillValidationController.swift */; };
-		F06EA7631F73DCF0008F9621 /* HomeResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06EA7621F73DCF0008F9621 /* HomeResponder.swift */; };
 		F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E731F62DEE400D71DBB /* AccountingMock.swift */; };
 		F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E751F62DEF400D71DBB /* AccountingManager.swift */; };
 		F0732E781F62E12B00D71DBB /* ClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0732E771F62E12B00D71DBB /* ClientsManager.swift */; };
@@ -90,6 +93,10 @@
 		5D52632CAEC9351B1CF11F92 /* Pods-SmartFact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact.debug.xcconfig"; sourceTree = "<group>"; };
 		870AA475E34B2EDDF4CD65A5 /* Pods-SmartFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactTests/Pods-SmartFactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A42DBA91F74303400B568D2 /* LoginResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponder.swift; sourceTree = "<group>"; };
+		8A8114B11F752FE70001C947 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		8A8114B31F7530280001C947 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		8A8114B61F754BBD0001C947 /* BillsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsWorker.swift; sourceTree = "<group>"; };
+		8A8114B81F754CDA0001C947 /* BillsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsInteractor.swift; sourceTree = "<group>"; };
 		9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC040DF31214B09F0C071154 /* Pods-SmartFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactUITests/Pods-SmartFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00A62F31F6444F4000B6BE9 /* BillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsCell.swift; sourceTree = "<group>"; };
@@ -112,12 +119,11 @@
 		F06D119F1F41E2A000E032DF /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		F06D11A11F41E2D500E032DF /* AccountingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingController.swift; sourceTree = "<group>"; };
 		F06D11A31F41E2E900E032DF /* ClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientController.swift; sourceTree = "<group>"; };
-		F06D11A51F41E2FC00E032DF /* BillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsController.swift; sourceTree = "<group>"; };
+		F06D11A51F41E2FC00E032DF /* BillsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsAction.swift; sourceTree = "<group>"; };
 		F06D11A81F41E37500E032DF /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		F06E27A21F6126FA00CAD63D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		F06E98231F70107B00D3ACFA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F06E98251F70234000D3ACFA /* BillValidationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationController.swift; sourceTree = "<group>"; };
-		F06EA7621F73DCF0008F9621 /* HomeResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponder.swift; sourceTree = "<group>"; };
 		F0732E731F62DEE400D71DBB /* AccountingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingMock.swift; sourceTree = "<group>"; };
 		F0732E751F62DEF400D71DBB /* AccountingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingManager.swift; sourceTree = "<group>"; };
 		F0732E771F62E12B00D71DBB /* ClientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsManager.swift; sourceTree = "<group>"; };
@@ -189,6 +195,35 @@
 			path = Security;
 			sourceTree = "<group>";
 		};
+		8A8114AF1F752F0B0001C947 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8A8114B51F754B950001C947 /* Bills */,
+				8A8114B01F752F130001C947 /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		8A8114B01F752F130001C947 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F0EB19351F31CC79006615CB /* HomeAction.swift */,
+				8A8114B11F752FE70001C947 /* HomeWorker.swift */,
+				8A8114B31F7530280001C947 /* HomeInteractor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8A8114B51F754B950001C947 /* Bills */ = {
+			isa = PBXGroup;
+			children = (
+				F06D11A51F41E2FC00E032DF /* BillsAction.swift */,
+				8A8114B61F754BBD0001C947 /* BillsWorker.swift */,
+				8A8114B81F754CDA0001C947 /* BillsInteractor.swift */,
+			);
+			path = Bills;
+			sourceTree = "<group>";
+		};
 		CC02332DD4C4FCFD79DE8B36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +292,6 @@
 				F0D5C94B1F66AA3F0005AF91 /* User */,
 				F0D5C94A1F66AA380005AF91 /* Security */,
 				F0D5C9471F66A8E90005AF91 /* Bills */,
-				F0EB19351F31CC79006615CB /* HomeAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -280,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				8A42DBA81F74302500B568D2 /* Security */,
-				F06EA7621F73DCF0008F9621 /* HomeResponder.swift */,
 			);
 			path = Responders;
 			sourceTree = "<group>";
@@ -313,7 +346,6 @@
 		F0D5C9471F66A8E90005AF91 /* Bills */ = {
 			isa = PBXGroup;
 			children = (
-				F06D11A51F41E2FC00E032DF /* BillsController.swift */,
 				F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */,
 				F0D5C9481F66A9010005AF91 /* CreateBillController.swift */,
 				F06E98251F70234000D3ACFA /* BillValidationController.swift */,
@@ -395,6 +427,7 @@
 		F0EB19321F31CC79006615CB /* SmartFact */ = {
 			isa = PBXGroup;
 			children = (
+				8A8114AF1F752F0B0001C947 /* Scene */,
 				F06263641F627F0300B03536 /* Managers */,
 				F06EA7641F73DD41008F9621 /* Workers */,
 				F06EA7611F73A877008F9621 /* Configurations */,
@@ -746,15 +779,18 @@
 				F06263701F62D79900B03536 /* NotificationsMock.swift in Sources */,
 				F01FDC941F4AB620008848DD /* MainForm.swift in Sources */,
 				F0D5C9521F66FDA10005AF91 /* UIViewControllerDataExtension.swift in Sources */,
+				8A8114B21F752FE70001C947 /* HomeWorker.swift in Sources */,
 				F06263721F62D8C100B03536 /* MeetupsManager.swift in Sources */,
 				F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */,
-				F06D11A61F41E2FC00E032DF /* BillsController.swift in Sources */,
+				F06D11A61F41E2FC00E032DF /* BillsAction.swift in Sources */,
 				F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */,
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,
+				8A8114B71F754BBD0001C947 /* BillsWorker.swift in Sources */,
 				F0DA37EC1F711AE3000CAC0D /* UserStruct.swift in Sources */,
 				F07B0B6B1F6AF6B800ABE958 /* CreateMeetupController.swift in Sources */,
 				F06263661F627F5F00B03536 /* BillsManager.swift in Sources */,
 				F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */,
+				8A8114B41F7530280001C947 /* HomeInteractor.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
 				F06E98261F70234000D3ACFA /* BillValidationController.swift in Sources */,
 				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
@@ -766,9 +802,9 @@
 				F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */,
 				F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
+				8A8114B91F754CDA0001C947 /* BillsInteractor.swift in Sources */,
 				F06E98241F70107B00D3ACFA /* Token.swift in Sources */,
 				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,
-				F06EA7631F73DCF0008F9621 /* HomeResponder.swift in Sources */,
 				F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
 				F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */,

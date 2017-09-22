@@ -8,10 +8,21 @@
 
 import UIKit
 
-class BillsController: UIViewController
+class BillsAction: UIViewController
 {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var billsList: UITableView!
+    
+    override func awakeFromNib()
+    {
+        super.awakeFromNib()
+        BillsInteractor().fetchBills(success: { (found) in
+            // TODO
+        }) { (missing) in
+            // TODO
+        }
+        
+    }
     
     override func viewDidLoad()
     {
@@ -47,7 +58,7 @@ class BillsController: UIViewController
     }
 }
 
-extension BillsController: UITableViewDelegate, UITableViewDataSource
+extension BillsAction: UITableViewDelegate, UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

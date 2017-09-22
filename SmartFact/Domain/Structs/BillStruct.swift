@@ -10,7 +10,7 @@ struct BillStruct
 {
     let id: String
     
-    struct Response: Decodable
+    struct viewData: Decodable
     {
         let id: String
     }

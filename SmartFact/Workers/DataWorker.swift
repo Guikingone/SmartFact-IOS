@@ -13,38 +13,6 @@ class DataWorker
 {
     static let instance = DataWorker()
     
-    public func getPersonalUserInformations(success: @escaping (_ response: UserStruct.Response) -> (), failure: @escaping (_: Bool) -> ())
-    {
-        do {
-            let request = try URLRequest(url: URI_PERSONAL_USER, method: .get, headers: AUTH_HEADERS)
-            
-            let task = URLSession.shared.dataTask(with: request)
-            { (data, response, errors) in
-                
-                if errors != nil {
-                    failure(true)
-                }
-                
-                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
-                
-                let data = data!
-                
-                if response.statusCode == 200 {
-                    let user = try? JSONDecoder().decode(UserStruct.Response.self, from: data)
-                    success(user!)
-                } else {
-                    failure(true)
-                }
-            }
-            
-            task.resume()
-            
-        } catch {
-            debugPrint(error)
-            failure(true)
-        }
-    }
-    
     public func getPersonalBills(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_BILLS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in

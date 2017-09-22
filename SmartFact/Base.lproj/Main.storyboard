@@ -100,7 +100,7 @@
         <!--Factures-->
         <scene sceneID="8RF-gU-039">
             <objects>
-                <viewController storyboardIdentifier="BillsController" id="F1e-IS-WwF" customClass="BillsController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BillsController" id="F1e-IS-WwF" customClass="BillsAction" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F5R-Ma-dtB"/>
                         <viewControllerLayoutGuide type="bottom" id="3cN-V5-uDh"/>
