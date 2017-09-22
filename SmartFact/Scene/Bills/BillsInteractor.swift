@@ -10,12 +10,17 @@ import Foundation
 
 class BillsInteractor
 {
-    public func fetchBills(success: @escaping (_: BillStruct.viewData) -> (), failure: @escaping (_: Bool) -> ())
+    public func fetchBills(success: @escaping (_: [BillStruct.getBillsData]) -> (), failure: @escaping (_: Bool) -> ())
     {
         BillsWorker().getPersonalBills(success: { (data) in
             success(data)
         }) { (missing) in
             failure(true)
         }
+    }
+    
+    public func fetchAndSaveBills()
+    {
+        
     }
 }

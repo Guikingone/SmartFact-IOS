@@ -18,4 +18,19 @@ class HomeInteractor
             failure(true)
         }
     }
+    
+    public func fetchAndSaveUser(happy: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
+    {
+        HomeWorker().getPersonalUserInformations(success: { (found) in
+            let data = UserStruct.postUserData.init(id: found.id, username: found.username, firstname: found.firstname, lastname: found.lastname, email: found.email)
+            
+            HomeManager().saveUser(data: data, success: { (saved) in
+                happy(true)
+            }, failure: { (failed) in
+                failure(true)
+            })
+        }) { (missing) in
+            failure(true)
+        }
+    }
 }

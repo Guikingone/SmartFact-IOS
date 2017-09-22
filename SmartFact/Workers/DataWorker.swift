@@ -13,22 +13,6 @@ class DataWorker
 {
     static let instance = DataWorker()
     
-    public func getPersonalBills(success: @escaping (_: Bool) -> ())
-    {
-        Alamofire.request(URI_PERSONAL_BILLS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in
-            
-            if response.result.error == nil {
-                if let json = response.result.value as? Dictionary<String, Any> {
-                    BillsManager.instance.setBillsData(data: json)
-                    success(true)
-                }
-            } else {
-                success(false)
-                debugPrint(response.result.error as Any)
-            }
-        }
-    }
-    
     public func getPersonalAccounting(success: @escaping (_: Bool) -> ())
     {
         Alamofire.request(URI_PERSONAL_ACCOUNTINGS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: AUTH_HEADERS).responseJSON { (response) in

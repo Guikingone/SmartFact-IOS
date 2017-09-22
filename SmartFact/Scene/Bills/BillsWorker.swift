@@ -10,7 +10,7 @@ import Foundation
 
 class BillsWorker
 {
-    public func getPersonalBills(success: @escaping (_: BillStruct.viewData) -> (), failure: @escaping (_: Bool) -> ())
+    public func getPersonalBills(success: @escaping (_: [BillStruct.getBillsData]) -> (), failure: @escaping (_: Bool) -> ())
     {
         do {
             let request = try URLRequest(url: URI_PERSONAL_BILLS, method: .get, headers: AUTH_HEADERS)
@@ -28,7 +28,7 @@ class BillsWorker
                 
                 if response.statusCode == 200 {
                     DispatchQueue.main.async {
-                        let bills = try? JSONDecoder().decode(BillStruct.viewData.self, from: data)
+                        let bills = try? JSONDecoder().decode([BillStruct.getBillsData].self, from: data)
                         success(bills!)
                     }
                 } else {

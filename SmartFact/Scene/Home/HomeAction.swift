@@ -28,10 +28,16 @@ class HomeAction: UIViewController
         }) { (failure) in
             self.connexionFailure()
         }
+        
+//        HomeInteractor().fetchAndSaveUser(happy: { (saved) in
+//            // TODO
+//        }) { (failed) in
+//            // TODO
+//        }
     }
     
     @IBAction func logoutUser(_ sender: Any)
     {
-        logout()
+        self.logout()
     }
 }

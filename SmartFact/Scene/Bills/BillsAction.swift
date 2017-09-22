@@ -13,11 +13,13 @@ class BillsAction: UIViewController
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var billsList: UITableView!
     
+    var bills: [BillStruct.getBillsData] = []
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
         BillsInteractor().fetchBills(success: { (found) in
-            // TODO
+            self.bills = found
         }) { (missing) in
             // TODO
         }
@@ -34,10 +36,10 @@ class BillsAction: UIViewController
         //        If so, show the table then load data from API (or CoreData if
         //        the option was checked).
         
-        if BillsManager.instance.bills.count == 0 {
-            self.billsList.isHidden = true
-            self.welcomeLabel.isHidden = false
-        }
+//        if BillsManager.instance.bills.count == 0 {
+//            self.billsList.isHidden = true
+//            self.welcomeLabel.isHidden = false
+//        }
         
 //        DataService.instance.getPersonalBills { (success) in
 //            if success {
@@ -65,7 +67,7 @@ extension BillsAction: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BillsManager.instance.bills.count
+        return self.bills.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

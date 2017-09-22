@@ -14,13 +14,15 @@
 		8A8114B41F7530280001C947 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B31F7530280001C947 /* HomeInteractor.swift */; };
 		8A8114B71F754BBD0001C947 /* BillsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B61F754BBD0001C947 /* BillsWorker.swift */; };
 		8A8114B91F754CDA0001C947 /* BillsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B81F754CDA0001C947 /* BillsInteractor.swift */; };
+		8A8114BB1F754F5C0001C947 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114BA1F754F5C0001C947 /* HomeManager.swift */; };
+		8A8114BD1F7550F50001C947 /* BillsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114BC1F7550F50001C947 /* BillsManager.swift */; };
+		8A8114C01F7552B90001C947 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114BF1F7552B90001C947 /* LoginAction.swift */; };
 		8C7251F25A878DB78215179C /* Pods_SmartFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */; };
 		F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A62F31F6444F4000B6BE9 /* BillsCell.swift */; };
 		F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */; };
 		F01FDC941F4AB620008848DD /* MainForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDC931F4AB620008848DD /* MainForm.swift */; };
 		F04109E01F4341A3009D04A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109DF1F4341A3009D04A4 /* Constants.swift */; };
 		F04109E21F4350EB009D04A4 /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04109E11F4350EB009D04A4 /* DataWorker.swift */; };
-		F06263661F627F5F00B03536 /* BillsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263651F627F5F00B03536 /* BillsManager.swift */; };
 		F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263671F627F9C00B03536 /* PlanningManager.swift */; };
 		F062636A1F6280F200B03536 /* BillsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06263691F6280F200B03536 /* BillsMock.swift */; };
 		F062636E1F62D78700B03536 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062636D1F62D78700B03536 /* NotificationsManager.swift */; };
@@ -97,6 +99,9 @@
 		8A8114B31F7530280001C947 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8A8114B61F754BBD0001C947 /* BillsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsWorker.swift; sourceTree = "<group>"; };
 		8A8114B81F754CDA0001C947 /* BillsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsInteractor.swift; sourceTree = "<group>"; };
+		8A8114BA1F754F5C0001C947 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		8A8114BC1F7550F50001C947 /* BillsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsManager.swift; sourceTree = "<group>"; };
+		8A8114BF1F7552B90001C947 /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC040DF31214B09F0C071154 /* Pods-SmartFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactUITests/Pods-SmartFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00A62F31F6444F4000B6BE9 /* BillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsCell.swift; sourceTree = "<group>"; };
@@ -104,7 +109,6 @@
 		F01FDC931F4AB620008848DD /* MainForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForm.swift; sourceTree = "<group>"; };
 		F04109DF1F4341A3009D04A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F04109E11F4350EB009D04A4 /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
-		F06263651F627F5F00B03536 /* BillsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsManager.swift; sourceTree = "<group>"; };
 		F06263671F627F9C00B03536 /* PlanningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningManager.swift; sourceTree = "<group>"; };
 		F06263691F6280F200B03536 /* BillsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsMock.swift; sourceTree = "<group>"; };
 		F062636D1F62D78700B03536 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		8A8114AF1F752F0B0001C947 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8A8114BE1F7552A80001C947 /* Login */,
 				8A8114B51F754B950001C947 /* Bills */,
 				8A8114B01F752F130001C947 /* Home */,
 			);
@@ -210,6 +215,7 @@
 				F0EB19351F31CC79006615CB /* HomeAction.swift */,
 				8A8114B11F752FE70001C947 /* HomeWorker.swift */,
 				8A8114B31F7530280001C947 /* HomeInteractor.swift */,
+				8A8114BA1F754F5C0001C947 /* HomeManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -220,8 +226,17 @@
 				F06D11A51F41E2FC00E032DF /* BillsAction.swift */,
 				8A8114B61F754BBD0001C947 /* BillsWorker.swift */,
 				8A8114B81F754CDA0001C947 /* BillsInteractor.swift */,
+				8A8114BC1F7550F50001C947 /* BillsManager.swift */,
 			);
 			path = Bills;
+			sourceTree = "<group>";
+		};
+		8A8114BE1F7552A80001C947 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8A8114BF1F7552B90001C947 /* LoginAction.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CC02332DD4C4FCFD79DE8B36 /* Frameworks */ = {
@@ -251,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				F06E27A21F6126FA00CAD63D /* UserManager.swift */,
-				F06263651F627F5F00B03536 /* BillsManager.swift */,
 				F06263671F627F9C00B03536 /* PlanningManager.swift */,
 				F062636D1F62D78700B03536 /* NotificationsManager.swift */,
 				F06263711F62D8C100B03536 /* MeetupsManager.swift */,
@@ -772,6 +786,7 @@
 				F0EB19361F31CC79006615CB /* HomeAction.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
 				8A42DBAA1F74303400B568D2 /* LoginResponder.swift in Sources */,
+				8A8114BD1F7550F50001C947 /* BillsManager.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
 				F06263761F62D8E400B03536 /* PlanningMock.swift in Sources */,
 				F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */,
@@ -788,7 +803,6 @@
 				8A8114B71F754BBD0001C947 /* BillsWorker.swift in Sources */,
 				F0DA37EC1F711AE3000CAC0D /* UserStruct.swift in Sources */,
 				F07B0B6B1F6AF6B800ABE958 /* CreateMeetupController.swift in Sources */,
-				F06263661F627F5F00B03536 /* BillsManager.swift in Sources */,
 				F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */,
 				8A8114B41F7530280001C947 /* HomeInteractor.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
@@ -798,6 +812,7 @@
 				F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */,
 				F062636A1F6280F200B03536 /* BillsMock.swift in Sources */,
 				F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */,
+				8A8114C01F7552B90001C947 /* LoginAction.swift in Sources */,
 				F07454471F44B75000D2F138 /* ForgotPasswordController.swift in Sources */,
 				F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */,
 				F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */,
@@ -805,6 +820,7 @@
 				8A8114B91F754CDA0001C947 /* BillsInteractor.swift in Sources */,
 				F06E98241F70107B00D3ACFA /* Token.swift in Sources */,
 				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,
+				8A8114BB1F754F5C0001C947 /* HomeManager.swift in Sources */,
 				F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */,
 				F06D11A21F41E2D500E032DF /* AccountingController.swift in Sources */,
 				F06E27A31F6126FA00CAD63D /* UserManager.swift in Sources */,
