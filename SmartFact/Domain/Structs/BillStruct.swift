@@ -15,10 +15,10 @@ struct BillStruct
         let id: String
         let date: String
         let total: Double
-        let send: Bool
+        let send: Bool?
         let createdAt: String
-        let sendAt: String
-        let file: String
+        let sendAt: String?
+        let file: String?
         let tva: Bool
     }
     

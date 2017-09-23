@@ -18,39 +18,34 @@ class BillsAction: UIViewController
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        
         BillsInteractor().fetchBills(success: { (found) in
             self.bills = found
         }) { (missing) in
-            // TODO
+            self.billsList.isHidden = true
+            self.welcomeLabel.isHidden = false
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        print(self.bills)
+        if self.bills.count >= 1 {
+            self.billsList.isHidden = false
         }
         
+        billsList.reloadData()
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         billsList.delegate = self
         billsList.dataSource = self
-        
-        // TODO : Check if there's data, if not, show the label.
-        //        If so, show the table then load data from API (or CoreData if
-        //        the option was checked).
-        
-//        if BillsManager.instance.bills.count == 0 {
-//            self.billsList.isHidden = true
-//            self.welcomeLabel.isHidden = false
-//        }
-        
-//        DataService.instance.getPersonalBills { (success) in
-//            if success {
-//                // TODO : Display all the bills saved.
-//                fetch(entityname: "Bills", completion: { (success) in
-//                    if success {
-//
-//                    }
-//                })
-//            }
-//        }
+        billsList.isHidden = true
     }
     
     @IBAction func createBillAction(_ sender: Any)
@@ -67,13 +62,13 @@ extension BillsAction: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.bills.count
+        return bills.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = billsList.dequeueReusableCell(withIdentifier: "billCell") as? BillsCell
-            else { return UITableViewCell() }
-        cell.configureCell(client: "Mr Test", total: 12.5)
+        guard let cell = billsList.dequeueReusableCell(withIdentifier: "BillCell") as? BillsCell else { return UITableViewCell() }
+        let bill = bills[indexPath.row]
+        cell.configureCell(client: bill.date, total: bill.total)
         return cell
     }
     

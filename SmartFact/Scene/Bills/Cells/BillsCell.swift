@@ -12,16 +12,10 @@ class BillsCell: UITableViewCell
 {
     @IBOutlet weak var billClientLbl: UILabel!
     @IBOutlet weak var billTotalLbl: UILabel!
-    @IBOutlet weak var billDetailsBtn: UIButton!
     
     func configureCell(client: String, total: Double)
     {
-        self.billClientLbl.text = client
-        self.billTotalLbl.text = String(describing: total)
-    }
-    
-    @IBAction func seeBillDetails(_ sender: Any)
-    {
-        // TODO : Return to the bills details page.
+        billClientLbl.text = client
+        billTotalLbl.text = String(describing: total)
     }
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		50E2CD9190B9CF8EDBF8518B /* Pods_SmartFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B96A7993270BE6F435116E /* Pods_SmartFactTests.framework */; };
 		6C9676C51CD0580EF8661994 /* Pods_SmartFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98D45E855242B951EA28F9 /* Pods_SmartFactUITests.framework */; };
-		8A42DBAA1F74303400B568D2 /* LoginResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A42DBA91F74303400B568D2 /* LoginResponder.swift */; };
 		8A8114B21F752FE70001C947 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B11F752FE70001C947 /* HomeWorker.swift */; };
 		8A8114B41F7530280001C947 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B31F7530280001C947 /* HomeInteractor.swift */; };
 		8A8114B71F754BBD0001C947 /* BillsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B61F754BBD0001C947 /* BillsWorker.swift */; };
@@ -17,6 +16,7 @@
 		8A8114BB1F754F5C0001C947 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114BA1F754F5C0001C947 /* HomeManager.swift */; };
 		8A8114BD1F7550F50001C947 /* BillsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114BC1F7550F50001C947 /* BillsManager.swift */; };
 		8A8114C01F7552B90001C947 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114BF1F7552B90001C947 /* LoginAction.swift */; };
+		8A905D571F76679F009D057D /* MeetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A905D561F76679F009D057D /* MeetupCell.swift */; };
 		8C7251F25A878DB78215179C /* Pods_SmartFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */; };
 		F00A62F41F6444F4000B6BE9 /* BillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A62F31F6444F4000B6BE9 /* BillsCell.swift */; };
 		F01A67DC1F4D8D0E007FF243 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A67DB1F4D8D0E007FF243 /* ResetPasswordController.swift */; };
@@ -94,7 +94,6 @@
 		25C9A59A601768CAEDEEBA82 /* Pods-SmartFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFact.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact.release.xcconfig"; sourceTree = "<group>"; };
 		5D52632CAEC9351B1CF11F92 /* Pods-SmartFact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact.debug.xcconfig"; sourceTree = "<group>"; };
 		870AA475E34B2EDDF4CD65A5 /* Pods-SmartFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactTests/Pods-SmartFactTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8A42DBA91F74303400B568D2 /* LoginResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponder.swift; sourceTree = "<group>"; };
 		8A8114B11F752FE70001C947 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		8A8114B31F7530280001C947 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8A8114B61F754BBD0001C947 /* BillsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsWorker.swift; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		8A8114BA1F754F5C0001C947 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		8A8114BC1F7550F50001C947 /* BillsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsManager.swift; sourceTree = "<group>"; };
 		8A8114BF1F7552B90001C947 /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
+		8A905D561F76679F009D057D /* MeetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCell.swift; sourceTree = "<group>"; };
 		9BCA0C0B858646B110D99A72 /* Pods_SmartFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC040DF31214B09F0C071154 /* Pods-SmartFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactUITests/Pods-SmartFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F00A62F31F6444F4000B6BE9 /* BillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsCell.swift; sourceTree = "<group>"; };
@@ -191,17 +191,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A42DBA81F74302500B568D2 /* Security */ = {
+		8A4799831F7683550030B838 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8A42DBA91F74303400B568D2 /* LoginResponder.swift */,
+				F00A62F31F6444F4000B6BE9 /* BillsCell.swift */,
 			);
-			path = Security;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8A8114AF1F752F0B0001C947 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8A905D541F766787009D057D /* Planning */,
 				8A8114BE1F7552A80001C947 /* Login */,
 				8A8114B51F754B950001C947 /* Bills */,
 				8A8114B01F752F130001C947 /* Home */,
@@ -223,6 +224,7 @@
 		8A8114B51F754B950001C947 /* Bills */ = {
 			isa = PBXGroup;
 			children = (
+				8A4799831F7683550030B838 /* Cells */,
 				F06D11A51F41E2FC00E032DF /* BillsAction.swift */,
 				8A8114B61F754BBD0001C947 /* BillsWorker.swift */,
 				8A8114B81F754CDA0001C947 /* BillsInteractor.swift */,
@@ -237,6 +239,22 @@
 				8A8114BF1F7552B90001C947 /* LoginAction.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		8A905D541F766787009D057D /* Planning */ = {
+			isa = PBXGroup;
+			children = (
+				8A905D551F766791009D057D /* Cell */,
+			);
+			path = Planning;
+			sourceTree = "<group>";
+		};
+		8A905D551F766791009D057D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8A905D561F76679F009D057D /* MeetupCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CC02332DD4C4FCFD79DE8B36 /* Frameworks */ = {
@@ -281,7 +299,6 @@
 				F09417AE1F48741A001FB7BC /* MainButton.swift */,
 				F01FDC931F4AB620008848DD /* MainForm.swift */,
 				F0892BC61F5FF65F00707C04 /* BackBtn.swift */,
-				F00A62F31F6444F4000B6BE9 /* BillsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,14 +339,6 @@
 				F06E98221F70106300D3ACFA /* Structs */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		F06EA75F1F73A7F5008F9621 /* Responders */ = {
-			isa = PBXGroup;
-			children = (
-				8A42DBA81F74302500B568D2 /* Security */,
-			);
-			path = Responders;
 			sourceTree = "<group>";
 		};
 		F06EA7611F73A877008F9621 /* Configurations */ = {
@@ -445,7 +454,6 @@
 				F06263641F627F0300B03536 /* Managers */,
 				F06EA7641F73DD41008F9621 /* Workers */,
 				F06EA7611F73A877008F9621 /* Configurations */,
-				F06EA75F1F73A7F5008F9621 /* Responders */,
 				F06EA75E1F73A7EE008F9621 /* Domain */,
 				F06EA75D1F73A7E5008F9621 /* Actions */,
 				F0D5C94E1F66EC240005AF91 /* Extensions */,
@@ -784,8 +792,8 @@
 				F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */,
 				F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeAction.swift in Sources */,
+				8A905D571F76679F009D057D /* MeetupCell.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
-				8A42DBAA1F74303400B568D2 /* LoginResponder.swift in Sources */,
 				8A8114BD1F7550F50001C947 /* BillsManager.swift in Sources */,
 				F06D11A41F41E2E900E032DF /* ClientController.swift in Sources */,
 				F06263761F62D8E400B03536 /* PlanningMock.swift in Sources */,
