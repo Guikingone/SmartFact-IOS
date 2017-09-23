@@ -941,10 +941,10 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="494.83695652173918"/>
         </scene>
-        <!--Forgot Password Controller-->
+        <!--Password Reset Action-->
         <scene sceneID="6m3-qJ-0VP">
             <objects>
-                <viewController id="nvE-X5-mbX" customClass="ForgotPasswordController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="passwordResetAction" id="nvE-X5-mbX" customClass="PasswordResetAction" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UvF-wy-2rk"/>
                         <viewControllerLayoutGuide type="bottom" id="3ON-aJ-iGh"/>
@@ -962,7 +962,7 @@
                                 <color key="textColor" red="1" green="0.59999999999999998" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diY-aG-MNZ" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diY-aG-MNZ" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
                                 <rect key="frame" x="16" y="245" width="343" height="55"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -981,10 +981,11 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Reinitialisation"/>
                                 <connections>
+                                    <action selector="passwordResetTokenRequest:" destination="nvE-X5-mbX" eventType="touchUpInside" id="hFG-1Z-W0i"/>
                                     <action selector="resetPassword:" destination="nvE-X5-mbX" eventType="touchUpInside" id="RvV-Hp-D6A"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Azz-SQ-1Lh" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Azz-SQ-1Lh" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
                                 <rect key="frame" x="16" y="340" width="343" height="55"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -994,10 +995,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVu-WY-csc">
+                                <rect key="frame" x="16" y="44" width="48" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.97664143467679354" green="1" blue="0.99325318656201789" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPasswordReset:" destination="nvE-X5-mbX" eventType="touchUpInside" id="fWK-rx-IIL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A1V-Uy-dd9" firstAttribute="leading" secondItem="8zd-ly-Vv2" secondAttribute="leadingMargin" constant="20" id="1nx-XG-3LG"/>
+                            <constraint firstItem="aVu-WY-csc" firstAttribute="top" secondItem="UvF-wy-2rk" secondAttribute="bottom" id="2JI-Hl-mzt"/>
                             <constraint firstItem="Azz-SQ-1Lh" firstAttribute="top" secondItem="diY-aG-MNZ" secondAttribute="bottom" constant="40" id="632-Sd-0b2"/>
                             <constraint firstItem="nN1-Na-yT7" firstAttribute="leading" secondItem="8zd-ly-Vv2" secondAttribute="leading" id="79C-QP-12W"/>
                             <constraint firstItem="diY-aG-MNZ" firstAttribute="centerX" secondItem="8zd-ly-Vv2" secondAttribute="centerX" id="9zr-TU-bA0"/>
@@ -1018,14 +1030,15 @@
                             <constraint firstItem="qhM-mz-crG" firstAttribute="trailing" secondItem="8zd-ly-Vv2" secondAttribute="trailingMargin" id="lqj-zg-EnY"/>
                             <constraint firstItem="Azz-SQ-1Lh" firstAttribute="leading" secondItem="8zd-ly-Vv2" secondAttribute="leadingMargin" id="qHj-dU-Sev"/>
                             <constraint firstItem="3ON-aJ-iGh" firstAttribute="top" secondItem="nN1-Na-yT7" secondAttribute="bottom" id="sF5-kZ-Hpt"/>
+                            <constraint firstItem="aVu-WY-csc" firstAttribute="leading" secondItem="8zd-ly-Vv2" secondAttribute="leadingMargin" id="scI-dK-bmi"/>
                             <constraint firstItem="A1V-Uy-dd9" firstAttribute="top" secondItem="UvF-wy-2rk" secondAttribute="bottom" constant="20" id="ssd-K7-LvN"/>
                             <constraint firstItem="nN1-Na-yT7" firstAttribute="top" secondItem="8zd-ly-Vv2" secondAttribute="top" id="waH-NB-cpt"/>
                             <constraint firstItem="diY-aG-MNZ" firstAttribute="leading" secondItem="8zd-ly-Vv2" secondAttribute="leadingMargin" id="zxC-bI-IsI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgotPasswordEmailTxtField" destination="diY-aG-MNZ" id="e38-Lf-hwh"/>
-                        <outlet property="forgotPasswordUsernameTxtField" destination="Azz-SQ-1Lh" id="AYn-D7-Ncj"/>
+                        <outlet property="emailTxtField" destination="diY-aG-MNZ" id="VbX-Oa-EnP"/>
+                        <outlet property="usernameTxtField" destination="Azz-SQ-1Lh" id="LEz-Aw-ZVf"/>
                         <segue destination="nVU-nC-fUP" kind="show" identifier="ForgotPasswordSegue" id="33C-Ke-KtC"/>
                     </connections>
                 </viewController>
@@ -1033,10 +1046,10 @@
             </objects>
             <point key="canvasLocation" x="2683" y="-719"/>
         </scene>
-        <!--Reset Password Controller-->
+        <!--Password Reset Final Action-->
         <scene sceneID="pI3-mm-qK8">
             <objects>
-                <viewController id="nVU-nC-fUP" customClass="ResetPasswordController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordResetFinalAction" id="nVU-nC-fUP" customClass="PasswordResetFinalAction" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ueE-d2-Ces"/>
                         <viewControllerLayoutGuide type="bottom" id="jkc-bi-2PF"/>
@@ -1048,7 +1061,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-uX-CnH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-0i-1X6" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="New password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-0i-1X6" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
                                 <rect key="frame" x="16" y="248" width="343" height="55"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -1068,7 +1081,7 @@
                                 <state key="normal" title="Réinitialiser le mot de passe"/>
                                 <connections>
                                     <action selector="resetPassword:" destination="nvE-X5-mbX" eventType="touchUpInside" id="2rx-2D-P7F"/>
-                                    <action selector="resetPassword:" destination="nVU-nC-fUP" eventType="touchUpInside" id="MS1-Mh-FoL"/>
+                                    <action selector="resetPassword:" destination="nVU-nC-fUP" eventType="touchUpInside" id="kPm-ue-emJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmartFact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sb7-Qe-1lX">
@@ -1098,7 +1111,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordTxtField" destination="Vpw-0i-1X6" id="b0c-w3-MwJ"/>
+                        <outlet property="passwordTxtField" destination="Vpw-0i-1X6" id="8Rz-QK-SQy"/>
                         <segue destination="LW3-u0-HHz" kind="show" identifier="PasswordUpdated" id="1fJ-aX-dRA"/>
                     </connections>
                 </viewController>
@@ -1106,10 +1119,10 @@
             </objects>
             <point key="canvasLocation" x="3590" y="-719"/>
         </scene>
-        <!--Login Controller-->
+        <!--Login Action-->
         <scene sceneID="pvb-Lp-4eU">
             <objects>
-                <viewController storyboardIdentifier="loginController" id="LW3-u0-HHz" customClass="LoginController" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginController" id="LW3-u0-HHz" customClass="LoginAction" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qQ4-ta-sG7"/>
                         <viewControllerLayoutGuide type="bottom" id="dBD-zt-pKz"/>
@@ -1134,6 +1147,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="resetPassword:" destination="LW3-u0-HHz" eventType="touchUpInside" id="LFm-N1-Hab"/>
                                     <segue destination="nvE-X5-mbX" kind="show" id="Peh-vf-1ia"/>
                                 </connections>
                             </button>
@@ -1146,10 +1160,10 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Connexion"/>
                                 <connections>
-                                    <action selector="LoginUser:" destination="LW3-u0-HHz" eventType="touchUpInside" id="nSX-s7-ECs"/>
+                                    <action selector="LoginUser:" destination="LW3-u0-HHz" eventType="touchUpInside" id="b8S-dj-EaQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r55-bh-Vvw" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r55-bh-Vvw" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
                                 <rect key="frame" x="16" y="200" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.64156978050000002" green="0.78770370580000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1160,7 +1174,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8il-qF-PEt" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8il-qF-PEt" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
                                 <rect key="frame" x="16" y="276" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.64156978050000002" green="0.78770370580000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1204,8 +1218,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordTxtField" destination="8il-qF-PEt" id="bED-Fo-MyD"/>
-                        <outlet property="usernameTxtField" destination="r55-bh-Vvw" id="SDR-xC-zfC"/>
+                        <outlet property="passwordTxtField" destination="8il-qF-PEt" id="D8L-fp-QCH"/>
+                        <outlet property="usernameTxtField" destination="r55-bh-Vvw" id="FWg-Eh-BWf"/>
                         <segue destination="8fU-48-6i1" kind="show" identifier="LoggedInSegue" id="npO-s2-b8A"/>
                     </connections>
                 </viewController>
@@ -1220,6 +1234,6 @@
         <image name="ic_reorder.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q0k-9U-1pf"/>
+        <segue reference="1fJ-aX-dRA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -125,10 +125,12 @@ class AuthService
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
                 
                 if response.statusCode == 200 {
-                    let userToken = try? JSONDecoder().decode(UserStruct.authToken.self, from: data!)
-                    self.authToken = (userToken?.token)!
-                    self.isLoggedIn = true
-                    completion(true)
+                    DispatchQueue.main.async {
+                        let userToken = try? JSONDecoder().decode(UserStruct.authToken.self, from: data!)
+                        self.authToken = (userToken?.token)!
+                        self.isLoggedIn = true
+                        completion(true)
+                    }
                 }
             }
             

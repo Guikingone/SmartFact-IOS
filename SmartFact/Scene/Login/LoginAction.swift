@@ -10,5 +10,34 @@ import UIKit
 
 class LoginAction: UIViewController
 {
+    @IBOutlet weak var usernameTxtField: MainForm!
+    @IBOutlet weak var passwordTxtField: MainForm!
     
+    override func viewDidAppear(_ animated: Bool)
+    {
+        //biometricLogin()
+    }
+    
+    @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue){}
+    
+    @IBAction func resetPassword(_ sender: Any)
+    {
+        guard let passwordResetAction = storyboard?.instantiateViewController(withIdentifier: "passwordResetAction") as? PasswordResetAction else { return }
+        presentDetails(passwordResetAction)
+    }
+    
+    @IBAction func LoginUser(_ sender: Any)
+    {
+        guard let username = usernameTxtField.text , usernameTxtField.text != "" else { return }
+        guard let password = passwordTxtField.text , passwordTxtField.text != "" else { return }
+        
+        AuthService.instance.loginUser(username: username, password: password)
+        { (success) in
+            if (success) {
+                if AuthService.instance.isLoggedIn {
+                    self.performSegue(withIdentifier: "LoggedInSegue", sender: self)
+                }
+            }
+        }
+    }
 }

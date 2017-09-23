@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		50E2CD9190B9CF8EDBF8518B /* Pods_SmartFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B96A7993270BE6F435116E /* Pods_SmartFactTests.framework */; };
 		6C9676C51CD0580EF8661994 /* Pods_SmartFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD98D45E855242B951EA28F9 /* Pods_SmartFactUITests.framework */; };
+		8A08B6AD1F76AC2A00EAA7D1 /* PasswordResetInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6AC1F76AC2A00EAA7D1 /* PasswordResetInteractor.swift */; };
+		8A08B6AF1F76AD8200EAA7D1 /* PasswordResetStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6AE1F76AD8200EAA7D1 /* PasswordResetStruct.swift */; };
+		8A08B6B21F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6B11F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift */; };
+		8A08B6B41F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6B31F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift */; };
+		8A08B6B61F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6B51F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift */; };
+		8A4799891F769F2B0030B838 /* PasswordResetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4799881F769F2B0030B838 /* PasswordResetAction.swift */; };
+		8A47998B1F76A4B50030B838 /* PasswordResetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A47998A1F76A4B50030B838 /* PasswordResetWorker.swift */; };
 		8A8114B21F752FE70001C947 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B11F752FE70001C947 /* HomeWorker.swift */; };
 		8A8114B41F7530280001C947 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B31F7530280001C947 /* HomeInteractor.swift */; };
 		8A8114B71F754BBD0001C947 /* BillsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8114B61F754BBD0001C947 /* BillsWorker.swift */; };
@@ -94,6 +101,13 @@
 		25C9A59A601768CAEDEEBA82 /* Pods-SmartFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFact.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact.release.xcconfig"; sourceTree = "<group>"; };
 		5D52632CAEC9351B1CF11F92 /* Pods-SmartFact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFact/Pods-SmartFact.debug.xcconfig"; sourceTree = "<group>"; };
 		870AA475E34B2EDDF4CD65A5 /* Pods-SmartFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFactTests/Pods-SmartFactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A08B6AC1F76AC2A00EAA7D1 /* PasswordResetInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetInteractor.swift; sourceTree = "<group>"; };
+		8A08B6AE1F76AD8200EAA7D1 /* PasswordResetStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetStruct.swift; sourceTree = "<group>"; };
+		8A08B6B11F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetFinalAction.swift; sourceTree = "<group>"; };
+		8A08B6B31F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetFinalWorker.swift; sourceTree = "<group>"; };
+		8A08B6B51F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetFinalInteractor.swift; sourceTree = "<group>"; };
+		8A4799881F769F2B0030B838 /* PasswordResetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetAction.swift; sourceTree = "<group>"; };
+		8A47998A1F76A4B50030B838 /* PasswordResetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetWorker.swift; sourceTree = "<group>"; };
 		8A8114B11F752FE70001C947 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		8A8114B31F7530280001C947 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8A8114B61F754BBD0001C947 /* BillsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsWorker.swift; sourceTree = "<group>"; };
@@ -191,6 +205,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A08B6B01F76AF7300EAA7D1 /* PasswordResetFinal */ = {
+			isa = PBXGroup;
+			children = (
+				8A08B6B11F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift */,
+				8A08B6B31F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift */,
+				8A08B6B51F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift */,
+			);
+			path = PasswordResetFinal;
+			sourceTree = "<group>";
+		};
 		8A4799831F7683550030B838 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,9 +223,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		8A4799871F769F180030B838 /* PasswordReset */ = {
+			isa = PBXGroup;
+			children = (
+				8A4799881F769F2B0030B838 /* PasswordResetAction.swift */,
+				8A47998A1F76A4B50030B838 /* PasswordResetWorker.swift */,
+				8A08B6AC1F76AC2A00EAA7D1 /* PasswordResetInteractor.swift */,
+				8A08B6AE1F76AD8200EAA7D1 /* PasswordResetStruct.swift */,
+			);
+			path = PasswordReset;
+			sourceTree = "<group>";
+		};
 		8A8114AF1F752F0B0001C947 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8A08B6B01F76AF7300EAA7D1 /* PasswordResetFinal */,
+				8A4799871F769F180030B838 /* PasswordReset */,
 				8A905D541F766787009D057D /* Planning */,
 				8A8114BE1F7552A80001C947 /* Login */,
 				8A8114B51F754B950001C947 /* Bills */,
@@ -784,11 +821,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0732E781F62E12B00D71DBB /* ClientsManager.swift in Sources */,
+				8A08B6AD1F76AC2A00EAA7D1 /* PasswordResetInteractor.swift in Sources */,
+				8A08B6B41F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift in Sources */,
 				F0892BC71F5FF65F00707C04 /* BackBtn.swift in Sources */,
 				F06D11971F41E13100E032DF /* RegisterController.swift in Sources */,
 				F0D5C9501F66EC480005AF91 /* UIViewControllerExtension.swift in Sources */,
 				F04109E21F4350EB009D04A4 /* DataWorker.swift in Sources */,
 				F062636E1F62D78700B03536 /* NotificationsManager.swift in Sources */,
+				8A47998B1F76A4B50030B838 /* PasswordResetWorker.swift in Sources */,
 				F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */,
 				F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeAction.swift in Sources */,
@@ -814,7 +854,10 @@
 				F06263681F627F9C00B03536 /* PlanningManager.swift in Sources */,
 				8A8114B41F7530280001C947 /* HomeInteractor.swift in Sources */,
 				F04109E01F4341A3009D04A4 /* Constants.swift in Sources */,
+				8A08B6AF1F76AD8200EAA7D1 /* PasswordResetStruct.swift in Sources */,
 				F06E98261F70234000D3ACFA /* BillValidationController.swift in Sources */,
+				8A08B6B21F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift in Sources */,
+				8A4799891F769F2B0030B838 /* PasswordResetAction.swift in Sources */,
 				F06D119B1F41E22400E032DF /* PlanningController.swift in Sources */,
 				F0AE14F01F5D43B2004C2728 /* UserController.swift in Sources */,
 				F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */,
@@ -825,6 +868,7 @@
 				F06263741F62D8D200B03536 /* MeetupsMock.swift in Sources */,
 				F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */,
 				F06D11A01F41E2A000E032DF /* NotificationsController.swift in Sources */,
+				8A08B6B61F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift in Sources */,
 				8A8114B91F754CDA0001C947 /* BillsInteractor.swift in Sources */,
 				F06E98241F70107B00D3ACFA /* Token.swift in Sources */,
 				F0732E761F62DEF400D71DBB /* AccountingManager.swift in Sources */,

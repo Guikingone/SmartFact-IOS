@@ -14,10 +14,23 @@ class BillsAction: UIViewController
     @IBOutlet weak var billsList: UITableView!
     
     var bills: [BillStruct.getBillsData] = []
-    
-    override func awakeFromNib()
+
+    override func viewDidAppear(_ animated: Bool)
     {
-        super.awakeFromNib()
+        super.viewDidAppear(animated)
+        
+        if self.bills.count >= 1 {
+            self.billsList.isHidden = false
+        } else {
+            self.billsList.isHidden = true
+        }
+        
+        billsList.reloadData()
+        
+    }
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
         
         BillsInteractor().fetchBills(success: { (found) in
             self.bills = found
@@ -27,18 +40,6 @@ class BillsAction: UIViewController
         }
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-        
-        print(self.bills)
-        if self.bills.count >= 1 {
-            self.billsList.isHidden = false
-        }
-        
-        billsList.reloadData()
-    }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class BillsAction: UIViewController
         billsList.delegate = self
         billsList.dataSource = self
         billsList.isHidden = true
+        welcomeLabel.isHidden = false
     }
     
     @IBAction func createBillAction(_ sender: Any)
@@ -76,6 +78,6 @@ extension BillsAction: UITableViewDelegate, UITableViewDataSource
         guard let billDetailController = storyboard?.instantiateViewController(
             withIdentifier: "BillsDetailsController"
             ) as? BillsDetailsController else { return }
-        present(billDetailController, animated: true, completion: nil)
+        presentDetails(billDetailController)
     }
 }

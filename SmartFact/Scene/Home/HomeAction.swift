@@ -12,15 +12,9 @@ class HomeAction: UIViewController
 {
     @IBOutlet weak var usernameTxtLabel: UILabel!
     
-    override func viewDidLoad()
+    override func viewWillAppear(_ animated: Bool)
     {
-        super.viewDidLoad()
-        self.usernameTxtLabel.isHidden = true
-    }
-    
-    override func awakeFromNib()
-    {
-        super.awakeFromNib()
+        super.viewWillAppear(animated)
         
         HomeInteractor().fetchUser(user: { (data) in
             self.usernameTxtLabel.text = data.username
@@ -28,12 +22,12 @@ class HomeAction: UIViewController
         }) { (failure) in
             self.connexionFailure()
         }
-        
-//        HomeInteractor().fetchAndSaveUser(happy: { (saved) in
-//            // TODO
-//        }) { (failed) in
-//            // TODO
-//        }
+    }
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.usernameTxtLabel.isHidden = true
     }
     
     @IBAction func logoutUser(_ sender: Any)

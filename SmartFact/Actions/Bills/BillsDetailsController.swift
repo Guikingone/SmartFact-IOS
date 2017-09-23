@@ -12,6 +12,11 @@ class BillsDetailsController: UIViewController
 {
     @IBOutlet weak var billClientNameLabel: UILabel!
     
+    func showBillDetails(bill: BillStruct.getBillsData)
+    {
+        self.billClientNameLabel.text = bill.date
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
