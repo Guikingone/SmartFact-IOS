@@ -6,8 +6,6 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-import Foundation
-
 struct BillStruct: Decodable
 {
     struct getBillsData: Decodable

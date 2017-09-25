@@ -144,6 +144,7 @@ extension UIViewController
                 style: .`default`,
                 handler: { _ in
                 SecurityService.instance.isLoggedIn = false;
+                SecurityService.instance.authToken = ""
                 self.performSegue(withIdentifier: "logoutSegue", sender: self) }
             )
         )

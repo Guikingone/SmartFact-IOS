@@ -6,8 +6,6 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-import Foundation
-
 class BillsInteractor
 {
     public func fetchBills(success: @escaping (_: [BillStruct.getBillsData]) -> (), failure: @escaping (_: Bool) -> ())

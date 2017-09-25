@@ -23,6 +23,7 @@ class RegisterAction: UIViewController
         guard let passwordRpt = passwordRptTxtField.text , passwordRptTxtField.text != "" else { return }
 
         if (passwordRpt != password) {
+            // TODO : Show an alert in order to inform the user.
             return
         }
         

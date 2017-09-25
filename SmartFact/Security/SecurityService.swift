@@ -33,14 +33,4 @@ class SecurityService
             defaults.set(newValue, forKey: TOKEN_KEY)
         }
     }
-    
-    var userEmail: String
-    {
-        get {
-            return defaults.string(forKey: USER_EMAIL)!
-        }
-        set {
-            defaults.set(newValue, forKey: USER_EMAIL)
-        }
-    }
 }
