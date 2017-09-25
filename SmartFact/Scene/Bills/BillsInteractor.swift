@@ -19,8 +19,12 @@ class BillsInteractor
         }
     }
     
-    public func fetchAndSaveBills()
+    public func fetchAndSaveBills(bills: [BillStruct.getBillsData], success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
     {
-        
+        BillsManager().saveBills(data: bills, saved: { (saved) in
+            // TODO
+        }) { (failed) in
+            // TODO
+        }
     }
 }

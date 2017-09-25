@@ -10,38 +10,6 @@ import Foundation
 
 class LoginWorker
 {
-    let defaults = UserDefaults.standard
-    
-    var isLoggedIn: Bool
-    {
-        get {
-            return defaults.bool(forKey: LOGGED_IN_KEY)
-        }
-        set {
-            defaults.set(newValue, forKey: LOGGED_IN_KEY)
-        }
-    }
-    
-    var authToken: String
-    {
-        get {
-            return defaults.string(forKey: TOKEN_KEY)!
-        }
-        set {
-            defaults.set(newValue, forKey: TOKEN_KEY)
-        }
-    }
-    
-    var userEmail: String
-    {
-        get {
-            return defaults.string(forKey: USER_EMAIL)!
-        }
-        set {
-            defaults.set(newValue, forKey: USER_EMAIL)
-        }
-    }
-    
     public func loginUser(username: String, password: String, success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
     {
         do {
@@ -67,8 +35,8 @@ class LoginWorker
                 DispatchQueue.main.async {
                     if response.statusCode == 200 {
                         let userToken = try? JSONDecoder().decode(UserStruct.authToken.self, from: data!)
-                        self.authToken = (userToken?.token)!
-                        LOGGED_IN = true
+                        SecurityService().authToken = (userToken?.token)!
+                        SecurityService().isLoggedIn = true
                         success(true)
                     } else {
                         failure(true)

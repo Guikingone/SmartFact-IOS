@@ -36,5 +36,5 @@ let HEADERS = ["Content-Type": "application/json"]
 
 let AUTH_HEADERS = [
     "Content-Type": "application/json",
-    "authorization": LoginWorker.authToken
+    "authorization": SecurityService.instance.authToken
 ]

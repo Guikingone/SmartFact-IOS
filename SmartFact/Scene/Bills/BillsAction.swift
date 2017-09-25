@@ -34,6 +34,7 @@ class BillsAction: UIViewController
         
         BillsInteractor().fetchBills(success: { (found) in
             self.bills = found
+            // TODO: Fetch CoreData via the BillsManager in order to find the bills.
         }) { (missing) in
             self.billsList.isHidden = true
             self.welcomeLabel.isHidden = false

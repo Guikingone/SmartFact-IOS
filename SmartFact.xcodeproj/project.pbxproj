@@ -14,6 +14,8 @@
 		8A08B6B21F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6B11F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift */; };
 		8A08B6B41F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6B31F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift */; };
 		8A08B6B61F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A08B6B51F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift */; };
+		8A296E3C1F7950D500B13B06 /* SecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A296E3B1F7950D500B13B06 /* SecurityService.swift */; };
+		8A296E3E1F79540600B13B06 /* BillsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A296E3D1F79540600B13B06 /* BillsStruct.swift */; };
 		8A3A52831F794210003499F4 /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A52821F794210003499F4 /* RegisterWorker.swift */; };
 		8A3A52851F794221003499F4 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A52841F794221003499F4 /* RegisterInteractor.swift */; };
 		8A4799891F769F2B0030B838 /* PasswordResetTokenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4799881F769F2B0030B838 /* PasswordResetTokenAction.swift */; };
@@ -59,7 +61,6 @@
 		F08A85D61F67B6E800879405 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D51F67B6E800879405 /* UIViewExtension.swift */; };
 		F08A85D81F67C03400879405 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A85D71F67C03400879405 /* UIButtonExtension.swift */; };
 		F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09417AE1F48741A001FB7BC /* MainButton.swift */; };
-		F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09E3D561F72DEFE008C56F3 /* BillStruct.swift */; };
 		F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0D8241F55BC9E00421A51 /* UserMock.swift */; };
 		F0AE14EC1F5D4133004C2728 /* BillsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */; };
 		F0AE14EE1F5D41D0004C2728 /* MeetupsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE14ED1F5D41D0004C2728 /* MeetupsDetailsController.swift */; };
@@ -107,6 +108,8 @@
 		8A08B6B11F76AF8A00EAA7D1 /* PasswordResetFinalAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetFinalAction.swift; sourceTree = "<group>"; };
 		8A08B6B31F76AFF100EAA7D1 /* PasswordResetFinalWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetFinalWorker.swift; sourceTree = "<group>"; };
 		8A08B6B51F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetFinalInteractor.swift; sourceTree = "<group>"; };
+		8A296E3B1F7950D500B13B06 /* SecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityService.swift; sourceTree = "<group>"; };
+		8A296E3D1F79540600B13B06 /* BillsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsStruct.swift; sourceTree = "<group>"; };
 		8A3A52821F794210003499F4 /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
 		8A3A52841F794221003499F4 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		8A4799881F769F2B0030B838 /* PasswordResetTokenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetTokenAction.swift; sourceTree = "<group>"; };
@@ -153,7 +156,6 @@
 		F08A85D51F67B6E800879405 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F08A85D71F67C03400879405 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		F09417AE1F48741A001FB7BC /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
-		F09E3D561F72DEFE008C56F3 /* BillStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStruct.swift; sourceTree = "<group>"; };
 		F0A0D8241F55BC9E00421A51 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
 		F0AE14EB1F5D4133004C2728 /* BillsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsDetailsController.swift; sourceTree = "<group>"; };
 		F0AE14ED1F5D41D0004C2728 /* MeetupsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupsDetailsController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,14 @@
 				8A08B6B51F76B07800EAA7D1 /* PasswordResetFinalInteractor.swift */,
 			);
 			path = PasswordResetFinal;
+			sourceTree = "<group>";
+		};
+		8A296E3A1F7950C300B13B06 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				8A296E3B1F7950D500B13B06 /* SecurityService.swift */,
+			);
+			path = Security;
 			sourceTree = "<group>";
 		};
 		8A3A52801F793D83003499F4 /* Start */ = {
@@ -288,6 +298,7 @@
 				8A8114B61F754BBD0001C947 /* BillsWorker.swift */,
 				8A8114B81F754CDA0001C947 /* BillsInteractor.swift */,
 				8A8114BC1F7550F50001C947 /* BillsManager.swift */,
+				8A296E3D1F79540600B13B06 /* BillsStruct.swift */,
 			);
 			path = Bills;
 			sourceTree = "<group>";
@@ -370,7 +381,6 @@
 			children = (
 				F06E98231F70107B00D3ACFA /* Token.swift */,
 				F0DA37EB1F711AE3000CAC0D /* UserStruct.swift */,
-				F09E3D561F72DEFE008C56F3 /* BillStruct.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -498,6 +508,7 @@
 		F0EB19321F31CC79006615CB /* SmartFact */ = {
 			isa = PBXGroup;
 			children = (
+				8A296E3A1F7950C300B13B06 /* Security */,
 				8A8114AF1F752F0B0001C947 /* Scene */,
 				F06263641F627F0300B03536 /* Managers */,
 				F06EA7641F73DD41008F9621 /* Workers */,
@@ -843,7 +854,6 @@
 				8A47998B1F76A4B50030B838 /* PasswordResetTokenWorker.swift in Sources */,
 				F0732E741F62DEE400D71DBB /* AccountingMock.swift in Sources */,
 				8A98B9B31F78F73E00EF6ED8 /* LoginStruct.swift in Sources */,
-				F09E3D571F72DEFE008C56F3 /* BillStruct.swift in Sources */,
 				F0EB19361F31CC79006615CB /* HomeAction.swift in Sources */,
 				8A905D571F76679F009D057D /* MeetupCell.swift in Sources */,
 				F06D11A91F41E37500E032DF /* StartController.swift in Sources */,
@@ -854,10 +864,12 @@
 				F0EB193C1F31CC79006615CB /* SmartFact.xcdatamodeld in Sources */,
 				F06263701F62D79900B03536 /* NotificationsMock.swift in Sources */,
 				F01FDC941F4AB620008848DD /* MainForm.swift in Sources */,
+				8A296E3E1F79540600B13B06 /* BillsStruct.swift in Sources */,
 				F0D5C9521F66FDA10005AF91 /* UIViewControllerDataExtension.swift in Sources */,
 				8A8114B21F752FE70001C947 /* HomeWorker.swift in Sources */,
 				F06263721F62D8C100B03536 /* MeetupsManager.swift in Sources */,
 				F0EB19341F31CC79006615CB /* AppDelegate.swift in Sources */,
+				8A296E3C1F7950D500B13B06 /* SecurityService.swift in Sources */,
 				F06D11A61F41E2FC00E032DF /* BillsAction.swift in Sources */,
 				F0A0D8251F55BC9E00421A51 /* UserMock.swift in Sources */,
 				F09417AF1F48741A001FB7BC /* MainButton.swift in Sources */,

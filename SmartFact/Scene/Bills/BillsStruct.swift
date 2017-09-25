@@ -1,15 +1,15 @@
 //
-//  BillStruct.swift
+//  BillsStruct.swift
 //  SmartFact
 //
-//  Created by Guillaume Loulier on 20/09/2017.
+//  Created by Guillaume Loulier on 25/09/2017.
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-struct BillStruct
+import Foundation
+
+struct BillStruct: Decodable
 {
-    let id: String
-    
     struct getBillsData: Decodable
     {
         let id: String
@@ -20,15 +20,5 @@ struct BillStruct
         let sendAt: String?
         let file: String?
         let tva: Bool
-    }
-    
-    struct Request: Decodable
-    {
-        let id: String
-    }
-    
-    struct View: Decodable
-    {
-        let id: String
     }
 }

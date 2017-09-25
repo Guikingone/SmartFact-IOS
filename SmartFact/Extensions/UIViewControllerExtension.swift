@@ -95,7 +95,7 @@ extension UIViewController
                 reply: { (success, errors) in
                     
                 if success {
-                    AuthService.instance.isLoggedIn = true
+                    SecurityService.instance.isLoggedIn = true
                     self.performSegue(withIdentifier: "LoggedInSegue", sender: self)
                 } else {
                     let biometricLoginAlert = UIAlertController(
@@ -131,7 +131,7 @@ extension UIViewController
         alert.addAction(
             UIAlertAction(
                 title: NSLocalizedString("Cancel",
-                                         comment: "Default action"),
+                comment: "Default action"),
                 style: .`default`,
                 handler: { _ in }
             )
@@ -143,8 +143,8 @@ extension UIViewController
                 comment: "Default action"),
                 style: .`default`,
                 handler: { _ in
-                    AuthService.instance.isLoggedIn = false;
-                    self.performSegue(withIdentifier: "logoutSegue", sender: self) }
+                SecurityService.instance.isLoggedIn = false;
+                self.performSegue(withIdentifier: "logoutSegue", sender: self) }
             )
         )
         
