@@ -19,9 +19,35 @@ class PasswordResetFinalAction: UIViewController
         guard let password = passwordTxtField.text , passwordTxtField.text != "" else { return }
         
         PasswordResetFinalInteractor().resetPasswordFinal(password: password, token: token, success: { (succeed) in
-            // TODO
+            guard let loginAction = self.storyboard?.instantiateViewController(
+                withIdentifier: "LoginAction"
+                ) as? LoginAction else { return }
+            self.presentDetails(loginAction)
         }) { (failed) in
-            // TODO
+            
+            let resetError: String = "Something goes wrong !"
+            let error: String = "To define"
+            
+            let resetAlert = UIAlertController(
+                title: resetError,
+                message: error,
+                preferredStyle: .alert
+            )
+            
+            resetAlert.addAction(
+                UIAlertAction(
+                    title: NSLocalizedString("I understand",
+                    comment: "Default action"),
+                    style: .`default`,
+                    handler: { _ in }
+                )
+            )
+            
+            self.present(resetAlert, animated: true, completion: nil)
         }
+    }
+    @IBAction func cancelPasswordResetFinal(_ sender: Any)
+    {
+        dismissDetails()
     }
 }

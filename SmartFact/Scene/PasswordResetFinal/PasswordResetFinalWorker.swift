@@ -20,7 +20,7 @@ class PasswordResetFinalWorker
             
             let requestBody = try? JSONEncoder().encode(body)
             
-            let request = try URLRequest(url: URI_RESET_PASSWORD, method: .post, headers: HEADERS)
+            let request = try URLRequest(url: URI_RESET_PASSWORD, method: .patch, headers: HEADERS)
             
             let task = URLSession.shared.uploadTask(with: request, from: requestBody, completionHandler: { (data, response, errors) in
 
@@ -28,10 +28,10 @@ class PasswordResetFinalWorker
                     return
                 }
                 
-                guard let response = response as? HTTPURLResponse , response.statusCode == 201 else { return }
+                guard let response = response as? HTTPURLResponse , response.statusCode == 200 else { return }
                 
                 DispatchQueue.main.async {
-                    if response.statusCode == 201 {
+                    if response.statusCode == 200 {
                         success(true)
                     } else {
                         failure(true)

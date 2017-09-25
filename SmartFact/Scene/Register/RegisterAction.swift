@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterController: UIViewController
+class RegisterAction: UIViewController
 {
     @IBOutlet weak var emailTxtField: MainForm!
     @IBOutlet weak var usernameTxtField: MainForm!
@@ -26,15 +26,10 @@ class RegisterController: UIViewController
             return
         }
         
-        AuthService.instance.registerUser(username: username, email: email, password: password)
-        { (success) in
-            if success {
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
-                }
-            } else {
-                self.registerFailure()
-            }
+        RegisterInteractor().register(username: username, plainPassword: password, email: email, success: { (created) in
+            self.performSegue(withIdentifier: "ConnexionSegue", sender: self)
+        }) { (failure) in
+            self.registerFailure()
         }
     }
     

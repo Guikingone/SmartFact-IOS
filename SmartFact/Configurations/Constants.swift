@@ -29,11 +29,12 @@ let ALLOWED_RESET_TOKEN = "reset_password_token"
 let PASSWORD_RESET_TOKEN = "reset_token"
 let LOGGED_IN_KEY = "logged_in"
 let USER_EMAIL = "user_email"
+let LOGGED_IN = false
 
 // Headers
 let HEADERS = ["Content-Type": "application/json"]
 
 let AUTH_HEADERS = [
     "Content-Type": "application/json",
-    "authorization": AuthService.instance.authToken
+    "authorization": LoginWorker.authToken
 ]

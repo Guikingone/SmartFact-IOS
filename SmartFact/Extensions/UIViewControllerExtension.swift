@@ -57,6 +57,29 @@ extension UIViewController
         self.present(connexionFailureAlert, animated: true, completion: nil)
     }
     
+    public func resetPasswordFailure()
+    {
+        let alertTitle: String = "Bad identifiers !"
+        let error: String = "The identifiers used are invalid or wrong spelled !"
+        
+        let resetPasswordFailureAlert = UIAlertController(
+            title: alertTitle,
+            message: error,
+            preferredStyle: .alert
+        )
+        
+        resetPasswordFailureAlert.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Retry",
+                comment: "Default action"),
+                style: .`default`,
+                handler: { _ in }
+            )
+        )
+        
+        self.present(resetPasswordFailureAlert, animated: true, completion: nil)
+    }
+    
     public func biometricLogin()
     {
         let laContext = LAContext();

@@ -29,13 +29,10 @@ class LoginAction: UIViewController
         guard let username = usernameTxtField.text , usernameTxtField.text != "" else { return }
         guard let password = passwordTxtField.text , passwordTxtField.text != "" else { return }
         
-        AuthService.instance.loginUser(username: username, password: password)
-        { (success) in
-            if (success) {
-                if AuthService.instance.isLoggedIn {
-                    self.performSegue(withIdentifier: "LoggedInSegue", sender: self)
-                }
-            }
+        LoginInteractor().login(username: username, password: password, success: { (logged) in
+            self.performSegue(withIdentifier: "LoggedInSegue", sender: self)
+        }) { (failed) in
+            // TODO
         }
     }
 }

@@ -21,7 +21,7 @@ class PasswordResetTokenAction: UIViewController
         PasswordResetTokenInteractor().resetPassword(email: email, username: username, success: { (accepted) in
             self.performSegue(withIdentifier: "resetPasswordFinalSegue", sender: self)
         }) { (rejected) in
-            // TODO: Create a new alert for failure !
+            print("Rejected !")
         }
     }
     
