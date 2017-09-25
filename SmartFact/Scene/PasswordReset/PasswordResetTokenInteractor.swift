@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PasswordResetInteractor
+class PasswordResetTokenInteractor
 {
     let defaults = UserDefaults.standard
     
@@ -34,9 +34,10 @@ class PasswordResetInteractor
     
     public func resetPassword(email: String, username: String, success: @escaping (_: Bool) -> (), failure: @escaping (_: Bool) -> ())
     {
-        PasswordResetWorker().resetPasswordToken(email: email, username: username, success: { (resetToken) in
+        PasswordResetTokenWorker().resetPasswordToken(email: email, username: username, success: { (resetToken) in
             self.passwordResetToken = resetToken.token
             self.allowedToResetPassword = true
+            success(true)
         }) { (requestError) in
             failure(true)
         }

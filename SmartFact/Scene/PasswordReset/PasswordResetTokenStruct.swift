@@ -6,7 +6,7 @@
 //  Copyright © 2017 Guillaume Loulier. All rights reserved.
 //
 
-struct PasswordResetStruct: Decodable
+struct PasswordResetTokenStruct: Decodable
 {
     let token: String
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PasswordResetAction: UIViewController
+class PasswordResetTokenAction: UIViewController
 {
     @IBOutlet weak var emailTxtField: MainForm!
     @IBOutlet weak var usernameTxtField: MainForm!
@@ -18,27 +18,11 @@ class PasswordResetAction: UIViewController
         guard let email = emailTxtField.text , emailTxtField.text != "" else { return }
         guard let username = usernameTxtField.text , usernameTxtField.text != "" else { return }
         
-        PasswordResetInteractor().resetPassword(email: email, username: username, success: { (accepted) in
-            
-            guard let passwordResetFinalAction = self.storyboard?.instantiateViewController(
-                withIdentifier: "PasswordResetFinalAction"
-                ) as? PasswordResetFinalAction else { return }
-            self.presentDetails(passwordResetFinalAction)
-            
+        PasswordResetTokenInteractor().resetPassword(email: email, username: username, success: { (accepted) in
+            self.performSegue(withIdentifier: "resetPasswordFinalSegue", sender: self)
         }) { (rejected) in
             // TODO: Create a new alert for failure !
         }
-        
-//        AuthService.instance.resetPasswordToken(email: email, username: username)
-//        {
-//            (success) in
-//
-//            if (success) {
-//                if AuthService.instance.allowedToResetPassword {
-//                    self.performSegue(withIdentifier: "ForgotPasswordSegue", sender: self)
-//                }
-//            }
-//        }
     }
     
     @IBAction func cancelPasswordReset(_ sender: Any)
@@ -48,7 +32,7 @@ class PasswordResetAction: UIViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let passwordResetFinalAction = segue.destination as? PasswordResetFinalAction {
-            passwordResetFinalAction.token = PasswordResetInteractor().passwordResetToken
+            passwordResetFinalAction.token = PasswordResetTokenInteractor().passwordResetToken
         }
     }
 }

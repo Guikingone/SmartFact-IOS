@@ -8,9 +8,9 @@
 
 import Foundation
 
-class PasswordResetWorker
+class PasswordResetTokenWorker
 {
-    public func resetPasswordToken(email: String, username: String, success: @escaping (_: PasswordResetStruct) -> (), failure: @escaping (_: Bool) -> ())
+    public func resetPasswordToken(email: String, username: String, success: @escaping (_: PasswordResetTokenStruct) -> (), failure: @escaping (_: Bool) -> ())
     {
         do {
             let body = [
@@ -27,18 +27,20 @@ class PasswordResetWorker
                     return
                 }
                 
-                guard let response = response as? HTTPURLResponse , response.statusCode == 200 else { return }
+                guard let response = response as? HTTPURLResponse , response.statusCode == 201 else { return }
     
-                if response.statusCode == 200 {
-                    let token = try? JSONDecoder().decode(PasswordResetStruct.self, from: data!)
-                    success(token!)
+                if response.statusCode == 201 {
+                    DispatchQueue.main.async {
+                        let token = try? JSONDecoder().decode(PasswordResetTokenStruct.self, from: data!)
+                        success(token!)
+                    }
                 }
             })
             
             task.resume()
         
         } catch {
-            debugPrint()
+            debugPrint("Could not receive token : \(error.localizedDescription)")
             failure(true)
         }
     }

@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="675-nS-2OR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="16" y="44" width="343" height="734"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmartFact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8o-2K-xJf">
                                 <rect key="frame" x="20" y="64" width="335" height="36"/>
@@ -70,26 +70,22 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.98275809182663498" green="1" blue="0.98115802119087747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="675-nS-2OR" secondAttribute="trailing" id="2U3-BO-c0S"/>
-                            <constraint firstItem="675-nS-2OR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="33k-qN-VYH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Voa-kx-Wz6" secondAttribute="trailing" id="4kR-AP-Bho"/>
+                            <constraint firstItem="675-nS-2OR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="51P-RP-17I"/>
                             <constraint firstItem="n8o-2K-xJf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="CN2-Gm-xCy"/>
-                            <constraint firstItem="675-nS-2OR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DSN-3D-DUL"/>
-                            <constraint firstItem="675-nS-2OR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gez-36-JLK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="675-nS-2OR" secondAttribute="bottom" id="Lhz-M7-2PW"/>
                             <constraint firstItem="Voa-kx-Wz6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pf1-KW-0J4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="675-nS-2OR" secondAttribute="bottom" id="PgA-JE-zS9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="675-nS-2OR" secondAttribute="bottom" id="S3l-S0-EQ5"/>
+                            <constraint firstItem="675-nS-2OR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TMg-qT-FZ9"/>
                             <constraint firstItem="nov-lP-Mjv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TYo-fb-MPG"/>
                             <constraint firstItem="Voa-kx-Wz6" firstAttribute="top" secondItem="nov-lP-Mjv" secondAttribute="bottom" constant="65" id="XKr-f2-pOZ"/>
                             <constraint firstAttribute="trailing" secondItem="n8o-2K-xJf" secondAttribute="trailing" constant="20" id="Z4P-Mm-h0c"/>
+                            <constraint firstItem="675-nS-2OR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aS3-Ze-h0w"/>
                             <constraint firstItem="Voa-kx-Wz6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bJT-LU-bEd"/>
                             <constraint firstItem="n8o-2K-xJf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bfd-0e-C7w"/>
                             <constraint firstItem="nov-lP-Mjv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dAL-TA-fUz"/>
                             <constraint firstItem="nov-lP-Mjv" firstAttribute="top" relation="lessThanOrEqual" secondItem="n8o-2K-xJf" secondAttribute="bottom" constant="155" id="fxc-GD-yS2"/>
-                            <constraint firstItem="675-nS-2OR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hov-Ts-bDV"/>
                             <constraint firstItem="n8o-2K-xJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oBl-Sn-vDG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nov-lP-Mjv" secondAttribute="trailing" id="shP-2m-IX1"/>
-                            <constraint firstAttribute="trailing" secondItem="675-nS-2OR" secondAttribute="trailing" id="ylz-Fr-gMh"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -941,10 +937,10 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="494.83695652173918"/>
         </scene>
-        <!--Password Reset Action-->
+        <!--Password Reset Token Action-->
         <scene sceneID="6m3-qJ-0VP">
             <objects>
-                <viewController storyboardIdentifier="passwordResetAction" id="nvE-X5-mbX" customClass="PasswordResetAction" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordResetTokenAction" id="nvE-X5-mbX" customClass="PasswordResetTokenAction" customModule="SmartFact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UvF-wy-2rk"/>
                         <viewControllerLayoutGuide type="bottom" id="3ON-aJ-iGh"/>
@@ -981,8 +977,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Reinitialisation"/>
                                 <connections>
-                                    <action selector="passwordResetTokenRequest:" destination="nvE-X5-mbX" eventType="touchUpInside" id="hFG-1Z-W0i"/>
-                                    <action selector="resetPassword:" destination="nvE-X5-mbX" eventType="touchUpInside" id="RvV-Hp-D6A"/>
+                                    <action selector="passwordResetTokenRequest:" destination="nvE-X5-mbX" eventType="touchUpInside" id="OPw-Tb-8rv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Azz-SQ-1Lh" customClass="MainForm" customModule="SmartFact" customModuleProvider="target">
@@ -1037,9 +1032,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTxtField" destination="diY-aG-MNZ" id="VbX-Oa-EnP"/>
-                        <outlet property="usernameTxtField" destination="Azz-SQ-1Lh" id="LEz-Aw-ZVf"/>
-                        <segue destination="nVU-nC-fUP" kind="show" identifier="ForgotPasswordSegue" id="33C-Ke-KtC"/>
+                        <outlet property="emailTxtField" destination="diY-aG-MNZ" id="2xn-BQ-51v"/>
+                        <outlet property="usernameTxtField" destination="Azz-SQ-1Lh" id="72B-ac-1qd"/>
+                        <segue destination="nVU-nC-fUP" kind="show" identifier="resetPasswordFinalSegue" id="33C-Ke-KtC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3N-7O-RVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1234,6 +1229,6 @@
         <image name="ic_reorder.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1fJ-aX-dRA"/>
+        <segue reference="q0k-9U-1pf"/>
     </inferredMetricsTieBreakers>
 </document>

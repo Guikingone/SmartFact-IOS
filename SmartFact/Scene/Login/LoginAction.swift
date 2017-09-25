@@ -18,11 +18,9 @@ class LoginAction: UIViewController
         //biometricLogin()
     }
     
-    @IBAction func unwindFromReinitialisationController(unwindSegue: UIStoryboardSegue){}
-    
     @IBAction func resetPassword(_ sender: Any)
     {
-        guard let passwordResetAction = storyboard?.instantiateViewController(withIdentifier: "passwordResetAction") as? PasswordResetAction else { return }
+        guard let passwordResetAction = storyboard?.instantiateViewController(withIdentifier: "PasswordResetTokenAction") as? PasswordResetTokenAction else { return }
         presentDetails(passwordResetAction)
     }
     
